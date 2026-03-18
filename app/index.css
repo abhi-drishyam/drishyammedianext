@@ -219,7 +219,7 @@
 ───────────────────────────────────────── */
 .ata-section {
   background: #080610;
-  padding: 150px 48px 80px;
+  padding: 80px 48px 80px;
   font-family: 'Manrope', sans-serif;
   color: #fff;
 }
@@ -392,13 +392,13 @@
 }
 
 @media (max-width: 800px) {
-  .ata-section { padding: 100px 24px 56px; }
+  .ata-section { padding: 64px 24px 56px; }
   .step-cards { grid-template-columns: 1fr 1fr; }
   .ata-sub br { display: none; }
   .timeline-wrap { padding: 0 20px; }
 }
 @media (max-width: 480px) {
-  .ata-section { padding: 72px 16px 48px; }
+  .ata-section { padding: 56px 16px 48px; }
   .ata-header { margin-bottom: 48px; }
   .timeline-wrap { display: none; }
   .step-cards { grid-template-columns: 1fr; gap: 12px; }
@@ -413,7 +413,7 @@
 ───────────────────────────────────────── */
 .wwf-section {
   position: relative;
-  padding: 80px 0;
+  padding: 120px 0 80px;
   overflow: hidden;
   font-family: 'Manrope', sans-serif;
 }
@@ -575,12 +575,15 @@
 }
 
 @media (max-width: 640px) {
-  .wwf-section { padding: 56px 0; }
+  .wwf-section { padding: 120px 0 56px; }
   .wwf-title { font-size: clamp(26px, 7vw, 36px); margin-bottom: 32px; }
   .wwf-track { gap: 28px; }
   .wwf-img { width: 130px; height: 130px; border-radius: 14px; }
   .wwf-card:hover { transform: rotate(var(--rot)); }
   .wwf-card-name { font-size: 11px; }
+}
+@media (max-width: 480px) {
+  .wwf-section { padding: 100px 0 48px; }
 }
 
 

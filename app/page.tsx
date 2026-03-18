@@ -26,7 +26,7 @@ export default function HomePage() {
             <p className="hero-sub">
               If you&apos;re a busy creator/business with no time to create, edit or post consistently on social media but still recognize the need to grow your brand faster, then we are for you.
             </p>
-            <Link href="/contact" className="hero-cta">Get Started</Link>
+            <Link href="/contact" className="hero-cta">See Our Work</Link>
           </div>
 
           <HeroVideoStrip videos={[
@@ -50,12 +50,6 @@ export default function HomePage() {
 
 
       {/* ══════════════════════════════════════
-          ATTENTION TO ACQUISITION
-      ══════════════════════════════════════ */}
-      <AtaTimeline />
-
-
-      {/* ══════════════════════════════════════
           WE'VE WORKED WITH
       ══════════════════════════════════════ */}
       <section className="wwf-section" aria-label="Clients we've worked with">
@@ -64,18 +58,32 @@ export default function HomePage() {
         <h2 className="wwf-title">We&apos;ve Worked <span className="wwf-grad">With</span></h2>
 
         <WwfTrack clients={[
-          { name: 'Arjun Mehta',   rot: '-6deg', img: '/image/homepage/client-1.webp' },
-          { name: 'Priya Kapoor',  rot: '5deg',  img: '/image/homepage/client-2.webp' },
-          { name: 'Rohan Sharma',  rot: '-4deg', img: '/image/homepage/client-3.webp' },
-          { name: 'Sneha Iyer',    rot: '7deg',  img: '/image/homepage/client-4.webp' },
-          { name: 'Vikram Nair',   rot: '-5deg', img: '/image/homepage/client-5.webp' },
-          { name: 'Ananya Rao',    rot: '4deg',  img: '/image/homepage/client-6.webp' },
-          { name: 'Karan Malhotra',rot: '-7deg', img: '/image/homepage/client-7.webp' },
-          { name: 'Divya Singh',   rot: '6deg',  img: '/image/homepage/client-8.webp' },
-          { name: 'Rahul Verma',   rot: '-3deg', img: '/image/homepage/client-9.webp' },
-          { name: 'Meera Joshi',   rot: '5deg',  img: '/image/homepage/client-10.webp' },
+          { name: 'Duryodhan',       rot: '-6deg', img: '/image/homepage/client-1.webp' },
+          { name: 'Badshah',         rot: '5deg',  img: '/image/homepage/client-2.webp' },
+          { name: 'Manan Vohra',     rot: '-4deg', img: '/image/homepage/client-3.webp' },
+          { name: 'Rudranshi',       rot: '7deg',  img: '/image/homepage/client-4.webp' },
+          { name: 'Paradox',         rot: '-5deg', img: '/image/homepage/client-5.webp' },
+          { name: 'Yuvraj',          rot: '4deg',  img: '/image/homepage/client-6.webp' },
+          { name: 'Amit Uchana',     rot: '-7deg', img: '/image/homepage/client-7.webp' },
+          { name: 'Priyanvrindha',   rot: '6deg',  img: '/image/homepage/client-8.webp' },
+          { name: 'Pritish Narula',  rot: '-3deg', img: '/image/homepage/client-9.webp' },
+          { name: 'Pooja Brampton',  rot: '5deg',  img: '/image/homepage/client-10.webp' },
+          { name: 'Mehnoor',         rot: '-4deg', img: '/image/homepage/client-11.webp' },
+          { name: 'Parmish Verma',   rot: '6deg',  img: '/image/homepage/client-12.webp' },
+          { name: 'SD Rotract',      rot: '-7deg', img: '/image/homepage/client-13.webp' },
+          { name: 'Arnmaan Bedil',   rot: '3deg',  img: '/image/homepage/client-14.webp' },
+          { name: 'Falcon',          rot: '-5deg', img: '/image/homepage/client-15.webp' },
+          { name: 'Nisha',           rot: '7deg',  img: '/image/homepage/client-16.webp' },
+          { name: 'RJ Shanky',       rot: '-3deg', img: '/image/homepage/client-17.webp' },
+          { name: 'DMS',             rot: '5deg',  img: '/image/homepage/client-18.webp' },
         ]} />
       </section>
+
+
+      {/* ══════════════════════════════════════
+          ATTENTION TO ACQUISITION
+      ══════════════════════════════════════ */}
+      <AtaTimeline />
 
 
       {/* ══════════════════════════════════════
