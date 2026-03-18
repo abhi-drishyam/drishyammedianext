@@ -504,22 +504,28 @@ html, body {
 
 @media (max-width: 900px) {
   .footer-body {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px 24px;
-    padding: 48px 32px 52px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px 20px;
+    padding: 40px 32px 44px;
   }
   .footer-brand { grid-column: 1 / -1; padding-right: 0; }
   .footer-divider { margin: 0 32px; }
-  .footer-copy-bar { padding: 20px 32px; }
+  .footer-copy-bar { padding: 18px 32px; }
 }
 
 @media (max-width: 560px) {
   .footer-body {
-    grid-template-columns: 1fr 1fr;
-    padding: 36px 24px 44px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px 12px;
+    padding: 32px 20px 40px;
   }
-  .footer-divider { margin: 0 24px; }
-  .footer-copy-bar { padding: 18px 24px; flex-direction: column; align-items: flex-start; }
+  .footer-brand { margin-bottom: 0; }
+  .footer-tagline { font-size: 12px; margin-bottom: 18px; }
+  .footer-divider { margin: 0 20px; }
+  .footer-copy-bar { padding: 14px 20px; flex-direction: column; align-items: flex-start; gap: 6px; }
+  .footer-copy { font-size: 11.5px; }
+  .footer-copy-links { gap: 14px; }
+  .footer-copy-links a { font-size: 11px; }
 }
 
 
@@ -597,12 +603,17 @@ html, body {
   .footer-section .cta-strip { padding: 60px 32px 48px; }
   .footer-section .cta-strip::after { left: 32px; right: 32px; }
 }
+/* Keep CTA strip buttons side-by-side (not full-width) up to 560px */
+@media (max-width: 768px) {
+  .cta-strip-actions .btn-primary,
+  .cta-strip-actions .btn-secondary { width: auto; }
+}
 @media (max-width: 560px) {
-  .cta-strip { padding: 60px 20px 80px; }
+  .cta-strip { padding: 48px 20px 56px; }
   .cta-strip-actions { flex-direction: column; width: 100%; }
   .cta-strip-actions .btn-primary,
   .cta-strip-actions .btn-secondary { width: 100%; justify-content: center; }
-  .footer-section .cta-strip { padding: 48px 20px 40px; }
+  .footer-section .cta-strip { padding: 36px 20px 32px; }
   .footer-section .cta-strip::after { left: 20px; right: 20px; }
 }
 
@@ -1060,6 +1071,7 @@ html, body {
   .btn-book { padding: 11px 22px; font-size: 13px; }
 }
 @media (max-width: 560px) {
-  .footer-nav-col a { font-size: 14px; padding: 4px 0; min-height: 44px; display: flex; align-items: center; }
-  .footer-social-btn { width: 44px; height: 44px; }
+  .footer-nav-col ul { gap: 10px; }
+  .footer-nav-col a { font-size: 13px; padding: 3px 0; min-height: 36px; display: flex; align-items: center; }
+  .footer-social-btn { width: 40px; height: 40px; }
 }
