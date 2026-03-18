@@ -1,3 +1,7 @@
+'use client';
+import { useEffect, useRef, useState } from 'react';
+import VideoCard from './VideoCard';
+
 interface VideoItem {
   src: string;
   label: string;
@@ -21,8 +25,23 @@ export default function VideoGallerySection({
   carouselClass,
   items,
 }: VideoGallerySectionProps) {
+  const [sectionActive, setSectionActive] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    // Watches the whole section — flips sectionActive on/off as user scrolls
+    const observer = new IntersectionObserver(
+      ([entry]) => setSectionActive(entry.isIntersecting),
+      { threshold: 0.05 } // triggers when 5% of section enters/leaves viewport
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="cat-block" id={id} aria-label={ariaLabel}>
+    <section ref={sectionRef} className="cat-block" id={id} aria-label={ariaLabel}>
       <div className="cat-header">
         <h3 className="cat-title">{title}</h3>
         <span className="cat-count">{count}</span>
@@ -31,25 +50,11 @@ export default function VideoGallerySection({
       <div className={`carousel-wrap ${carouselClass}`} aria-label="Scrolling gallery">
         <div className="carousel-track" role="list">
           {items.map((item, i) => (
-            <div key={i} className={`gallery-card${item.cls ? ' ' + item.cls : ''}`} role="listitem">
-              <div className="card-img">
-                <video src={item.src} autoPlay loop muted playsInline />
-              </div>
-              <div className="card-overlay">
-                <span className="card-overlay-text">{item.label}</span>
-              </div>
-            </div>
+            <VideoCard key={i} src={item.src} label={item.label} cls={item.cls} sectionActive={sectionActive} />
           ))}
           {/* Duplicates for infinite scroll loop */}
           {items.map((item, i) => (
-            <div key={`dup-${i}`} className={`gallery-card${item.cls ? ' ' + item.cls : ''}`} aria-hidden="true">
-              <div className="card-img">
-                <video src={item.src} autoPlay loop muted playsInline />
-              </div>
-              <div className="card-overlay">
-                <span className="card-overlay-text">{item.label}</span>
-              </div>
-            </div>
+            <VideoCard key={`dup-${i}`} src={item.src} label={item.label} cls={item.cls} ariaHidden sectionActive={sectionActive} />
           ))}
         </div>
       </div>

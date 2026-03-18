@@ -7,6 +7,10 @@
 
 
 
+/* Override globals.css — scroll must never pause on this page */
+.carousel-wrap:hover .carousel-track { animation-play-state: running !important; }
+
+
 /* ─────────────────────────────────────────
    CAROUSEL — Card widths & speeds (video page)
 ───────────────────────────────────────── */

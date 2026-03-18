@@ -2,6 +2,7 @@ import './video.css';
 import type { Metadata } from 'next';
 import HeroSection from '@/components/HeroSection';
 import VideoGallerySection from '@/components/VideoGallerySection';
+import LazySection from '@/components/LazySection';
 
 export const metadata: Metadata = {
   title: 'Video Editing Portfolio — Drishyam Media',
@@ -15,49 +16,58 @@ const SECTIONS = [
     count: '8 videos',
     ariaLabel: 'Motion Graphics',
     carouselClass: 'motion-carousel',
-    items: Array.from({ length: 8 }, (_, i) => ({
-      src: `/assets/images/video/motion/motion-${i + 1}.mp4`,
-      label: `Motion Graphics ${i + 1}`,
-    })),
+    items: [
+      { src: '/video/motion-1.mp4', label: 'Motion Graphics 1' },
+      { src: '/video/motion-2.mp4', label: 'Motion Graphics 2' },
+      { src: '/video/motion-3.mp4', label: 'Motion Graphics 3' },
+      { src: '/video/motion-4.mp4', label: 'Motion Graphics 4' },
+      { src: '/video/motion-5.mp4', label: 'Motion Graphics 5' },
+      { src: '/video/motion-6.mp4', label: 'Motion Graphics 6' },
+      { src: '/video/motion-7.mp4', label: 'Motion Graphics 7' },
+      { src: '/video/motion-8.mp4', label: 'Motion Graphics 8' },
+    ],
   },
   {
     id: 'events',
     title: 'Event Edits',
-    count: '8 videos',
+    count: '6 videos',
     ariaLabel: 'Event Edits',
     carouselClass: 'event-carousel',
     items: [
-      { src: '/assets/images/video/events/event-1.mp4', label: 'Event Edit 1', cls: 'card-landscape' },
-      { src: '/assets/images/video/events/event-2.mp4', label: 'Event Edit 2', cls: 'card-portrait'  },
-      { src: '/assets/images/video/events/event-3.mp4', label: 'Event Edit 3', cls: 'card-portrait'  },
-      { src: '/assets/images/video/events/event-4.mp4', label: 'Event Edit 4', cls: 'card-landscape' },
-      { src: '/assets/images/video/events/event-5.mp4', label: 'Event Edit 5', cls: 'card-portrait'  },
-      { src: '/assets/images/video/events/event-6.mp4', label: 'Event Edit 6', cls: 'card-landscape' },
-      { src: '/assets/images/video/events/event-7.mp4', label: 'Event Edit 7', cls: 'card-portrait'  },
-      { src: '/assets/images/video/events/event-8.mp4', label: 'Event Edit 8', cls: 'card-landscape' },
+      { src: '/video/event-1.mp4',  label: 'Event Edit 1', cls: 'card-landscape' },
+      { src: '/video/event-2.mp4',  label: 'Event Edit 2', cls: 'card-portrait'  },
+      { src: '/video/event-3.mp4',  label: 'Event Edit 3', cls: 'card-portrait'  },
+      { src: '/video/eventv-1.mp4', label: 'Event Edit 4', cls: 'card-landscape' },
+      { src: '/video/eventv-2.mp4', label: 'Event Edit 5', cls: 'card-portrait'  },
+      { src: '/video/eventv-3.mp4', label: 'Event Edit 6', cls: 'card-landscape' },
     ],
   },
   {
     id: 'speedramp',
     title: 'SpeedRamp Edits',
-    count: '8 videos',
+    count: '5 videos',
     ariaLabel: 'SpeedRamp Edits',
     carouselClass: 'speedramp-carousel',
-    items: Array.from({ length: 8 }, (_, i) => ({
-      src: `/assets/images/video/speedramp/speedramp-${i + 1}.mp4`,
-      label: `SpeedRamp Edit ${i + 1}`,
-    })),
+    items: [
+      { src: '/video/speedramp-1.mp4', label: 'SpeedRamp Edit 1' },
+      { src: '/video/speedramp-2.mp4', label: 'SpeedRamp Edit 2' },
+      { src: '/video/speedramp-3.mp4', label: 'SpeedRamp Edit 3' },
+      { src: '/video/speedramp-4.mp4', label: 'SpeedRamp Edit 4' },
+      { src: '/video/speedramp-5.mp4', label: 'SpeedRamp Edit 5' },
+    ],
   },
   {
     id: 'longformat',
     title: 'Long Format Edits',
-    count: '8 videos',
+    count: '4 videos',
     ariaLabel: 'Long Format Edits',
     carouselClass: 'longformat-carousel',
-    items: Array.from({ length: 8 }, (_, i) => ({
-      src: `/assets/images/video/longformat/longformat-${i + 1}.mp4`,
-      label: `Long Format Edit ${i + 1}`,
-    })),
+    items: [
+      { src: '/video/long-1.mp4', label: 'Long Format Edit 1' },
+      { src: '/video/long-5.mp4', label: 'Long Format Edit 2' },
+      { src: '/video/long-6.mp4', label: 'Long Format Edit 3' },
+      { src: '/video/long-7.mp4', label: 'Long Format Edit 4' },
+    ],
   },
   {
     id: 'animation',
@@ -65,10 +75,16 @@ const SECTIONS = [
     count: '8 videos',
     ariaLabel: 'Animation Videos',
     carouselClass: 'animation-carousel',
-    items: Array.from({ length: 8 }, (_, i) => ({
-      src: `/assets/images/video/animation/animation-${i + 1}.mp4`,
-      label: `Animation Video ${i + 1}`,
-    })),
+    items: [
+      { src: '/video/talking-1.mp4', label: 'Animation Video 1' },
+      { src: '/video/talking-2.mp4', label: 'Animation Video 2' },
+      { src: '/video/talking-3.mp4', label: 'Animation Video 3' },
+      { src: '/video/talking-4.mp4', label: 'Animation Video 4' },
+      { src: '/video/talking-5.mp4', label: 'Animation Video 5' },
+      { src: '/video/talking-6.mp4', label: 'Animation Video 6' },
+      { src: '/video/talking-7.mp4', label: 'Animation Video 7' },
+      { src: '/video/talking-8.mp4', label: 'Animation Video 8' },
+    ],
   },
 ];
 
@@ -103,9 +119,15 @@ export default function VideoPage() {
           </p>
         </div>
 
-        {SECTIONS.map((section) => (
-          <VideoGallerySection key={section.id} {...section} />
-        ))}
+        {SECTIONS.map((section, i) =>
+          i === 0 ? (
+            <VideoGallerySection key={section.id} {...section} />
+          ) : (
+            <LazySection key={section.id}>
+              <VideoGallerySection {...section} />
+            </LazySection>
+          )
+        )}
 
       </main>
 

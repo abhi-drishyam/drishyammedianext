@@ -143,7 +143,7 @@
   /* FIX: promote to GPU layer for smoother animation */
   will-change: transform;
 }
-.card-strip:hover { animation-play-state: paused; }
+/* scroll continues uninterrupted on hover */
 
 @keyframes scrollStrip {
   from { transform: translateX(0); }
@@ -159,10 +159,13 @@
   overflow: hidden;
   background: var(--purple-mid);
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: default;
 }
-.card:hover { transform: scale(1.04) translateY(-4px); }
+.card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.6), 0 0 24px rgba(155,47,255,0.3);
+}
 
 /* FIX: use nth-child(8n+X) so duplicated Set B cards get the same gradient pattern */
 .card:nth-child(8n+1) { background: linear-gradient(160deg,#0d0a2e,#2a0a50); }
@@ -527,6 +530,10 @@
   background: rgba(255,255,255,0.09);
   border: 1px solid rgba(255,255,255,0.12);
   z-index: 1;
+}
+.wwf-img--loaded::before,
+.wwf-img--loaded::after {
+  display: none;
 }
 .wwf-card-inner {
   position: absolute;

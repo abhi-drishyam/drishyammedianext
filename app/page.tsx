@@ -2,6 +2,8 @@ import './index.css';
 import Link from 'next/link';
 import WebsiteShowcase from './WebsiteShowcase';
 import AtaTimeline from '@/components/AtaTimeline';
+import HeroVideoStrip from '@/components/HeroVideoStrip';
+import WwfTrack from '@/components/WwfTrack';
 
 export default function HomePage() {
   return (
@@ -27,28 +29,20 @@ export default function HomePage() {
             <Link href="/contact" className="hero-cta">Get Started</Link>
           </div>
 
-          <div className="card-strip-wrap" aria-hidden="true">
-            <div className="card-strip" id="strip">
-              {/* Set A */}
-              <div className="card"><div className="card-inner"></div><div className="card-label">Alex Rivera</div></div>
-              <div className="card"><div className="card-inner"></div><div className="card-label">Studio Noir</div></div>
-              <div className="card"><div className="card-inner"></div><div className="card-label">Dr. Maya</div></div>
-              <div className="card"><div className="card-inner"></div><div className="card-label">Lena Chen</div></div>
-              <div className="card"><div className="card-inner"></div><div className="card-label">Bold Collective</div></div>
-              <div className="card"><div className="card-inner"></div><div className="card-label">Marcus Law</div></div>
-              <div className="card"><div className="card-inner"></div><div className="card-label">Craft &amp; Co.</div></div>
-              <div className="card"><div className="card-inner"></div><div className="card-label">Sofia Park</div></div>
-              {/* Set B (seamless duplicate) */}
-              <div className="card" aria-hidden="true"><div className="card-inner"></div><div className="card-label">Alex Rivera</div></div>
-              <div className="card" aria-hidden="true"><div className="card-inner"></div><div className="card-label">Studio Noir</div></div>
-              <div className="card" aria-hidden="true"><div className="card-inner"></div><div className="card-label">Dr. Maya</div></div>
-              <div className="card" aria-hidden="true"><div className="card-inner"></div><div className="card-label">Lena Chen</div></div>
-              <div className="card" aria-hidden="true"><div className="card-inner"></div><div className="card-label">Bold Collective</div></div>
-              <div className="card" aria-hidden="true"><div className="card-inner"></div><div className="card-label">Marcus Law</div></div>
-              <div className="card" aria-hidden="true"><div className="card-inner"></div><div className="card-label">Craft &amp; Co.</div></div>
-              <div className="card" aria-hidden="true"><div className="card-inner"></div><div className="card-label">Sofia Park</div></div>
-            </div>
-          </div>
+          <HeroVideoStrip videos={[
+            '/video/talking-1.mp4',
+            '/video/motion-1.mp4',
+            '/video/talking-2.mp4',
+            '/video/motion-2.mp4',
+            '/video/talking-3.mp4',
+            '/video/speedramp-2.mp4',
+            '/video/motion-3.mp4',
+            '/video/talking-4.mp4',
+            '/video/talking-5.mp4',
+            '/video/motion-4.mp4',
+            '/video/talking-6.mp4',
+            '/video/speedramp-3.mp4',
+          ]} />
 
         </div>{/* end .hero-wrap */}
 
@@ -69,32 +63,18 @@ export default function HomePage() {
 
         <h2 className="wwf-title">We&apos;ve Worked <span className="wwf-grad">With</span></h2>
 
-        <div className="wwf-track-wrap" aria-hidden="true">
-          <div className="wwf-track">
-            {/* SET A */}
-            <div className="wwf-card" style={{ ['--rot' as any]: '-6deg', ['--img' as any]: 'linear-gradient(160deg,#0d0a2e,#2a0a50)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Arjun Mehta</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '5deg', ['--img' as any]: 'linear-gradient(160deg,#1a0520,#4a0a3a)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Priya Kapoor</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '-4deg', ['--img' as any]: 'linear-gradient(160deg,#200010,#500020)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Rohan Sharma</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '7deg', ['--img' as any]: 'linear-gradient(160deg,#100020,#380040)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Sneha Iyer</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '-5deg', ['--img' as any]: 'linear-gradient(160deg,#280010,#500018)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Vikram Nair</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '4deg', ['--img' as any]: 'linear-gradient(160deg,#0a0820,#2a1060)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Ananya Rao</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '-7deg', ['--img' as any]: 'linear-gradient(160deg,#1e0010,#480020)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Karan Malhotra</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '6deg', ['--img' as any]: 'linear-gradient(160deg,#0d0030,#300050)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Divya Singh</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '-3deg', ['--img' as any]: 'linear-gradient(160deg,#200018,#4a0030)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Rahul Verma</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '5deg', ['--img' as any]: 'linear-gradient(160deg,#140028,#3a0048)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Meera Joshi</span></div>
-            {/* SET B (seamless duplicate) */}
-            <div className="wwf-card" style={{ ['--rot' as any]: '-6deg', ['--img' as any]: 'linear-gradient(160deg,#0d0a2e,#2a0a50)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Arjun Mehta</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '5deg', ['--img' as any]: 'linear-gradient(160deg,#1a0520,#4a0a3a)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Priya Kapoor</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '-4deg', ['--img' as any]: 'linear-gradient(160deg,#200010,#500020)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Rohan Sharma</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '7deg', ['--img' as any]: 'linear-gradient(160deg,#100020,#380040)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Sneha Iyer</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '-5deg', ['--img' as any]: 'linear-gradient(160deg,#280010,#500018)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Vikram Nair</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '4deg', ['--img' as any]: 'linear-gradient(160deg,#0a0820,#2a1060)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Ananya Rao</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '-7deg', ['--img' as any]: 'linear-gradient(160deg,#1e0010,#480020)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Karan Malhotra</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '6deg', ['--img' as any]: 'linear-gradient(160deg,#0d0030,#300050)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Divya Singh</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '-3deg', ['--img' as any]: 'linear-gradient(160deg,#200018,#4a0030)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Rahul Verma</span></div>
-            <div className="wwf-card" style={{ ['--rot' as any]: '5deg', ['--img' as any]: 'linear-gradient(160deg,#140028,#3a0048)' }}><div className="wwf-img"><div className="wwf-card-inner"></div></div><span className="wwf-card-name">Meera Joshi</span></div>
-          </div>
-        </div>
+        <WwfTrack clients={[
+          { name: 'Arjun Mehta',   rot: '-6deg', img: '/image/homepage/client-1.webp' },
+          { name: 'Priya Kapoor',  rot: '5deg',  img: '/image/homepage/client-2.webp' },
+          { name: 'Rohan Sharma',  rot: '-4deg', img: '/image/homepage/client-3.webp' },
+          { name: 'Sneha Iyer',    rot: '7deg',  img: '/image/homepage/client-4.webp' },
+          { name: 'Vikram Nair',   rot: '-5deg', img: '/image/homepage/client-5.webp' },
+          { name: 'Ananya Rao',    rot: '4deg',  img: '/image/homepage/client-6.webp' },
+          { name: 'Karan Malhotra',rot: '-7deg', img: '/image/homepage/client-7.webp' },
+          { name: 'Divya Singh',   rot: '6deg',  img: '/image/homepage/client-8.webp' },
+          { name: 'Rahul Verma',   rot: '-3deg', img: '/image/homepage/client-9.webp' },
+          { name: 'Meera Joshi',   rot: '5deg',  img: '/image/homepage/client-10.webp' },
+        ]} />
       </section>
 
 
