@@ -156,6 +156,14 @@ export default function NotFound() {
           border-color: rgba(255,255,255,0.28);
           transform: translateY(-1px);
         }
+
+        @media (max-width: 480px) {
+          .nf-content { padding: 0 16px; }
+          .nf-sub { margin-bottom: 32px; }
+          .nf-actions { flex-direction: column; width: 100%; }
+          .nf-btn-primary,
+          .nf-btn-ghost { width: 100%; justify-content: center; }
+        }
       `}</style>
     </div>
   );

@@ -27,6 +27,11 @@
 @media (max-width: 768px) {
   .about-hero { padding: 100px 24px 70px; }
 }
+@media (max-width: 480px) {
+  .about-hero { padding: 90px 16px 48px; }
+  .about-hero h1 { margin-bottom: 20px; }
+  .about-hero p { font-size: 15px; }
+}
 
 .vision-section {
   padding: 100px 48px;
@@ -74,6 +79,11 @@
   .vision-section { padding: 60px 24px; }
   .vision-container { grid-template-columns: 1fr; gap: 40px; }
   .vision-image { aspect-ratio: 16/12; }
+}
+@media (max-width: 480px) {
+  .vision-section { padding: 48px 16px; }
+  .vision-container { gap: 28px; }
+  .vision-content p { font-size: 15px; }
 }
 
 .journey-section {
@@ -139,6 +149,14 @@
 @media (max-width: 900px) {
   .journey-section { padding: 60px 24px; }
   .journey-container { grid-template-columns: 1fr; gap: 40px; }
+  .journey-image:hover { transform: none; }
+}
+@media (max-width: 480px) {
+  .journey-section { padding: 48px 16px; }
+  .journey-container { gap: 28px; }
+  .journey-content p { font-size: 15px; }
+  .journey-images { gap: 12px; }
+  .journey-image { border-radius: 14px; }
 }
 
 .bts-section { padding: 100px 48px; }
@@ -211,6 +229,13 @@
 @media (max-width: 768px) {
   .bts-section { padding: 60px 24px; }
   .bts-videos { grid-template-columns: 1fr; gap: 20px; }
+  .bts-video-card:hover { transform: none; }
+  .play-btn { width: 56px; height: 56px; }
+  .play-btn svg { width: 20px; height: 20px; }
+}
+@media (max-width: 480px) {
+  .bts-section { padding: 48px 16px; }
+  .bts-videos { gap: 14px; }
 }
 
 .team-section {
@@ -276,5 +301,17 @@
 }
 @media (max-width: 768px) {
   .team-section { padding: 60px 24px; }
-  .team-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 40px; }
+  .team-card:hover { transform: none; }
+  .team-info { padding: 16px; }
+  .team-name { font-size: 17px; }
+  .team-role { font-size: 13px; }
+}
+@media (max-width: 480px) {
+  .team-section { padding: 48px 16px; }
+  .team-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .team-photo { aspect-ratio: 3/4; }
+  .team-info { padding: 14px 12px; }
+  .team-name { font-size: 15px; }
+  .team-role { font-size: 12px; }
 }

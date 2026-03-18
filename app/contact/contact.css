@@ -27,6 +27,10 @@
 @media (max-width: 768px) {
   .contact-hero { padding: 80px 24px 60px; }
 }
+@media (max-width: 480px) {
+  .contact-hero { padding: 72px 16px 40px; }
+  .contact-hero p { font-size: 15px; }
+}
 
 .contact-section {
   padding: 80px 48px 120px;
@@ -196,6 +200,20 @@
   .contact-info { position: static; }
   .contact-form-wrapper { padding: 32px 24px; }
   .form-row { grid-template-columns: 1fr; gap: 24px; }
+  .contact-method:hover { transform: none; }
+}
+@media (max-width: 480px) {
+  .contact-section { padding: 48px 16px 64px; }
+  .contact-container { gap: 36px; }
+  .contact-info-text { font-size: 15px; margin-bottom: 32px; }
+  .contact-methods { gap: 12px; }
+  .contact-method { padding: 16px; border-radius: 14px; gap: 12px; }
+  .contact-method-icon { width: 42px; height: 42px; }
+  .contact-method-content p { font-size: 15px; }
+  .contact-form-wrapper { padding: 24px 18px; border-radius: 18px; }
+  .form-group input,
+  .form-group textarea { padding: 13px 14px; font-size: 16px; }
+  .form-submit { padding: 15px 32px; font-size: 15px; width: 100%; }
 }
 
 .locations-section {
@@ -270,5 +288,15 @@
 }
 @media (max-width: 768px) {
   .locations-section { padding: 60px 24px; }
-  .locations-grid { grid-template-columns: 1fr; gap: 24px; }
+  .locations-grid { grid-template-columns: 1fr; gap: 20px; }
+  .location-card:hover { transform: none; }
+  .location-map { height: 180px; }
+}
+@media (max-width: 480px) {
+  .locations-section { padding: 48px 16px; }
+  .locations-grid { gap: 14px; }
+  .location-card { border-radius: 16px; }
+  .location-info { padding: 18px; }
+  .location-name { font-size: 18px; }
+  .location-address { font-size: 13px; }
 }

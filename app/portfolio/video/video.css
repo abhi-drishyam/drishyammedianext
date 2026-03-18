@@ -173,8 +173,11 @@
 }
 @media (max-width: 640px) {
   .gallery-page { padding: 48px 0 64px; }
-  .cat-block { padding: 0 16px; margin-bottom: 60px; }
-  .cat-title { font-size: 22px; }
+  .cat-block { padding: 0 16px; margin-bottom: 48px; }
+  .cat-title { font-size: 20px; }
+  .gallery-heading-wrap { margin: 0 16px 40px; }
+  .gallery-heading-title { font-size: clamp(26px, 6vw, 40px); }
+  .gallery-heading-desc { font-size: 14px; }
   .motion-carousel .gallery-card,
   .speedramp-carousel .gallery-card,
   .longformat-carousel .gallery-card,

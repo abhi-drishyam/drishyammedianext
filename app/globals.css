@@ -295,7 +295,12 @@ html, body {
 @media (max-width: 900px) {
   .site-nav { padding: 16px 24px; }
   .nav-tabs { display: none; }
+  .nav-right { display: none; }
   .nav-hamburger { display: flex; }
+}
+@media (max-width: 400px) {
+  .site-nav { padding: 14px 16px; }
+  .nav-logo { font-size: 24px; }
 }
 
 
@@ -557,9 +562,12 @@ html, body {
   .footer-section .cta-strip::after { left: 32px; right: 32px; }
 }
 @media (max-width: 560px) {
-  .cta-strip-actions { flex-direction: column; }
-  .footer-section .cta-strip { padding: 48px 24px 40px; }
-  .footer-section .cta-strip::after { left: 24px; right: 24px; }
+  .cta-strip { padding: 60px 20px 80px; }
+  .cta-strip-actions { flex-direction: column; width: 100%; }
+  .cta-strip-actions .btn-primary,
+  .cta-strip-actions .btn-secondary { width: 100%; justify-content: center; }
+  .footer-section .cta-strip { padding: 48px 20px 40px; }
+  .footer-section .cta-strip::after { left: 20px; right: 20px; }
 }
 
 
@@ -922,9 +930,24 @@ html, body {
 }
 
 /* Shared responsive: page-hero + filter-bar + anchor-pills */
+@media (max-width: 768px) {
+  .gallery-page { padding: 60px 20px 80px; }
+  .cat-header { gap: 12px; margin-bottom: 24px; }
+  .gallery-card:hover { transform: none; }
+  .gallery-card:active { transform: scale(0.98); }
+  .card-overlay { opacity: 1; }
+}
 @media (max-width: 640px) {
   .page-hero { padding: 120px 16px 20px; }
   .filter-bar, .anchor-pills { gap: 8px; }
+  .filter-pill { font-size: 12px; padding: 8px 14px; }
+  .anchor-pill { font-size: 12px; padding: 7px 14px; }
+  .section-header { margin: 0 auto 40px; }
+  .section-header h2 { margin-bottom: 12px; }
+}
+@media (max-width: 400px) {
+  .page-hero { padding: 100px 14px 16px; }
+  .gallery-page { padding: 48px 14px 60px; }
 }
 
 
@@ -989,4 +1012,18 @@ html, body {
   display: flex; align-items: center; gap: 10px;
   padding-top: 16px;
   border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ── Mobile touch-friendly adjustments ── */
+@media (max-width: 768px) {
+  .tm-quote-card:hover { transform: none; }
+  .btn-primary { padding: 16px 32px; font-size: 15px; width: 100%; justify-content: center; }
+  .btn-secondary { padding: 15px 28px; font-size: 14px; width: 100%; justify-content: center; }
+  .btn-outline { padding: 13px 24px; font-size: 14px; }
+  .btn-solid { padding: 13px 24px; font-size: 14px; }
+  .btn-book { padding: 11px 22px; font-size: 13px; }
+}
+@media (max-width: 560px) {
+  .footer-nav-col a { font-size: 14px; padding: 4px 0; min-height: 44px; display: flex; align-items: center; }
+  .footer-social-btn { width: 44px; height: 44px; }
 }

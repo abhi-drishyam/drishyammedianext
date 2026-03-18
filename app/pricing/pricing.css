@@ -113,6 +113,11 @@
 }
 
 @media (max-width: 768px) { .svc-section { padding: 70px 24px 80px; } }
+@media (max-width: 480px) {
+  .svc-section { padding: 56px 16px 64px; }
+  .svc-header { margin-bottom: 40px; }
+  .svc-header p br { display: none; }
+}
 
 /* ─────────────────────────────────────────
    PRICING TABLE  (comparison grid)
@@ -286,6 +291,11 @@
   .pt-row { gap: 4px; }
   .pt-row-cell { justify-content: flex-start; padding: 8px 16px; }
   .pt-cta-spacer { display: none; }
+  .pt-plan-card:hover { transform: none; }
+}
+@media (max-width: 480px) {
+  .pt-plan-card { padding: 22px 18px 20px; border-radius: 14px; }
+  .pt-note { padding: 16px 18px; font-size: 12px; }
 }
 
 /* ─────────────────────────────────────────
@@ -372,6 +382,8 @@
 
 @media (max-width: 640px) {
   .shoot-cards { grid-template-columns: 1fr; max-width: 420px; }
+  .shoot-card:hover { transform: none; }
+  .shoot-card-inner { padding: 28px 24px; }
 }
 
 /* ─────────────────────────────────────────
@@ -513,6 +525,8 @@
 
 @media (max-width: 720px) {
   .webdev-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .wd-card:hover { transform: none; }
+  .wd-card { padding: 28px 22px; }
 }
 
 /* ─────────────────────────────────────────
@@ -695,4 +709,7 @@
 
 @media (max-width: 768px) {
   .special-grid { grid-template-columns: 1fr; max-width: 480px; }
+  .sp-card:hover { transform: none; }
+  .sp-card-inner { padding: 32px 24px 32px; }
+  .sp-clarity { padding: 18px 20px; }
 }

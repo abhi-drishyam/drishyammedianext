@@ -43,6 +43,12 @@
   .post-hero { padding: 90px 20px 48px; }
   .post-cover { margin: 32px 20px 0; border-radius: 14px; }
 }
+@media (max-width: 480px) {
+  .post-hero { padding: 80px 16px 36px; }
+  .post-hero h1 { margin-bottom: 20px; }
+  .post-meta { gap: 12px; font-size: 13px; }
+  .post-cover { margin: 24px 16px 0; border-radius: 12px; }
+}
 
 .post-body {
   background: var(--bg-deep, #060510);
@@ -136,6 +142,14 @@
   .post-content h2 { margin-top: 40px; }
   .post-content blockquote { padding: 18px 20px; }
 }
+@media (max-width: 480px) {
+  .post-body { padding: 36px 16px 48px; }
+  .post-content p { font-size: 15px; line-height: 1.8; }
+  .post-content li { font-size: 15px; }
+  .post-content blockquote { padding: 16px; margin: 24px 0; }
+  .post-content blockquote p { font-size: 15px; }
+  .post-content hr { margin: 32px 0; }
+}
 
 .related-posts {
   background: var(--bg-deep, #060510);
@@ -181,5 +195,11 @@
 }
 @media (max-width: 640px) {
   .related-posts { padding: 0 20px 64px; }
-  .related-grid { grid-template-columns: 1fr; }
+  .related-grid { grid-template-columns: 1fr; gap: 12px; }
+  .related-card { padding: 22px 18px; border-radius: 14px; }
+  .related-card:hover { transform: none; }
+}
+@media (max-width: 480px) {
+  .related-posts { padding: 0 16px 48px; }
+  .related-posts-inner { padding-top: 48px; }
 }
