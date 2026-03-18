@@ -1075,7 +1075,8 @@
 @media (max-width: 768px) {
   .ws-section { padding: 56px 20px; }
   .ws-sub br { display: none; }
-  .ws-frame-wrap { flex-direction: column; }
+  .ws-frame-wrap { flex-direction: column; align-items: center; }
+  .ws-browser { width: 100%; max-width: 600px; align-self: center; }
   .ws-thumbs { flex-direction: row; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; gap: 8px; }
   .ws-thumbs::-webkit-scrollbar { display: none; }
   .ws-thumb { flex-shrink: 0; width: 100px; }
