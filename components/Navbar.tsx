@@ -234,7 +234,7 @@ export default function Navbar() {
           ×
         </button>
         <Link href="/" onClick={() => setDrawerOpen(false)}>Home</Link>
-        <span className="drawer-group-label" style={{ fontSize: 22, fontWeight: 800, padding: '12px 24px', color: 'rgba(255,255,255,0.70)' }}>Portfolio</span>
+        <span className="drawer-group-label">Portfolio</span>
         {portfolioItems.map((item) => (
           <Link key={item.href} href={item.href} className="drawer-sub-item" onClick={() => setDrawerOpen(false)}>
             {item.label}
@@ -242,7 +242,7 @@ export default function Navbar() {
         ))}
         <Link href="/about" onClick={() => setDrawerOpen(false)}>About</Link>
         <Link href="/reviews" onClick={() => setDrawerOpen(false)}>Reviews</Link>
-        <span className="drawer-group-label" style={{ fontSize: 22, fontWeight: 800, padding: '12px 24px', color: 'rgba(255,255,255,0.70)' }}>Pricing</span>
+        <span className="drawer-group-label">Pricing</span>
         {pricingItems.map((item) => (
           <Link key={item.href} href={item.href} className="drawer-sub-item" onClick={() => setDrawerOpen(false)}>
             {item.label}
