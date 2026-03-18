@@ -21,11 +21,11 @@ const clientPhotos = [
 ];
 
 const videoTestimonials = [
-  { featured: true, quote: '"These guys don\'t mess around. We saw results from month one. If you want to grow your business, look no further."', author: '— Scott Henry, Content Creator' },
-  { featured: false, quote: '"Working with Drishyam was a game-changer. Their designs gave our brand a fresh identity."', author: '— Rahul Sharma, Content Creator' },
-  { featured: false, quote: '"We design content that gets noticed, attracts followers, and builds your online presence."', author: '— Thomas, Content Creator' },
-  { featured: false, quote: '"The ROI has been incredible. Our engagement tripled in just 3 months."', author: '— Simon, Marketing Director' },
-  { featured: false, quote: '"Professional, creative, and always on time. Exactly what we needed."', author: '— Priya Patel, Small Business Owner' },
+  { featured: true,  initials: 'SH', accent: '#9b2fff', avatarGrad: 'linear-gradient(135deg,#4b3fff,#9b2fff)', quote: '"These guys don\'t mess around. We saw results from month one. If you want to grow your business, look no further."', author: 'Scott Henry',  role: 'Content Creator'      },
+  { featured: false, initials: 'RS', accent: '#d4007a', avatarGrad: 'linear-gradient(135deg,#9b2fff,#d4007a)', quote: '"Working with Drishyam was a game-changer. Their designs gave our brand a fresh identity."',                          author: 'Rahul Sharma', role: 'Content Creator'      },
+  { featured: false, initials: 'TH', accent: '#4b3fff', avatarGrad: 'linear-gradient(135deg,#d4007a,#ff3c2f)', quote: '"We design content that gets noticed, attracts followers, and builds your online presence."',                           author: 'Thomas',       role: 'Content Creator'      },
+  { featured: false, initials: 'SM', accent: '#ff3c2f', avatarGrad: 'linear-gradient(135deg,#ff3c2f,#9b2fff)', quote: '"The ROI has been incredible. Our engagement tripled in just 3 months."',                                              author: 'Simon',        role: 'Marketing Director'   },
+  { featured: false, initials: 'PP', accent: '#9b2fff', avatarGrad: 'linear-gradient(135deg,#4b3fff,#d4007a)', quote: '"Professional, creative, and always on time. Exactly what we needed."',                                               author: 'Priya Patel',  role: 'Small Business Owner' },
 ];
 
 const textTestimonials = [
@@ -90,14 +90,21 @@ export default function ReviewsPage() {
         </div>
         <div className="video-grid">
           {videoTestimonials.map((v, i) => (
-            <div key={i} className={`video-card${v.featured ? ' featured' : ''}`}>
+            <div key={i} className={`video-card${v.featured ? ' featured' : ''}`} style={{ ['--accent' as any]: v.accent }}>
               <div className="video-placeholder">
-                <div className="play-btn">
-                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                </div>
-                <div className="video-quote">
-                  {v.quote}
-                  <div className="video-author">{v.author}</div>
+                <div className="video-bg-glow" aria-hidden="true" />
+                <button className="play-btn" aria-label={`Play testimonial from ${v.author}`}>
+                  <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z" /></svg>
+                </button>
+                <div className="video-info">
+                  <p className="video-quote">{v.quote}</p>
+                  <div className="video-author">
+                    <div className="video-avatar" style={{ background: v.avatarGrad }}>{v.initials}</div>
+                    <div>
+                      <div className="video-author-name">{v.author}</div>
+                      <div className="video-author-role">{v.role}</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
