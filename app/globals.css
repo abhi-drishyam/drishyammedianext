@@ -615,6 +615,10 @@ html, body {
   .cta-strip-actions .btn-secondary { width: 100%; justify-content: center; }
   .footer-section .cta-strip { padding: 36px 20px 32px; }
   .footer-section .cta-strip::after { left: 20px; right: 20px; }
+  /* Keep footer CTA buttons side-by-side on mobile */
+  .footer-section .cta-strip-actions { flex-direction: row; width: auto; gap: 10px; }
+  .footer-section .cta-strip-actions .btn-primary,
+  .footer-section .cta-strip-actions .btn-secondary { width: auto; font-size: 13px; padding: 12px 18px; }
 }
 
 
