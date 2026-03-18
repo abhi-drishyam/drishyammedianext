@@ -201,22 +201,16 @@
 
 /* ── RESPONSIVE HERO ── */
 @media (max-width: 720px) {
-  .hero-wrap { min-height: 100vh; }
-  .hero-content { flex: 1; justify-content: center; padding: 24px 24px 0; }
-  .card { width: 120px; }
+  .hero-content { padding-top: 48px; }
+  .card { width: 130px; }
   .card:hover { transform: none; }
-  .card-strip-wrap { margin-top: 24px; }
 }
 @media (max-width: 480px) {
-  .hero-content { padding: 16px 16px 0; }
-  .hero-sub { font-size: 14px; margin-top: 14px; }
-  .hero-cta { margin-top: 20px; padding: 13px 32px; font-size: 14px; }
-  .card-strip-wrap { margin-top: 8px; }
-  .card { width: 95px; }
-  .card-strip { gap: 8px; padding: 6px 0 10px; }
-}
-@media (max-width: 390px) {
-  .card { width: 82px; }
+  .hero-content { padding: 36px 16px 0; }
+  .hero-sub { font-size: 14px; margin-top: 16px; }
+  .hero-cta { margin-top: 24px; padding: 13px 32px; font-size: 14px; }
+  .card { width: 110px; }
+  .card-strip { gap: 10px; }
 }
 
 
