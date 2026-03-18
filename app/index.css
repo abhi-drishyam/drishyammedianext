@@ -201,11 +201,13 @@
 
 /* ── RESPONSIVE HERO ── */
 @media (max-width: 720px) {
+  .hero-wrap { padding-bottom: 20px; }
   .hero-content { padding-top: 48px; }
   .card { width: 130px; }
   .card:hover { transform: none; }
 }
 @media (max-width: 480px) {
+  .hero-wrap { padding-bottom: 16px; }
   .hero-content { padding: 36px 16px 0; }
   .hero-sub { font-size: 14px; margin-top: 16px; }
   .hero-cta { margin-top: 24px; padding: 13px 32px; font-size: 14px; }
