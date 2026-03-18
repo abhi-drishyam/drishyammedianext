@@ -211,7 +211,7 @@ export default function Navbar() {
           id="hamburgerBtn"
           aria-label="Toggle navigation menu"
           aria-expanded={drawerOpen}
-          onClick={() => setDrawerOpen(true)}
+          onClick={() => setDrawerOpen((prev) => !prev)}
         >
           <span />
           <span />
