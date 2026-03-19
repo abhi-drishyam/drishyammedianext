@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 
 const videoStyle: React.CSSProperties = {
   position: 'absolute',
@@ -8,23 +10,39 @@ const videoStyle: React.CSSProperties = {
   height: '100%',
   objectFit: 'cover',
   borderRadius: 'inherit',
+  transition: 'opacity 0.7s ease',
 };
+
+function VideoCard({ src }: { src: string }) {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <div className="card">
+      <div className={`card-skeleton${loaded ? ' card-skeleton--hide' : ''}`} aria-hidden="true" />
+      <video
+        src={src}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="none"
+        style={{ ...videoStyle, opacity: loaded ? 1 : 0 }}
+        onCanPlay={() => setLoaded(true)}
+      />
+      <div className="card-label" />
+    </div>
+  );
+}
 
 export default function HeroVideoStrip({ videos }: { videos: string[] }) {
   return (
     <div className="card-strip-wrap" aria-hidden="true">
       <div className="card-strip" id="strip">
         {videos.map((src) => (
-          <div key={src} className="card">
-            <video src={src} autoPlay loop muted playsInline preload="none" style={videoStyle} />
-            <div className="card-label" />
-          </div>
+          <VideoCard key={src} src={src} />
         ))}
         {videos.map((src) => (
-          <div key={`dup-${src}`} className="card" aria-hidden="true">
-            <video src={src} autoPlay loop muted playsInline preload="none" style={videoStyle} />
-            <div className="card-label" />
-          </div>
+          <VideoCard key={`dup-${src}`} src={src} />
         ))}
       </div>
     </div>

@@ -90,10 +90,10 @@ export default function HomePage() {
         titleHighlight2="Acquisition"
         subtitle="We started by helping creators go viral. Now, we help brands and experts grow predictably through systems that combine authentic storytelling, branding, and automation."
         steps={[
-          { name: 'Capture',    desc: 'One studio session. Months of content. We extract your story in just a few hours.' },
-          { name: 'Create',     desc: 'Our team transforms raw footage into scroll-stopping, branded short-form content.' },
-          { name: 'Distribute', desc: 'Strategic posting across platforms with optimized timing and hashtag strategies.' },
-          { name: 'Convert',    desc: 'Automated DM systems turn engaged viewers into qualified leads and bookings.' },
+          { name: 'Plan',    desc: 'We find what works in your niche and build a content strategy that actually grows.' },
+          { name: 'Shoot',     desc: 'One shoot. Multiple high-quality videos. No wasted effort.' },
+          { name: 'Edit', desc: 'Fast, sharp edits designed to stop scrolling and keep people watching.' },
+          { name: 'Grow',    desc: 'We guide posting, hooks, and systems that turn views into leads and sales.' },
         ]}
       />
 

@@ -19,8 +19,8 @@ export default function Footer() {
         <div className="footer-brand">
           <Link href="/" className="footer-logo-mark">Drishyam<sup>®</sup></Link>
           <p className="footer-tagline">
-            Crafting designs &amp; strategies<br />
-            that help your brand shine online.
+            Content is easy. Growth is not.<br />
+            We help you do both.
           </p>
           <div className="footer-socials">
             {/* WhatsApp */}
