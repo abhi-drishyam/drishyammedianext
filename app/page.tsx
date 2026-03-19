@@ -73,9 +73,9 @@ export default function HomePage() {
           { name: 'SD Rotract',      rot: '-7deg', img: '/image/homepage/client-13.webp' },
           { name: 'Arnmaan Bedil',   rot: '3deg',  img: '/image/homepage/client-14.webp' },
           { name: 'Falcon',          rot: '-5deg', img: '/image/homepage/client-15.webp' },
-          { name: 'Nisha',           rot: '7deg',  img: '/image/homepage/client-16.webp' },
+          { name: 'Aishwarya Majmudar',           rot: '7deg',  img: '/image/homepage/client-16.webp' },
           { name: 'RJ Shanky',       rot: '-3deg', img: '/image/homepage/client-17.webp' },
-          { name: 'DMS',             rot: '5deg',  img: '/image/homepage/client-18.webp' },
+          { name: 'Dominoz',             rot: '5deg',  img: '/image/homepage/client-18.webp' },
         ]} />
       </section>
 
@@ -83,7 +83,19 @@ export default function HomePage() {
       {/* ══════════════════════════════════════
           ATTENTION TO ACQUISITION
       ══════════════════════════════════════ */}
-      <AtaTimeline />
+      <AtaTimeline
+        titlePrefix="From "
+        titleHighlight1="Attention"
+        titleConnector=" To "
+        titleHighlight2="Acquisition"
+        subtitle="We started by helping creators go viral. Now, we help brands and experts grow predictably through systems that combine authentic storytelling, branding, and automation."
+        steps={[
+          { name: 'Capture',    desc: 'One studio session. Months of content. We extract your story in just a few hours.' },
+          { name: 'Create',     desc: 'Our team transforms raw footage into scroll-stopping, branded short-form content.' },
+          { name: 'Distribute', desc: 'Strategic posting across platforms with optimized timing and hashtag strategies.' },
+          { name: 'Convert',    desc: 'Automated DM systems turn engaged viewers into qualified leads and bookings.' },
+        ]}
+      />
 
 
       {/* ══════════════════════════════════════

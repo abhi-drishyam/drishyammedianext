@@ -6,7 +6,42 @@ const STEP_DURATION = 1800;
 const TOTAL_STEPS = 4;
 const LINE_FILLS = ['8%', '36%', '64%', '97%'];
 
-export default function AtaTimeline() {
+interface AtaStep {
+  name: string;
+  desc: string;
+}
+
+interface AtaTimelineProps {
+  titlePrefix?:    string;  // default: "From "
+  titleHighlight1?: string; // default: "Attention"
+  titleConnector?: string;  // default: " To "
+  titleHighlight2?: string; // default: "Acquisition"
+  subtitle?:       string;
+  steps?: [AtaStep, AtaStep, AtaStep, AtaStep];
+}
+
+const DEFAULT_STEPS: [AtaStep, AtaStep, AtaStep, AtaStep] = [
+  { name: 'Capture',    desc: 'One studio session. Months of content. We extract your story in just a few hours.' },
+  { name: 'Create',     desc: 'Our team transforms raw footage into scroll-stopping, branded short-form content.' },
+  { name: 'Distribute', desc: 'Strategic posting across platforms with optimized timing and hashtag strategies.' },
+  { name: 'Convert',    desc: 'Automated DM systems turn engaged viewers into qualified leads and bookings.' },
+];
+
+const STEP_ICONS = [
+  <svg key="capture"    width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M10 9l5 3-5 3V9z"/></svg>,
+  <svg key="create"     width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/><path d="M15 5l3 3"/></svg>,
+  <svg key="distribute" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5l-1-4 7.5-7.5 4 4-7.5 7.5-3.5-1z"/><path d="M14 6l4 4"/><circle cx="19" cy="5" r="2"/></svg>,
+  <svg key="convert"    width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>,
+];
+
+export default function AtaTimeline({
+  titlePrefix    = 'From ',
+  titleHighlight1 = 'Attention',
+  titleConnector = ' To ',
+  titleHighlight2 = 'Acquisition',
+  subtitle       = 'We started by helping creators go viral. Now, we help brands and experts grow predictably through systems that combine authentic storytelling, branding, and automation.',
+  steps          = DEFAULT_STEPS,
+}: AtaTimelineProps) {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -104,13 +139,12 @@ export default function AtaTimeline() {
     <section className="ata-section" aria-label="Our Process" ref={sectionRef}>
       <div className="ata-header">
         <h2 className="ata-title">
-          <span className="ata-white">From </span><span className="ata-pink">Attention</span><span className="ata-white"> To </span><span className="ata-purple">Acquisition</span>
+          <span className="ata-white">{titlePrefix}</span>
+          <span className="ata-pink">{titleHighlight1}</span>
+          <span className="ata-white">{titleConnector}</span>
+          <span className="ata-purple">{titleHighlight2}</span>
         </h2>
-        <p className="ata-sub">
-          We started by helping creators go viral. Now, we help brands and experts
-          grow predictably through systems that combine authentic storytelling,
-          branding, and automation.
-        </p>
+        <p className="ata-sub">{subtitle}</p>
       </div>
 
       <div className="timeline-wrap" aria-hidden="true">
@@ -126,41 +160,16 @@ export default function AtaTimeline() {
       </div>
 
       <div className="step-cards" role="list">
-        <div className="step-card" data-step="0" role="listitem">
-          <div className="step-icon-wrap" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M10 9l5 3-5 3V9z"/></svg>
+        {steps.map((step, i) => (
+          <div className="step-card" data-step={i} role="listitem" key={i}>
+            <div className="step-icon-wrap" aria-hidden="true">
+              {STEP_ICONS[i]}
+            </div>
+            <h3 className="step-name">{step.name}</h3>
+            <p className="step-desc">{step.desc}</p>
+            <div className="card-progress" aria-hidden="true"><div className="card-progress-fill"></div></div>
           </div>
-          <h3 className="step-name">Capture</h3>
-          <p className="step-desc">One studio session. Months of content. We extract your story in just a few hours.</p>
-          <div className="card-progress" aria-hidden="true"><div className="card-progress-fill"></div></div>
-        </div>
-
-        <div className="step-card" data-step="1" role="listitem">
-          <div className="step-icon-wrap" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/><path d="M15 5l3 3"/></svg>
-          </div>
-          <h3 className="step-name">Create</h3>
-          <p className="step-desc">Our team transforms raw footage into scroll-stopping, branded short-form content.</p>
-          <div className="card-progress" aria-hidden="true"><div className="card-progress-fill"></div></div>
-        </div>
-
-        <div className="step-card" data-step="2" role="listitem">
-          <div className="step-icon-wrap" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5l-1-4 7.5-7.5 4 4-7.5 7.5-3.5-1z"/><path d="M14 6l4 4"/><circle cx="19" cy="5" r="2"/></svg>
-          </div>
-          <h3 className="step-name">Distribute</h3>
-          <p className="step-desc">Strategic posting across platforms with optimized timing and hashtag strategies.</p>
-          <div className="card-progress" aria-hidden="true"><div className="card-progress-fill"></div></div>
-        </div>
-
-        <div className="step-card" data-step="3" role="listitem">
-          <div className="step-icon-wrap" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-          </div>
-          <h3 className="step-name">Convert</h3>
-          <p className="step-desc">Automated DM systems turn engaged viewers into qualified leads and bookings.</p>
-          <div className="card-progress" aria-hidden="true"><div className="card-progress-fill"></div></div>
-        </div>
+        ))}
       </div>
     </section>
   );
