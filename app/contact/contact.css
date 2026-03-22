@@ -198,8 +198,8 @@
   .contact-section { padding: 60px 24px 80px; }
   .contact-container { grid-template-columns: 1fr; gap: 48px; }
   .contact-info { position: static; }
-  .contact-form-wrapper { padding: 32px 24px; }
-  .form-row { grid-template-columns: 1fr; gap: 24px; }
+  .contact-form-wrapper { padding: 32px 24px; margin-top: 24px; }
+  .form-row { gap: 12px; }
   .contact-method:hover { transform: none; }
 }
 @media (max-width: 480px) {
@@ -210,10 +210,13 @@
   .contact-method { padding: 16px; border-radius: 14px; gap: 12px; }
   .contact-method-icon { width: 42px; height: 42px; }
   .contact-method-content p { font-size: 15px; }
-  .contact-form-wrapper { padding: 24px 18px; border-radius: 18px; }
+  .contact-form-wrapper { padding: 20px 14px; border-radius: 18px; }
+  .contact-form { gap: 16px; }
+  .form-row { gap: 10px; }
+  .form-group textarea { min-height: 100px; }
   .form-group input,
-  .form-group textarea { padding: 13px 14px; font-size: 16px; }
-  .form-submit { padding: 15px 32px; font-size: 15px; width: 100%; }
+  .form-group textarea { padding: 11px 12px; font-size: 15px; }
+  .form-submit { padding: 14px 24px; font-size: 15px; width: 100%; }
 }
 
 .locations-section {
@@ -288,15 +291,19 @@
 }
 @media (max-width: 768px) {
   .locations-section { padding: 60px 24px; }
-  .locations-grid { grid-template-columns: 1fr; gap: 20px; }
+  .locations-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .location-card:hover { transform: none; }
-  .location-map { height: 180px; }
+  .location-map { height: 140px; }
+  .location-info { padding: 14px; }
+  .location-name { font-size: 16px; }
+  .location-address { font-size: 12px; }
 }
 @media (max-width: 480px) {
   .locations-section { padding: 48px 16px; }
-  .locations-grid { gap: 14px; }
-  .location-card { border-radius: 16px; }
-  .location-info { padding: 18px; }
-  .location-name { font-size: 18px; }
-  .location-address { font-size: 13px; }
+  .locations-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .location-card { border-radius: 14px; }
+  .location-map { height: 110px; }
+  .location-info { padding: 10px; }
+  .location-name { font-size: 13px; }
+  .location-address { font-size: 11px; }
 }
