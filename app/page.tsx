@@ -73,9 +73,8 @@ export default function HomePage() {
           { name: 'SD Rotract',      rot: '-7deg', img: '/image/homepage/client-13.webp' },
           { name: 'Arnmaan Bedil',   rot: '3deg',  img: '/image/homepage/client-14.webp' },
           { name: 'Falcon',          rot: '-5deg', img: '/image/homepage/client-15.webp' },
-          { name: 'Aishwarya Majmudar',           rot: '7deg',  img: '/image/homepage/client-16.webp' },
           { name: 'RJ Shanky',       rot: '-3deg', img: '/image/homepage/client-17.webp' },
-          { name: 'Dominoz',             rot: '5deg',  img: '/image/homepage/client-18.webp' },
+          { name: 'Dominoz',         rot: '5deg',  img: '/image/homepage/client-18.webp' },
         ]} />
       </section>
 
