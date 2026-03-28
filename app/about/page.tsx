@@ -80,14 +80,18 @@ export default function AboutPage() {
         </div>
         <div className="team-grid">
           {[
-            { emoji: '👨‍🎨', name: 'Goldi', role: 'Graphic Designer' },
-            { emoji: '🎬', name: 'Abhishek', role: 'Cinematographer / Strategist' },
-            { emoji: '🎞️', name: 'Prince', role: 'Motion Designer' },
-            { emoji: '👨‍💻', name: 'Jaideep', role: 'Developer' },
+            { image: 'image/about/team-1.webp', name: 'Goldi',    role: 'Graphic Designer'              },
+            { image: 'image/about/team-2.webp', name: 'Abhishek', role: 'Cinematographer / Strategist'  },
+            { image: 'image/about/team-3.webp', name: 'Prakash',   role: 'Motion Designer'               },
+            { image: 'image/about/team-4.webp', name: 'Anil',  role: 'Developer'                     },
           ].map((member) => (
             <div key={member.name} className="team-card">
-              <div className="team-photo">
-                <div className="team-photo-placeholder" aria-hidden="true">{member.emoji}</div>
+              <div className="team-photo" style={{ aspectRatio: '1 / 1', overflow: 'hidden' }}>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
               </div>
               <div className="team-info">
                 <h3 className="team-name">{member.name}</h3>
