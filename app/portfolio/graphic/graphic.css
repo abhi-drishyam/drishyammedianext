@@ -9,7 +9,7 @@
    CAROUSEL — Card widths & speeds (graphic page)
 ───────────────────────────────────────── */
 /* Card widths relative to full viewport (carousel is now 100vw wide) */
-.post-carousel .gallery-card     { width: calc((100vw - 36px) / 4); aspect-ratio: 1/1; }
+.post-carousel .gallery-card     { width: calc((100vw - 36px) / 4); aspect-ratio: 4/5; }
 .thumb-carousel .gallery-card    { width: calc((100vw - 24px) / 3); aspect-ratio: 16/9; }
 .reel-carousel .gallery-card     { width: calc((100vw - 48px) / 5); aspect-ratio: 9/16; }
 .poster-carousel .gallery-card   { width: calc((100vw - 36px) / 4); aspect-ratio: 2/3; }
@@ -22,6 +22,9 @@
 .poster-carousel .carousel-track   { animation: carouselScroll 30s linear infinite; }
 .album-carousel .carousel-track    { animation: carouselScroll 26s linear infinite; }
 .brochure-carousel .carousel-track { animation: carouselScroll 34s linear infinite; }
+
+/* Keep carousels running on hover (override global pause) */
+.carousel-wrap:hover .carousel-track { animation-play-state: running !important; }
 
 /* Placeholder gradients */
 .post-carousel .gallery-card:nth-child(8n+1) .card-img { background: linear-gradient(145deg,#0a0818,#1e0848); }

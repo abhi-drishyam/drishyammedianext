@@ -280,22 +280,54 @@
 }
 .pt-note strong { color: rgba(255,255,255,0.70); font-weight: 700; }
 
-/* responsive table → stack on mobile */
+/* responsive table → mobile */
 @media (max-width: 900px) {
-  .pt-header,
-  .pt-row,
-  .pt-cta-row { grid-template-columns: 1fr; }
-  .pt-header { gap: 16px; }
+  .pt-header {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+  }
   .pt-header-spacer { display: none; }
-  .pt-row-label { background: rgba(155,47,255,0.07); border-radius: 8px; }
-  .pt-row { gap: 4px; }
-  .pt-row-cell { justify-content: flex-start; padding: 8px 16px; }
+
+  .pt-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .pt-row-label {
+    grid-column: 1 / -1;
+    background: rgba(155,47,255,0.07);
+    border-radius: 8px;
+    font-size: 12.5px;
+    padding: 10px 14px;
+  }
+  .pt-row-cell {
+    justify-content: center;
+    padding: 10px 6px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.02);
+  }
+
+  .pt-cta-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 28px;
+  }
   .pt-cta-spacer { display: none; }
   .pt-plan-card:hover { transform: none; }
 }
 @media (max-width: 480px) {
-  .pt-plan-card { padding: 22px 18px 20px; border-radius: 14px; }
+  .pt-plan-card { padding: 20px 14px 18px; border-radius: 14px; }
+  .pt-plan-name { font-size: 14px; }
+  .pt-plan-price { font-size: 28px; }
+  .pt-plan-requests { font-size: 11px; padding: 3px 8px; }
+  .pt-row-label { font-size: 12px; padding: 8px 12px; }
+  .pt-row-cell { padding: 8px 4px; font-size: 12px; }
+  .pt-priority { font-size: 9px; padding: 2px 7px; }
   .pt-note { padding: 16px 18px; font-size: 12px; }
+  .pt-cta-row { gap: 8px; }
+  .pt-cta-cell .btn-outline,
+  .pt-cta-cell .btn-solid { font-size: 12px; padding: 12px 14px; }
 }
 
 /* ─────────────────────────────────────────
@@ -381,9 +413,11 @@
 .shoot-delivery-note strong { color: rgba(255,255,255,0.65); }
 
 @media (max-width: 640px) {
-  .shoot-cards { grid-template-columns: 1fr; max-width: 420px; }
+  .shoot-cards { grid-template-columns: 1fr; max-width: 420px; gap: 16px; }
   .shoot-card:hover { transform: none; }
-  .shoot-card-inner { padding: 28px 24px; }
+  .shoot-card-inner { padding: 28px 22px; }
+  .shoot-price { font-size: 36px; }
+  .shoot-delivery-note { padding: 16px 18px; font-size: 12px; }
 }
 
 /* ─────────────────────────────────────────
@@ -460,7 +494,48 @@
 }
 
 @media (max-width: 700px) {
-  .seo-header, .seo-row, .seo-cta-row { grid-template-columns: 1fr; }
+  .seo-header {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .seo-header > div:first-child { display: none; }
+
+  .seo-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .seo-label {
+    grid-column: 1 / -1;
+    background: rgba(155,47,255,0.07);
+    border-radius: 8px;
+    font-size: 12.5px;
+    padding: 9px 14px;
+  }
+  .seo-cell {
+    justify-content: center;
+    padding: 9px 6px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.02);
+  }
+
+  .seo-cta-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 24px;
+  }
+  .seo-cta-row > div:first-child { display: none; }
+
+  .seo-note { padding: 16px 18px; font-size: 12px; }
+}
+@media (max-width: 480px) {
+  .seo-plan-card { padding: 18px 14px; border-radius: 12px; }
+  .seo-plan-name { font-size: 13px; }
+  .seo-plan-price { font-size: 22px; }
+  .seo-label { font-size: 12px; padding: 8px 12px; }
+  .seo-cell { font-size: 11px; padding: 8px 4px; }
+  .seo-cell.sub { font-size: 10.5px; }
 }
 
 /* ─────────────────────────────────────────
@@ -524,9 +599,21 @@
 .wd-footnote .icon.red   { color: rgba(212,0,122,0.7); }
 
 @media (max-width: 720px) {
-  .webdev-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .webdev-grid { grid-template-columns: 1fr; max-width: 420px; gap: 14px; }
   .wd-card:hover { transform: none; }
   .wd-card { padding: 28px 22px; }
+  .wd-name { font-size: 18px; margin-bottom: 12px; }
+  .wd-price { font-size: 30px; }
+  .wd-desc { font-size: 12.5px; margin-bottom: 20px; }
+  .wd-footnote { font-size: 12px; }
+}
+@media (max-width: 480px) {
+  .webdev-grid { max-width: 100%; }
+  .wd-card { padding: 24px 18px; border-radius: 14px; }
+  .wd-package { font-size: 12px; }
+  .wd-price { font-size: 28px; }
+  .wd-period { font-size: 11px; }
+  .wd-footnote { font-size: 11.5px; gap: 8px; }
 }
 
 /* ─────────────────────────────────────────
@@ -572,8 +659,16 @@
 .maint-period { font-size: 12px; color: rgba(255,255,255,0.38); font-weight: 500; margin-top: 4px; }
 
 @media (max-width: 560px) {
-  .maint-card { flex-direction: column; align-items: flex-start; }
+  .maint-card { flex-direction: column; align-items: flex-start; gap: 24px; padding: 28px 24px; }
   .maint-price-col { text-align: left; }
+  .maint-title { font-size: 20px; }
+  .maint-desc { font-size: 12.5px; }
+  .maint-price { font-size: 32px; }
+}
+@media (max-width: 480px) {
+  .maint-card { padding: 24px 20px; border-radius: 16px; gap: 20px; }
+  .maint-name { font-size: 10px; }
+  .maint-title { font-size: 18px; }
 }
 
 /* ─────────────────────────────────────────
@@ -596,7 +691,13 @@
 }
 
 @media (max-width: 560px) {
-  .unlimited-card { padding: 28px 24px; }
+  .unlimited-card { padding: 28px 22px; }
+  .unlimited-title { font-size: 20px; margin-bottom: 20px; }
+}
+@media (max-width: 480px) {
+  .unlimited-card { padding: 24px 18px; border-radius: 16px; }
+  .unlimited-title { font-size: 18px; }
+  .cross-list li { font-size: 12px; }
 }
 
 /* ─────────────────────────────────────────
@@ -708,8 +809,25 @@
 }
 
 @media (max-width: 768px) {
-  .special-grid { grid-template-columns: 1fr; max-width: 480px; }
+  .special-grid { grid-template-columns: 1fr; max-width: 480px; gap: 20px; }
   .sp-card:hover { transform: none; }
   .sp-card-inner { padding: 32px 24px 32px; }
+  .sp-name { font-size: 22px; }
+  .sp-price { font-size: 40px; }
+  .sp-period { margin-bottom: 22px; }
+  .sp-divider { margin-bottom: 22px; }
+  .sp-why { padding: 16px 18px; margin-top: 22px; }
+  .sp-why ul { gap: 7px; }
+  .sp-why ul li { font-size: 12.5px; }
   .sp-clarity { padding: 18px 20px; }
+}
+@media (max-width: 480px) {
+  .special-grid { max-width: 100%; }
+  .sp-card-inner { padding: 26px 20px 28px; }
+  .sp-badge { font-size: 9px; padding: 4px 11px; margin-bottom: 16px; }
+  .sp-name { font-size: 20px; margin-bottom: 6px; }
+  .sp-price { font-size: 36px; }
+  .sp-section-title { font-size: 10px; margin-bottom: 12px; }
+  .sp-clarity { padding: 16px 16px; }
+  .sp-clarity h4 { font-size: 12px; margin-bottom: 10px; }
 }

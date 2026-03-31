@@ -35,11 +35,11 @@ const SECTIONS = [
     carouselClass: 'event-carousel',
     items: [
       { src: '/video/event-1.mp4',  label: 'Event Edit 1', cls: 'card-landscape' },
-      { src: '/video/event-2.mp4',  label: 'Event Edit 2', cls: 'card-portrait'  },
-      { src: '/video/event-3.mp4',  label: 'Event Edit 3', cls: 'card-portrait'  },
-      { src: '/video/eventv-1.mp4', label: 'Event Edit 4', cls: 'card-landscape' },
-      { src: '/video/eventv-2.mp4', label: 'Event Edit 5', cls: 'card-portrait'  },
-      { src: '/video/eventv-3.mp4', label: 'Event Edit 6', cls: 'card-landscape' },
+      { src: '/video/eventv-2.mp4',  label: 'Event Edit 2', cls: 'card-portrait'  },
+            { src: '/video/event-2.mp4', label: 'Event Edit 4', cls: 'card-landscape' },
+      { src: '/video/eventv-3.mp4',  label: 'Event Edit 3', cls: 'card-portrait'  },
+      { src: '/video/event-3.mp4', label: 'Event Edit 6', cls: 'card-landscape' },
+      { src: '/video/eventv-1.mp4', label: 'Event Edit 5', cls: 'card-portrait'  },
     ],
   },
   {

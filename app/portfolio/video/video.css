@@ -20,6 +20,7 @@
 .longformat-carousel .gallery-card { width: calc((100vw - 48px) / 5); aspect-ratio: 16/9; }
 
 /* Event Edits — mixed aspect ratios via per-card classes */
+.event-carousel .carousel-track { align-items: center; }
 .event-carousel .gallery-card.card-landscape { width: calc((100vw - 48px) / 5); aspect-ratio: 16/9; }
 .event-carousel .gallery-card.card-portrait  { width: calc((100vw - 72px) / 7); aspect-ratio: 9/16; }
 
