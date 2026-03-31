@@ -13,6 +13,7 @@ export default function BlogPostPage() {
       title={<>24 Marketing Lessons That Took Me <span className="grad-text">3 Years, Thousands of Dollars, and Hundreds of Tests</span> to Learn</>}
       date="Mar 15, 2026"
       readTime="25 min read"
+      image="/image/Blog/blog-4.webp"
       relatedPosts={[
         { href: '/blog/why-my-ads-print-money', title: 'Why My ADs Print Money While Others Bleed Cash', description: 'The ultimate secret to paid advertising is economics, funnels, and long-term thinking.' },
         { href: '/blog/create-1000-ads-meta-andromeda', title: 'Create 1000 Ads Without Recording Anything', description: 'How to scale Meta Ads Andromeda with a creative machine that never runs dry.' },

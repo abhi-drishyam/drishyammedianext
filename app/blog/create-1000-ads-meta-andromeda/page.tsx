@@ -13,6 +13,7 @@ export default function BlogPostPage() {
       title={<>Create 1000 Ads Without Recording Anything <span className="grad-text">(How To Scale Meta Ads Andromeda)</span></>}
       date="Mar 15, 2025"
       readTime="20 min read"
+      image="/image/Blog/blog-3.webp"
       relatedPosts={[
         { href: '/blog/why-my-ads-print-money', title: 'Why My ADs Print Money While Others Bleed Cash', description: 'The ultimate secret to paid advertising is economics, funnels, and long-term thinking.' },
         { href: '#', title: 'The Only Copywriting Framework You Need', description: 'Coming soon' },

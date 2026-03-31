@@ -13,6 +13,7 @@ export default function BlogPostPage() {
       title={<>The Only Copywriting Framework <span className="grad-text">You&apos;ll Ever Need</span></>}
       date="Mar 15, 2026"
       readTime="22 min read"
+      image="/image/Blog/blog-1.webp"
       relatedPosts={[
         { href: '/blog/why-my-ads-print-money', title: 'Why My ADs Print Money While Others Bleed Cash', description: 'The ultimate secret to paid advertising is economics, funnels, and long-term thinking.' },
         { href: '/blog/landing-page-not-converting', title: "Why Your Landing Page Isn't Converting", description: 'The structural and psychological fixes that actually move the needle on conversions.' },

@@ -13,6 +13,7 @@ export default function BlogPostPage() {
       title={<>Why My ADs Print Money While <span className="grad-text">Others Bleed Cash</span></>}
       date="Apr 8, 2022"
       readTime="17 min read"
+      image="/image/Blog/blog-2.webp"
       relatedPosts={[
         { href: '#', title: 'The Only Copywriting Framework You Need', description: 'Coming soon' },
         { href: '#', title: 'Bundling at Framer: Rolldown for Faster Sites', description: 'Coming soon' },

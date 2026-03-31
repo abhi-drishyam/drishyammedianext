@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { ReactNode } from 'react';
 
 interface RelatedPost {
@@ -11,6 +12,7 @@ interface BlogPostLayoutProps {
   title: ReactNode;
   date: string;
   readTime: string;
+  image: string;
   relatedPosts: RelatedPost[];
   children: ReactNode;
 }
@@ -19,6 +21,7 @@ export default function BlogPostLayout({
   title,
   date,
   readTime,
+  image,
   relatedPosts,
   children,
 }: BlogPostLayoutProps) {
@@ -35,7 +38,9 @@ export default function BlogPostLayout({
               <span>{readTime}</span>
             </div>
           </div>
-          <div className="post-cover" aria-hidden="true" />
+          <div className="post-cover" aria-hidden="true">
+            <Image src={image} alt="" width={900} height={500} style={{ width: '100%', height: 'auto' }} />
+          </div>
         </section>
       </div>
 

@@ -13,6 +13,7 @@ export default function BlogPostPage() {
       title={<>How to Write Killer, High-Converting Video Ad Scripts <span className="grad-text">(Without Templates, AI Guesswork, or Agencies)</span></>}
       date="Mar 15, 2026"
       readTime="12 min read"
+      image="/image/Blog/blog-6.webp"
       relatedPosts={[
         { href: '/blog/create-1000-ads-meta-andromeda', title: 'Create 1000 Ads Without Recording Anything', description: 'How to scale Meta Ads Andromeda with a creative machine that never runs dry.' },
         { href: '/blog/24-marketing-lessons', title: '24 Marketing Lessons That Took Me 3 Years to Learn', description: 'Distilled patterns from 3 years of testing, thousands in ad spend, and hundreds of tests.' },

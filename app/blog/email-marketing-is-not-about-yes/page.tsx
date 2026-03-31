@@ -13,6 +13,7 @@ export default function BlogPostPage() {
       title={<>Email Marketing Is <span className="grad-text">Not About Yes</span></>}
       date="Mar 15, 2026"
       readTime="30 min read"
+      image="/image/Blog/blog-5.webp"
       relatedPosts={[
         { href: '/blog/why-my-ads-print-money', title: 'Why My ADs Print Money While Others Bleed Cash', description: 'The ultimate secret to paid advertising is economics, funnels, and long-term thinking.' },
         { href: '/blog/24-marketing-lessons', title: '24 Marketing Lessons That Took Me 3 Years to Learn', description: 'Distilled patterns from 3 years of testing, thousands in ad spend, and hundreds of tests.' },

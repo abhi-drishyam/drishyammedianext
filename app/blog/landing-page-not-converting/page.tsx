@@ -13,6 +13,7 @@ export default function BlogPostPage() {
       title={<>Why Your Landing Page Isn&apos;t Converting <span className="grad-text">(This Fix Tripled My Sales in 24 Hours)</span></>}
       date="Mar 15, 2026"
       readTime="14 min read"
+      image="/image/Blog/blog-7.webp"
       relatedPosts={[
         { href: '/blog/why-my-ads-print-money', title: 'Why My ADs Print Money While Others Bleed Cash', description: 'The ultimate secret to paid advertising is economics, funnels, and long-term thinking.' },
         { href: '/blog/killer-video-ad-scripts', title: 'How to Write Killer, High-Converting Video Ad Scripts', description: 'The only script framework you need — word by word, based on 1,000+ tested video ads.' },
