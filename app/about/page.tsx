@@ -80,9 +80,9 @@ export default function AboutPage() {
         </div>
         <div className="team-grid">
           {[
-            { image: 'image/about/team-1.webp', name: 'Goldi',    role: 'Graphic Designer'              },
+            { image: 'image/about/team-1.webp', name: 'Goldy',    role: 'Graphic Designer'              },
             { image: 'image/about/team-2.webp', name: 'Abhishek', role: 'Cinematographer / Strategist'  },
-            { image: 'image/about/team-3.webp', name: 'Prakash',   role: 'Motion Designer'               },
+            { image: 'image/about/team-3.webp', name: 'Prakash',   role: 'Cinematographer'               },
             { image: 'image/about/team-4.webp', name: 'Anil',  role: 'Developer'                     },
           ].map((member) => (
             <div key={member.name} className="team-card">
