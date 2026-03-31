@@ -8,16 +8,16 @@ export const metadata: Metadata = {
 };
 
 const clientPhotos = [
-  { initials: 'RH', gradient: 'linear-gradient(135deg,#4b3fff,#9b2fff)' },
-  { initials: 'SH', gradient: 'linear-gradient(135deg,#9b2fff,#d4007a)' },
-  { initials: 'TK', gradient: 'linear-gradient(135deg,#d4007a,#ff3c2f)' },
-  { initials: 'SM', gradient: 'linear-gradient(135deg,#ff3c2f,#9b2fff)' },
-  { initials: 'AK', gradient: 'linear-gradient(135deg,#4b3fff,#d4007a)' },
-  { initials: 'NF', gradient: 'linear-gradient(135deg,#9b2fff,#ff3c2f)' },
-  { initials: 'MJ', gradient: 'linear-gradient(135deg,#d4007a,#4b3fff)' },
-  { initials: 'PP', gradient: 'linear-gradient(135deg,#ff3c2f,#4b3fff)' },
-  { initials: 'LW', gradient: 'linear-gradient(135deg,#9b2fff,#d4007a)' },
-  { initials: 'DM', gradient: 'linear-gradient(135deg,#4b3fff,#ff3c2f)' },
+  { initials: 'RH', gradient: 'linear-gradient(135deg,#4b3fff,#9b2fff)', image: '/image/homepage/client-11.webp' },
+  { initials: 'SH', gradient: 'linear-gradient(135deg,#9b2fff,#d4007a)', image: '/image/homepage/client-4.webp' },
+  { initials: 'TK', gradient: 'linear-gradient(135deg,#d4007a,#ff3c2f)', image: '/image/homepage/client-3.webp' },
+  { initials: 'SM', gradient: 'linear-gradient(135deg,#ff3c2f,#9b2fff)', image: '/image/homepage/client-13.webp' },
+  { initials: 'AK', gradient: 'linear-gradient(135deg,#4b3fff,#d4007a)', image: '/image/homepage/client-15.webp' },
+  { initials: 'NF', gradient: 'linear-gradient(135deg,#9b2fff,#ff3c2f)', image: '/image/homepage/client-6.webp' },
+  { initials: 'MJ', gradient: 'linear-gradient(135deg,#d4007a,#4b3fff)', image: '/image/homepage/client-17.webp' },
+  { initials: 'PP', gradient: 'linear-gradient(135deg,#ff3c2f,#4b3fff)', image: '/image/homepage/client-8.webp' },
+  { initials: 'LW', gradient: 'linear-gradient(135deg,#9b2fff,#d4007a)', image: '/image/homepage/client-7.webp' },
+  { initials: 'DM', gradient: 'linear-gradient(135deg,#4b3fff,#ff3c2f)', image: '/image/homepage/client-10.webp' },
 ];
 
 const videoTestimonials = [
@@ -60,7 +60,7 @@ export default function ReviewsPage() {
             <div className="client-photos-wrapper">
               {clientPhotos.map((c, i) => (
                 <div key={i} className="client-photo">
-                  <div className="client-initial" style={{ background: c.gradient }}>{c.initials}</div>
+                  <img src={c.image} alt={c.initials} className="client-initial" style={{ background: c.gradient, objectFit: 'cover' }} />
                 </div>
               ))}
             </div>
