@@ -377,7 +377,7 @@ export default function CreativePricingPage() {
       <section className="svc-section" id="video-shoots" aria-label="Video Shoot packages">
         <div className="svc-header">
           <h2>Video Shoots — <span className="grad-text">Project Based</span></h2>
-          <p>Same gear. Same quality. Pricing based on time. <strong style={{color:'rgba(255,255,255,0.6)'}}>Tampa, USA</strong></p>
+          <p>Same gear. Same quality. Pricing based on time. <strong style={{color:'rgba(255,255,255,0.6)'}}></strong></p>
         </div>
 
         <div className="shoot-cards">
