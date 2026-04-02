@@ -78,6 +78,7 @@ html, body {
 }
 
 .nav-logo {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
   font-size: 28px;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -389,9 +390,11 @@ html, body {
 
 .footer-logo-mark {
   display: inline-block;
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
   font-size: 22px;
   font-weight: 900;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   background: linear-gradient(90deg, #4b3fff, #9b2fff, #d4007a, #ff3c2f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

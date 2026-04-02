@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Manrope } from 'next/font/google';
+import { Manrope, Poppins } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -11,10 +11,23 @@ const manrope = Manrope({
   display: 'swap',
 });
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  weight: ['700', '800', '900'],
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: 'Drishyam Media',
   description:
     'Creative marketing agency offering video production, graphic design, and web development.',
+  icons: {
+    icon: [
+      { url: '/icons/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/icons/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -24,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={manrope.variable}>
+      <body className={`${manrope.variable} ${poppins.variable}`}>
         <Navbar />
         {children}
         <Footer />
