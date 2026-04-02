@@ -326,13 +326,13 @@ export default function HomePage() {
         </div>
 
         <div className="tm-stats-bar" role="list">
-          <div className="tm-stat" role="listitem"><div className="tm-stat-num">500<span>+</span></div><div className="tm-stat-label">Happy Clients</div></div>
+          <div className="tm-stat" role="listitem"><div className="tm-stat-num">50<span>+</span></div><div className="tm-stat-label">Happy Clients</div></div>
           <div className="tm-stat-divider" aria-hidden="true"></div>
-          <div className="tm-stat" role="listitem"><div className="tm-stat-num">98<span>%</span></div><div className="tm-stat-label">Retention Rate</div></div>
+          <div className="tm-stat" role="listitem"><div className="tm-stat-num">85<span>%</span></div><div className="tm-stat-label">Retention Rate</div></div>
           <div className="tm-stat-divider" aria-hidden="true"></div>
           <div className="tm-stat" role="listitem"><div className="tm-stat-num">4.9<span>★</span></div><div className="tm-stat-label">Average Rating</div></div>
           <div className="tm-stat-divider" aria-hidden="true"></div>
-          <div className="tm-stat" role="listitem"><div className="tm-stat-num">12<span>M+</span></div><div className="tm-stat-label">Views Generated</div></div>
+          <div className="tm-stat" role="listitem"><div className="tm-stat-num">M<span>+</span></div><div className="tm-stat-label">Views Generated</div></div>
         </div>
       </section>
     </>

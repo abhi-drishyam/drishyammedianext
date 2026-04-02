@@ -28,13 +28,118 @@ export default function CreativePricingPage() {
         description={<>Unlimited requests. Structured delivery. Predictable quality.<br />Video editing, graphic design, shoots — bundled or à la carte.</>}
         ariaLabel="Creative services pricing overview"
         categories={[
+          { href: '#special', label: 'Special Packages' },
           { href: '#video-editing', label: 'Video Editing' },
           { href: '#graphic-design', label: 'Graphic Design' },
           { href: '#video-shoots', label: 'Video Shoots' },
-          { href: '#special', label: 'Special Packages' },
           { href: '#unlimited-clarity', label: 'Unlimited Clarity' },
         ]}
       />
+
+      {/* SPECIAL PACKAGES */}
+      <section className="svc-section" id="special" aria-label="Special bundle packages">
+        <div className="svc-header">
+          <h2>Special <span className="grad-text"> Packages</span></h2>
+          <p>Everything you need, bundled into one predictable monthly rate.</p>
+        </div>
+
+        <div className="special-grid">
+
+          {/* Creator / Influencer */}
+          <div className="sp-card">
+            <div className="sp-card-inner">
+              <div className="sp-badge">For Creators</div>
+              <div className="sp-name">Creator / Influencer<br />Growth Package</div>
+              <div className="sp-price grad-text">$599</div>
+              <div className="sp-period">per month · cancel anytime</div>
+              <div className="sp-divider"></div>
+
+              <div className="sp-section-title">What&apos;s Included</div>
+              <ul className="tick-list pink" style={{marginBottom:'0'}}>
+                <li><span className="tick"></span>2 hour shoot (tampa and nearby area only)</li>
+                <li><span className="tick"></span>1 video editing request at a time</li>
+                <li><span className="tick"></span>1 graphic design request at a time</li>
+                <li><span className="tick"></span>Unlimited requests &amp; unlimited revisions</li>
+                <li><span className="tick"></span>Short-form videos (Reels, Shorts, TikTok)</li>
+                <li><span className="tick"></span>Long-form videos (YouTube, podcasts)</li>
+                <li><span className="tick"></span>Thumbnails &amp; social media graphics</li>
+                <li><span className="tick"></span>Basic photo cleanup &amp; retouching</li>
+                <li><span className="tick"></span>Platform-optimized formatting</li>
+                <li><span className="tick"></span>24–48 business hour turnaround per task</li>
+                <li><span className="tick"></span>High-priority queue</li>
+                <li><span className="tick"></span>Cancel or pause anytime</li>
+              </ul>
+
+              <div className="sp-why">
+                <div className="sp-why-title">Why this works for creators</div>
+                <ul>
+                  <li>Keeps your content pipeline moving every week</li>
+                  <li>Test, iterate, and improve without extra costs</li>
+                  <li>Perfect for influencers, YouTubers, coaches &amp; personal brands</li>
+                  <li>You focus on creating — we handle editing and design</li>
+                </ul>
+              </div>
+
+              <br />
+              <Link href="/contact" className="btn-solid" style={{marginTop:'auto'}}>Get Started</Link>
+            </div>
+          </div>
+
+          {/* SMB */}
+          <div className="sp-card">
+            <div className="sp-card-inner">
+              <div className="sp-badge">For Businesses</div>
+              <div className="sp-name">Small &amp; Medium Business<br />Growth Package</div>
+              <div className="sp-price grad-text">$999</div>
+              <div className="sp-period">per month · cancel anytime</div>
+              <div className="sp-divider"></div>
+
+              <div className="sp-section-title">What&apos;s Included</div>
+              <ul className="tick-list pink" style={{marginBottom:'0'}}>
+                <li><span className="tick"></span>2 hour shoot (tampa and nearby area only)</li>
+                <li><span className="tick"></span>1 video editing request at a time</li>                <li><span className="tick"></span>1 graphic design request at a time</li>
+                <li><span className="tick"></span>Unlimited requests &amp; unlimited revisions</li>
+                <li><span className="tick"></span>Social videos, ads, promos &amp; brand content</li>
+                <li><span className="tick"></span>Social posts, banners &amp; marketing creatives</li>
+                <li><span className="tick"></span>Photo retouching &amp; image cleanup</li>
+                <li><span className="tick"></span>Monthly SEO (local focus)</li>
+                <li><span className="tick"></span>Google Business Profile optimization</li>
+                <li><span className="tick"></span>Maps &amp; local visibility improvement</li>
+                <li><span className="tick"></span>Monthly SEO work report</li>
+                <li><span className="tick"></span>24–48 business hour turnaround per task</li>
+                <li><span className="tick"></span>High priority queue</li>
+                <li><span className="tick"></span>Cancel or pause anytime</li>
+              </ul>
+
+              <div className="sp-why">
+                <div className="sp-why-title">Why this works for businesses</div>
+                <ul>
+                  <li>Combines content creation with search visibility</li>
+                  <li>No need to manage multiple freelancers or agencies</li>
+                  <li>Helps customers find you, trust you &amp; contact you</li>
+                  <li>Clear monthly reporting shows exactly what work was done</li>
+                </ul>
+              </div>
+
+              <br />
+              <Link href="/contact" className="btn-solid" style={{marginTop:'auto'}}>Get Started</Link>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="sp-clarity">
+          <h4>Important Clarity</h4>
+          <ul className="tick-list" style={{gap:'9px'}}>
+            <li><span className="tick"></span>Unlimited requests mean unlimited submissions</li>
+            <li><span className="tick"></span>Work is completed on 1 video + 1 graphic at a time</li>
+            <li><span className="tick"></span>Revisions are unlimited within the original scope</li>
+            <li><span className="tick"></span>Editing time depends on complexity — on average, a 5-minute video takes 2–4 hours to edit</li>
+          </ul>
+        </div>
+      </section>
+
+      <div className="section-sep" />
 
       {/* VIDEO EDITING */}
       <section className="svc-section" id="video-editing" aria-label="Video Editing plans">
@@ -64,7 +169,7 @@ export default function CreativePricingPage() {
 
             <div className="pt-plan-card">
               <div className="pt-plan-name">Scale</div>
-              <div className="pt-plan-price grad-text">$799</div>
+              <div className="pt-plan-price grad-text">$899</div>
               <div className="pt-plan-period">per month</div>
               <div className="pt-plan-requests">3 active requests</div>
             </div>
@@ -103,7 +208,7 @@ export default function CreativePricingPage() {
             </div>
             <div className="pt-row">
               <div className="pt-row-label">Platform Specific Formatting</div>
-              <div className="pt-row-cell"><Check /></div>
+              <div className="pt-row-cell"><Cross /></div>
               <div className="pt-row-cell"><Check pink /></div>
               <div className="pt-row-cell"><Check /></div>
             </div>
@@ -281,7 +386,7 @@ export default function CreativePricingPage() {
               <div className="shoot-label">Package</div>
               <div className="shoot-name">Half-Day</div>
               <div className="shoot-duration">4 Hours</div>
-              <div className="shoot-price grad-text">$549</div>
+              <div className="shoot-price grad-text">$349</div>
               <div className="shoot-price-note">one-time project fee</div>
               <div className="shoot-divider" aria-hidden="true"></div>
               <div className="shoot-equipment">
@@ -296,7 +401,7 @@ export default function CreativePricingPage() {
               <div className="shoot-label">Package</div>
               <div className="shoot-name">Full-Day</div>
               <div className="shoot-duration">8 Hours</div>
-              <div className="shoot-price grad-text">$949</div>
+              <div className="shoot-price grad-text">$549</div>
               <div className="shoot-price-note">one-time project fee</div>
               <div className="shoot-divider" aria-hidden="true"></div>
               <div className="shoot-equipment">
@@ -310,110 +415,6 @@ export default function CreativePricingPage() {
         <div className="shoot-delivery-note">
           <strong>Delivery:</strong> Final footage shared via Google Drive.<br />
           <strong>Add-ons priced separately:</strong> Drone, extra camera, rush delivery.
-        </div>
-      </section>
-
-      <div className="section-sep" />
-
-      {/* SPECIAL PACKAGES */}
-      <section className="svc-section" id="special" aria-label="Special bundle packages">
-        <div className="svc-header">
-          <h2>Two <span className="grad-text">Special Packages</span></h2>
-          <p>Everything you need, bundled into one predictable monthly rate.</p>
-        </div>
-
-        <div className="special-grid">
-
-          {/* Creator / Influencer */}
-          <div className="sp-card">
-            <div className="sp-card-inner">
-              <div className="sp-badge">For Creators</div>
-              <div className="sp-name">Creator / Influencer<br />Growth Package</div>
-              <div className="sp-price grad-text">$599</div>
-              <div className="sp-period">per month · cancel anytime</div>
-              <div className="sp-divider"></div>
-
-              <div className="sp-section-title">What&apos;s Included</div>
-              <ul className="tick-list pink" style={{marginBottom:'0'}}>
-                <li><span className="tick"></span>1 video editing request at a time</li>
-                <li><span className="tick"></span>1 graphic design request at a time</li>
-                <li><span className="tick"></span>Unlimited requests &amp; unlimited revisions</li>
-                <li><span className="tick"></span>Short-form videos (Reels, Shorts, TikTok)</li>
-                <li><span className="tick"></span>Long-form videos (YouTube, podcasts)</li>
-                <li><span className="tick"></span>Thumbnails &amp; social media graphics</li>
-                <li><span className="tick"></span>Basic photo cleanup &amp; retouching</li>
-                <li><span className="tick"></span>Platform-optimized formatting</li>
-                <li><span className="tick"></span>24–48 business hour turnaround per task</li>
-                <li><span className="tick"></span>High-priority queue</li>
-                <li><span className="tick"></span>Cancel or pause anytime</li>
-              </ul>
-
-              <div className="sp-why">
-                <div className="sp-why-title">Why this works for creators</div>
-                <ul>
-                  <li>Keeps your content pipeline moving every week</li>
-                  <li>Test, iterate, and improve without extra costs</li>
-                  <li>Perfect for influencers, YouTubers, coaches &amp; personal brands</li>
-                  <li>You focus on creating — we handle editing and design</li>
-                </ul>
-              </div>
-
-              <br />
-              <Link href="/contact" className="btn-solid" style={{marginTop:'auto'}}>Get Started</Link>
-            </div>
-          </div>
-
-          {/* SMB */}
-          <div className="sp-card">
-            <div className="sp-card-inner">
-              <div className="sp-badge">For Businesses</div>
-              <div className="sp-name">Small &amp; Medium Business<br />Growth Package</div>
-              <div className="sp-price grad-text">$999</div>
-              <div className="sp-period">per month · cancel anytime</div>
-              <div className="sp-divider"></div>
-
-              <div className="sp-section-title">What&apos;s Included</div>
-              <ul className="tick-list pink" style={{marginBottom:'0'}}>
-                <li><span className="tick"></span>1 video editing request at a time</li>
-                <li><span className="tick"></span>1 graphic design request at a time</li>
-                <li><span className="tick"></span>Unlimited requests &amp; unlimited revisions</li>
-                <li><span className="tick"></span>Social videos, ads, promos &amp; brand content</li>
-                <li><span className="tick"></span>Social posts, banners &amp; marketing creatives</li>
-                <li><span className="tick"></span>Photo retouching &amp; image cleanup</li>
-                <li><span className="tick"></span>Monthly SEO (local focus)</li>
-                <li><span className="tick"></span>Google Business Profile optimization</li>
-                <li><span className="tick"></span>Maps &amp; local visibility improvement</li>
-                <li><span className="tick"></span>Monthly SEO work report</li>
-                <li><span className="tick"></span>24–48 business hour turnaround per task</li>
-                <li><span className="tick"></span>High priority queue</li>
-                <li><span className="tick"></span>Cancel or pause anytime</li>
-              </ul>
-
-              <div className="sp-why">
-                <div className="sp-why-title">Why this works for businesses</div>
-                <ul>
-                  <li>Combines content creation with search visibility</li>
-                  <li>No need to manage multiple freelancers or agencies</li>
-                  <li>Helps customers find you, trust you &amp; contact you</li>
-                  <li>Clear monthly reporting shows exactly what work was done</li>
-                </ul>
-              </div>
-
-              <br />
-              <Link href="/contact" className="btn-solid" style={{marginTop:'auto'}}>Get Started</Link>
-            </div>
-          </div>
-
-        </div>
-
-        <div className="sp-clarity">
-          <h4>Important Clarity</h4>
-          <ul className="tick-list" style={{gap:'9px'}}>
-            <li><span className="tick"></span>Unlimited requests mean unlimited submissions</li>
-            <li><span className="tick"></span>Work is completed on 1 video + 1 graphic at a time</li>
-            <li><span className="tick"></span>Revisions are unlimited within the original scope</li>
-            <li><span className="tick"></span>Editing time depends on complexity — on average, a 5-minute video takes 2–4 hours to edit</li>
-          </ul>
         </div>
       </section>
 
