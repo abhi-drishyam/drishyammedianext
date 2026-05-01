@@ -13,13 +13,15 @@ const navLinks = [
 ];
 
 const portfolioItems = [
+  { href: '/portfolio/shoot', label: 'Photography/Videography' },
   { href: '/portfolio/video', label: 'Video Production' },
   { href: '/portfolio/graphic', label: 'Graphic Designing' },
-  { href: '#', label: 'Web/App Development' },
+  { href: '/portfolio/web', label: 'Web/App Development' },
 ];
 
 const pricingItems = [
-  { href: '/pricing/creative', label: 'Creative Services' },
+  { href: '/pricing/photography-videography', label: 'Photography / Videography' },
+  { href: '/pricing/creative', label: 'Editing Services' },
   { href: '/pricing/website-seo', label: 'Website & SEO' },
 ];
 

@@ -1,0 +1,460 @@
+/* ═══════════════════════════════════════════════════════════
+   WEB & APP PORTFOLIO PAGE
+═══════════════════════════════════════════════════════════ */
+
+
+/* ─────────────────────────────────────────
+   Services strip — What We Build
+───────────────────────────────────────── */
+.wp-services {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 48px 0;
+  text-align: center;
+}
+.wp-services-heading {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 48px;
+}
+.wp-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.wp-svc-card {
+  text-align: left;
+  padding: 32px 28px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.03);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.wp-svc-card:hover {
+  border-color: rgba(155,47,255,0.25);
+  background: rgba(255,255,255,0.05);
+}
+.wp-svc-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(155,47,255,0.08);
+  border: 1px solid rgba(155,47,255,0.15);
+  margin-bottom: 20px;
+}
+.wp-svc-card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+.wp-svc-card p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.45);
+}
+
+
+/* ─────────────────────────────────────────
+   Section wrapper
+───────────────────────────────────────── */
+.wp-section {
+  position: relative;
+  padding: 80px 48px 120px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+
+/* ─────────────────────────────────────────
+   Grid — 2-col on desktop, 1-col on mobile
+───────────────────────────────────────── */
+.wp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+
+/* ─────────────────────────────────────────
+   Card
+───────────────────────────────────────── */
+.wp-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.03);
+  overflow: hidden;
+  transition: transform 0.35s ease, border-color 0.35s ease,
+              box-shadow 0.35s ease, opacity 0.35s ease;
+  cursor: pointer;
+}
+.wp-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(155,47,255,0.35);
+  box-shadow: 0 24px 64px rgba(75,63,255,0.12),
+              0 0 0 1px rgba(155,47,255,0.15);
+}
+.wp-card.dimmed {
+  opacity: 0.35;
+}
+
+
+/* ─────────────────────────────────────────
+   Browser chrome inside card
+───────────────────────────────────────── */
+.wp-browser {
+  background: #0a0818;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.wp-browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.wp-dots {
+  display: flex;
+  gap: 6px;
+}
+.wp-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.wp-url {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 6px;
+  padding: 5px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.wp-screen {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+.wp-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.wp-card:hover .wp-screen img {
+  transform: scale(1.03);
+}
+
+
+/* ─────────────────────────────────────────
+   Card info area
+───────────────────────────────────────── */
+.wp-info {
+  padding: 24px 24px 28px;
+}
+.wp-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 999px;
+  padding: 4px 12px;
+  margin-bottom: 14px;
+}
+.wp-title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.wp-desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 18px;
+}
+.wp-link-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4b3fff, #9b2fff, #d4007a, #ff3c2f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: gap 0.25s ease;
+}
+.wp-link-hint svg {
+  /* SVG can't use background-clip, so give it a gradient-ish color */
+  stroke: #9b2fff;
+  transition: transform 0.25s ease;
+}
+.wp-card:hover .wp-link-hint {
+  gap: 10px;
+}
+.wp-card:hover .wp-link-hint svg {
+  transform: translate(2px, -2px);
+}
+
+
+/* ─────────────────────────────────────────
+   Bottom CTA
+───────────────────────────────────────── */
+.wp-cta-wrap {
+  text-align: center;
+  margin-top: 100px;
+}
+.wp-cta-text {
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 500;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 24px;
+}
+.wp-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #4b3fff 0%, #9b2fff 50%, #d4007a 100%);
+  border: none;
+  border-radius: 999px;
+  padding: 16px 40px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.wp-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(155,47,255,0.35);
+}
+
+
+/* ─────────────────────────────────────────
+   Redirect confirmation modal
+───────────────────────────────────────── */
+.wp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: wpFadeIn 0.2s ease;
+  padding: 24px;
+}
+@keyframes wpFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.wp-modal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: #0d0a1e;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 40px 32px 32px;
+  text-align: center;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.6),
+              0 0 0 1px rgba(155,47,255,0.1);
+  animation: wpSlideUp 0.25s ease;
+}
+@keyframes wpSlideUp {
+  from { opacity: 0; transform: translateY(16px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.wp-modal-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(155,47,255,0.08);
+  border: 1px solid rgba(155,47,255,0.15);
+}
+
+.wp-modal-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.wp-modal-desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 12px;
+}
+.wp-modal-desc strong {
+  color: rgba(255,255,255,0.8);
+  font-weight: 600;
+}
+
+.wp-modal-url {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 6px 14px;
+  margin-bottom: 28px;
+  word-break: break-all;
+}
+
+.wp-modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.wp-modal-cancel {
+  flex: 1;
+  font-family: var(--font-manrope), 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 999px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.wp-modal-cancel:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.wp-modal-continue {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--font-manrope), 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #4b3fff 0%, #9b2fff 50%, #d4007a 100%);
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.wp-modal-continue:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(155,47,255,0.35);
+}
+
+
+/* ─────────────────────────────────────────
+   Responsive
+───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .wp-services {
+    padding: 60px 24px 0;
+  }
+  .wp-services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .wp-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .wp-section {
+    padding: 60px 24px 80px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wp-services {
+    padding: 40px 16px 0;
+  }
+  .wp-services-heading {
+    margin-bottom: 32px;
+  }
+  .wp-svc-card {
+    padding: 24px 20px;
+  }
+  .wp-section {
+    padding: 40px 16px 60px;
+  }
+  .wp-grid {
+    gap: 24px;
+  }
+  .wp-card:hover {
+    transform: none;
+  }
+  .wp-info {
+    padding: 18px 18px 22px;
+  }
+  .wp-title {
+    font-size: 19px;
+  }
+  .wp-desc {
+    font-size: 13px;
+  }
+  .wp-cta-wrap {
+    margin-top: 64px;
+  }
+  /* Modal — full-width on small screens */
+  .wp-modal-overlay {
+    padding: 16px;
+    align-items: flex-end;
+  }
+  .wp-modal {
+    padding: 32px 24px 24px;
+    border-radius: 18px 18px 12px 12px;
+    max-width: 100%;
+  }
+  .wp-modal-actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+}

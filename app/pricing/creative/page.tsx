@@ -24,7 +24,7 @@ export default function CreativePricingPage() {
     <>
       <HeroSection
         badge="Monthly subscriptions & project packages"
-        heading={<>Creative Services <span className="grad-text">Pricing</span></>}
+        heading={<>Editing Services <span className="grad-text">Pricing</span></>}
         description={<>Unlimited requests. Structured delivery. Predictable quality.<br />Video editing, graphic design, shoots — bundled or à la carte.</>}
         ariaLabel="Creative services pricing overview"
         categories={[
@@ -50,13 +50,14 @@ export default function CreativePricingPage() {
             <div className="sp-card-inner">
               <div className="sp-badge">For Creators</div>
               <div className="sp-name">Creator / Influencer<br />Growth Package</div>
-              <div className="sp-price grad-text">$599</div>
+              <del className="sp-original">$2000</del>
+              <div className="sp-price grad-text">$699</div>
               <div className="sp-period">per month · cancel anytime</div>
               <div className="sp-divider"></div>
 
               <div className="sp-section-title">What&apos;s Included</div>
               <ul className="tick-list pink" style={{marginBottom:'0'}}>
-                <li><span className="tick"></span>2 hour shoot (tampa and nearby area only)</li>
+                <li><span className="tick"></span>2 hour shoot (tampa bay area only)</li>
                 <li><span className="tick"></span>1 video editing request at a time</li>
                 <li><span className="tick"></span>1 graphic design request at a time</li>
                 <li><span className="tick"></span>Unlimited requests &amp; unlimited revisions</li>
@@ -90,13 +91,14 @@ export default function CreativePricingPage() {
             <div className="sp-card-inner">
               <div className="sp-badge">For Businesses</div>
               <div className="sp-name">Small &amp; Medium Business<br />Growth Package</div>
+              <del className="sp-original">$2500</del>
               <div className="sp-price grad-text">$999</div>
               <div className="sp-period">per month · cancel anytime</div>
               <div className="sp-divider"></div>
 
               <div className="sp-section-title">What&apos;s Included</div>
               <ul className="tick-list pink" style={{marginBottom:'0'}}>
-                <li><span className="tick"></span>2 hour shoot (tampa and nearby area only)</li>
+                <li><span className="tick"></span>2 hour shoot (tampa bay area only)</li>
                 <li><span className="tick"></span>1 video editing request at a time</li>                <li><span className="tick"></span>1 graphic design request at a time</li>
                 <li><span className="tick"></span>Unlimited requests &amp; unlimited revisions</li>
                 <li><span className="tick"></span>Social videos, ads, promos &amp; brand content</li>
@@ -134,7 +136,7 @@ export default function CreativePricingPage() {
             <li><span className="tick"></span>Unlimited requests mean unlimited submissions</li>
             <li><span className="tick"></span>Work is completed on 1 video + 1 graphic at a time</li>
             <li><span className="tick"></span>Revisions are unlimited within the original scope</li>
-            <li><span className="tick"></span>Editing time depends on complexity — on average, a 5-minute video takes 2–4 hours to edit</li>
+            <li><span className="tick"></span>Editing time depends on complexity</li>
           </ul>
         </div>
       </section>
@@ -154,6 +156,7 @@ export default function CreativePricingPage() {
 
             <div className="pt-plan-card">
               <div className="pt-plan-name">Starter</div>
+              <del className="sp-original">$649</del>
               <div className="pt-plan-price grad-text">$399</div>
               <div className="pt-plan-period">per month</div>
               <div className="pt-plan-requests">1 active request</div>
@@ -162,6 +165,7 @@ export default function CreativePricingPage() {
             <div className="pt-plan-card featured">
               <div className="pt-badge">Most Popular</div>
               <div className="pt-plan-name">Growth</div>
+              <del className="sp-original">$849</del>
               <div className="pt-plan-price grad-text">$599</div>
               <div className="pt-plan-period">per month</div>
               <div className="pt-plan-requests">2 active requests</div>
@@ -169,6 +173,7 @@ export default function CreativePricingPage() {
 
             <div className="pt-plan-card">
               <div className="pt-plan-name">Scale</div>
+              <del className="sp-original">$1149</del>
               <div className="pt-plan-price grad-text">$899</div>
               <div className="pt-plan-period">per month</div>
               <div className="pt-plan-requests">3 active requests</div>
@@ -272,6 +277,7 @@ export default function CreativePricingPage() {
 
             <div className="pt-plan-card">
               <div className="pt-plan-name">Starter</div>
+              <del className="sp-original">$499</del>
               <div className="pt-plan-price grad-text">$249</div>
               <div className="pt-plan-period">per month</div>
               <div className="pt-plan-requests">1 active request</div>
@@ -280,6 +286,7 @@ export default function CreativePricingPage() {
             <div className="pt-plan-card featured">
               <div className="pt-badge">Most Popular</div>
               <div className="pt-plan-name">Growth</div>
+              <del className="sp-original">$679</del>
               <div className="pt-plan-price grad-text">$429</div>
               <div className="pt-plan-period">per month</div>
               <div className="pt-plan-requests">2 active requests</div>
@@ -287,6 +294,7 @@ export default function CreativePricingPage() {
 
             <div className="pt-plan-card">
               <div className="pt-plan-name">Scale</div>
+              <del className="sp-original">$909</del>
               <div className="pt-plan-price grad-text">$659</div>
               <div className="pt-plan-period">per month</div>
               <div className="pt-plan-requests">3 active requests</div>

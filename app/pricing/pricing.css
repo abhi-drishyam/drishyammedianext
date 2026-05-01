@@ -752,6 +752,13 @@
   font-weight: 900; letter-spacing: -0.02em;
   color: #fff; line-height: 1.15; margin-bottom: 8px;
 }
+.sp-original {
+  font-size: 19px; font-weight: 600;
+  color: rgba(255,255,255,0.32);
+  text-decoration: line-through;
+  letter-spacing: -0.01em;
+  display: block; margin-top: 14px; margin-bottom: 0px;
+}
 .sp-price {
   font-size: clamp(42px, 5vw, 58px);
   font-weight: 900; letter-spacing: -0.04em;
@@ -830,4 +837,47 @@
   .sp-section-title { font-size: 10px; margin-bottom: 12px; }
   .sp-clarity { padding: 16px 16px; }
   .sp-clarity h4 { font-size: 12px; margin-bottom: 10px; }
+}
+
+/* ─────────────────────────────────────────
+   GENERAL SHOOT — 4-card grid (2×2)
+───────────────────────────────────────── */
+.shoot-cards-four {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 860px; margin: 0 auto 32px;
+}
+
+/* featured shoot card (Most Popular highlight) */
+.shoot-card.featured {
+  background: linear-gradient(160deg,
+    rgba(155,47,255,0.35), rgba(212,0,122,0.25), rgba(75,63,255,0.20));
+  box-shadow: 0 0 40px rgba(212,0,122,0.12);
+}
+.shoot-card.featured:hover {
+  background: linear-gradient(160deg, #4b3fff, #9b2fff, #d4007a, #ff3c2f);
+}
+
+/* inline badge (Most Popular / Best Value) */
+.shoot-inline-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 10px; font-weight: 800;
+  letter-spacing: 0.10em; text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(90deg, #4b3fff, #d4007a);
+  padding: 4px 12px; border-radius: 999px;
+  margin-bottom: 14px;
+}
+.shoot-inline-badge::before {
+  content: ''; width: 5px; height: 5px;
+  border-radius: 50%; background: rgba(255,255,255,0.8);
+}
+.shoot-inline-badge.value {
+  background: linear-gradient(90deg, #d4007a, #ff3c2f);
+}
+
+@media (max-width: 640px) {
+  .shoot-cards-four { grid-template-columns: 1fr; max-width: 420px; gap: 16px; }
 }
