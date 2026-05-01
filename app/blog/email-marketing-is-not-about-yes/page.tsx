@@ -3,14 +3,17 @@ import BlogPostLayout from '../../../components/BlogPostLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Email Marketing Is Not About Yes — Drishyam Media',
-  description: "Email marketing isn't about getting yeses. It's about converting maybes and nos — the principles, mistakes, and hacks that build real email revenue.",
+  title: 'Email Marketing Is Not About Yes',
+  description:
+    "Email marketing isn't about getting yeses. It's about converting maybes and nos — the principles, mistakes, and hacks that build real email revenue.",
+  alternates: { canonical: '/blog/email-marketing-is-not-about-yes' },
 };
 
 export default function BlogPostPage() {
   return (
     <BlogPostLayout
       title={<>Email Marketing Is <span className="grad-text">Not About Yes</span></>}
+      titleText="Email Marketing Is Not About Yes"
       date="Mar 15, 2026"
       readTime="30 min read"
       image="/image/Blog/blog-5.webp"

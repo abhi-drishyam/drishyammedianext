@@ -3,20 +3,23 @@ import BlogPostLayout from '../../../components/BlogPostLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Why My ADs Print Money While Others Bleed Cash — Drishyam Media',
-  description: 'The ultimate secret to paid advertising is economics, funnels, and long-term thinking.',
+  title: 'Why My Ads Print Money While Others Bleed Cash',
+  description:
+    'The ultimate secret to paid advertising is economics, funnels, and long-term thinking. Learn how to build ads that actually generate profit.',
+  alternates: { canonical: '/blog/why-my-ads-print-money' },
 };
 
 export default function BlogPostPage() {
   return (
     <BlogPostLayout
       title={<>Why My ADs Print Money While <span className="grad-text">Others Bleed Cash</span></>}
+      titleText="Why My Ads Print Money While Others Bleed Cash"
       date="Apr 8, 2022"
       readTime="17 min read"
       image="/image/Blog/blog-2.webp"
       relatedPosts={[
-        { href: '#', title: 'The Only Copywriting Framework You Need', description: 'Coming soon' },
-        { href: '#', title: 'Bundling at Framer: Rolldown for Faster Sites', description: 'Coming soon' },
+        { href: '/blog/the-only-copywriting-framework', title: 'The Only Copywriting Framework You\'ll Ever Need', description: 'A no-fluff masterclass on copywriting from 3+ years of practice.' },
+        { href: '/blog/create-1000-ads-meta-andromeda', title: 'Create 1000 Ads Without Recording Anything', description: 'How to scale Meta Ads with a creative machine that never runs dry.' },
       ]}
     >
           <h2>The Secret of Paid Advertising: Economics and Funnels</h2>

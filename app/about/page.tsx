@@ -3,8 +3,10 @@ import HeroSection from '@/components/HeroSection';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us — Drishyam Media',
-  description: 'Step into Drishyam, where ideas turn into visuals and brands find their voice.',
+  title: 'About Us — Creative Marketing Agency',
+  description:
+    'Meet the team behind Drishyam Media. We turn ideas into visuals and help brands find their voice through design, strategy, and storytelling.',
+  alternates: { canonical: '/about' },
 };
 
 export default function AboutPage() {

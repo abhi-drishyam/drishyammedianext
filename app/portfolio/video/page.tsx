@@ -5,8 +5,10 @@ import VideoGallerySection from '@/components/VideoGallerySection';
 import LazySection from '@/components/LazySection';
 
 export const metadata: Metadata = {
-  title: 'Video Editing Portfolio — Drishyam Media',
-  description: 'Video editing portfolio — motion graphics, event edits, speedramp edits, long format, and animation videos.',
+  title: 'Video Editing Portfolio — Motion Graphics, Events & Animations',
+  description:
+    'Explore Drishyam Media\'s video editing portfolio — motion graphics, event edits, speedramp edits, long-format content, and animation videos.',
+  alternates: { canonical: '/portfolio/video' },
 };
 
 const SECTIONS = [

@@ -5,8 +5,10 @@ import VideoGallerySection from '@/components/VideoGallerySection';
 import LazySection from '@/components/LazySection';
 
 export const metadata: Metadata = {
-  title: 'Shoot Portfolio — Drishyam Media',
-  description: 'Shoot portfolio — BTS footage, event coverage, portrait sessions, product shoots, and aerial cinematography.',
+  title: 'Photography & Videography Shoot Portfolio',
+  description:
+    'Explore Drishyam Media\'s shoot portfolio — BTS footage, event coverage, portrait sessions, product shoots, and aerial cinematography.',
+  alternates: { canonical: '/portfolio/shoot' },
 };
 
 const SECTIONS = [

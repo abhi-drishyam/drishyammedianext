@@ -1,6 +1,14 @@
 import '../pricing.css';
 import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Website & SEO Pricing — WordPress, Custom Dev & Local SEO',
+  description:
+    'Website development and SEO pricing — WordPress sites, custom-coded websites, maintenance plans, and local SEO packages. Transparent pricing, no hidden fees.',
+  alternates: { canonical: '/pricing/website-seo' },
+};
 
 // Helper SVG components
 const SeoCheck = ({ pink = false }) => (

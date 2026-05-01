@@ -3,8 +3,10 @@ import type { Metadata } from 'next';
 import TestimonialCard from '@/components/TestimonialCard';
 
 export const metadata: Metadata = {
-  title: 'Client Reviews — Drishyam Media',
-  description: 'Real testimonials and success stories from Drishyam Media clients. 500+ happy clients, 4.9★ average rating.',
+  title: 'Client Reviews & Testimonials',
+  description:
+    'Real testimonials and success stories from Drishyam Media clients. 500+ happy clients, 4.9★ average rating, 98% retention rate.',
+  alternates: { canonical: '/reviews' },
 };
 
 const clientPhotos = [
@@ -45,9 +47,47 @@ const whyCards = [
   { initials: 'AK', gradient: 'linear-gradient(135deg,#9b2fff,#ff3c2f)', quote: "They're more than a service provider — they're a strategic partner. Every piece of content is crafted with our business goals in mind.", name: 'Anika Kumar', role: 'Startup Founder' },
 ];
 
+const reviewsJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Drishyam Media',
+  url: 'https://drishyammedia.com',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '500',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: [
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Scott Henry' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: "These guys don't mess around. We saw results from month one. If you want to grow your business, look no further.",
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Rahul Sharma' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'Working with Drishyam was a game-changer. Their designs gave our brand a fresh identity.',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Anika Kumar' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewBody: 'Professional service from start to finish. They understood our goals and delivered beyond expectations.',
+    },
+  ],
+};
+
 export default function ReviewsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
+      />
       <div className="hero-wrapper">
         <section className="reviews-hero" aria-label="Reviews hero section">
           <div className="grain" aria-hidden="true" />

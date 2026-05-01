@@ -81,8 +81,8 @@ export default function Footer() {
       <div className="footer-copy-bar">
         <p className="footer-copy">© {new Date().getFullYear()} Drishyam Media Marketing Agency. All Rights Reserved.</p>
         <ul className="footer-copy-links">
-          <li><Link href="#">Privacy Policy</Link></li>
-          <li><Link href="#">Terms of Service</Link></li>
+          <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+          <li><Link href="/terms-of-service">Terms of Service</Link></li>
         </ul>
       </div>
 

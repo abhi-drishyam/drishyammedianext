@@ -4,13 +4,74 @@ import ContactForm from './ContactForm';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us — Drishyam Media',
-  description: "Have a project in mind? We'd love to hear from you.",
+  title: 'Contact Us — Get a Free Strategy Call',
+  description:
+    "Have a project in mind? Contact Drishyam Media for video production, graphic design, web development, and brand growth. Offices in Tampa, Chandigarh, Niagara, and Mumbai.",
+  alternates: { canonical: '/contact' },
+};
+
+const localBusinessJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Drishyam Media',
+  url: 'https://drishyammedia.com',
+  logo: 'https://drishyammedia.com/icons/icon-512x512.png',
+  image: 'https://drishyammedia.com/icons/icon-512x512.png',
+  description:
+    'Creative marketing agency specializing in video production, graphic design, web development, and brand growth strategy.',
+  email: 'contact@drishyammedia.com',
+  telephone: '+1-813-965-7606',
+  priceRange: '$$',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '500',
+    bestRating: '5',
+  },
+  address: [
+    {
+      '@type': 'PostalAddress',
+      addressLocality: 'Tampa',
+      addressRegion: 'FL',
+      addressCountry: 'US',
+    },
+    {
+      '@type': 'PostalAddress',
+      addressLocality: 'Chandigarh',
+      addressCountry: 'IN',
+    },
+    {
+      '@type': 'PostalAddress',
+      addressLocality: 'Niagara',
+      addressCountry: 'CA',
+    },
+    {
+      '@type': 'PostalAddress',
+      addressLocality: 'Mumbai',
+      addressCountry: 'IN',
+    },
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Creative Marketing Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Video Editing' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Graphic Design' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Development' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Photography & Videography' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO Services' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Brand Strategy' } },
+    ],
+  },
 };
 
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
       <HeroSection
         heading={<>Let&apos;s Create Something <span className="grad-text">Amazing Together</span></>}
         description="Have a project in mind? We'd love to hear from you. Reach out and let's start building your brand's next big story."

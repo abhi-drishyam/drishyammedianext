@@ -3,14 +3,17 @@ import BlogPostLayout from '../../../components/BlogPostLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Why Your Landing Page Is Not Converting — Drishyam Media',
-  description: "You've changed the copy, the design, the ads — and still nothing converts. Here's what actually fixes a landing page.",
+  title: "Why Your Landing Page Isn't Converting",
+  description:
+    "You've changed the copy, the design, the ads — and still nothing converts. Here's what actually fixes a landing page.",
+  alternates: { canonical: '/blog/landing-page-not-converting' },
 };
 
 export default function BlogPostPage() {
   return (
     <BlogPostLayout
       title={<>Why Your Landing Page Isn&apos;t Converting <span className="grad-text">(This Fix Tripled My Sales in 24 Hours)</span></>}
+      titleText="Why Your Landing Page Isn't Converting"
       date="Mar 15, 2026"
       readTime="14 min read"
       image="/image/Blog/blog-7.webp"

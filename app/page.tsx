@@ -5,9 +5,96 @@ import AtaTimeline from '@/components/AtaTimeline';
 import HeroVideoStrip from '@/components/HeroVideoStrip';
 import WwfTrack from '@/components/WwfTrack';
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Drishyam Media',
+  url: 'https://drishyammedia.com',
+  logo: 'https://drishyammedia.com/icons/icon-512x512.png',
+  description:
+    'Creative marketing agency specializing in video production, graphic design, web development, and brand growth strategy for creators and businesses worldwide.',
+  foundingDate: '2022',
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      telephone: '+1-813-965-7606',
+      contactType: 'sales',
+      areaServed: ['US', 'CA'],
+      availableLanguage: 'English',
+    },
+    {
+      '@type': 'ContactPoint',
+      telephone: '+91-9914319899',
+      contactType: 'sales',
+      areaServed: 'IN',
+      availableLanguage: ['English', 'Hindi'],
+    },
+  ],
+  sameAs: [
+    'https://www.instagram.com/studio.drishyam',
+    'https://wa.me/18139657606',
+  ],
+  address: [
+    {
+      '@type': 'PostalAddress',
+      addressLocality: 'Tampa',
+      addressRegion: 'FL',
+      addressCountry: 'US',
+    },
+    {
+      '@type': 'PostalAddress',
+      addressLocality: 'Chandigarh',
+      addressCountry: 'IN',
+    },
+    {
+      '@type': 'PostalAddress',
+      addressLocality: 'Niagara',
+      addressCountry: 'CA',
+    },
+    {
+      '@type': 'PostalAddress',
+      addressLocality: 'Mumbai',
+      addressCountry: 'IN',
+    },
+  ],
+  knowsAbout: [
+    'Video Production',
+    'Video Editing',
+    'Graphic Design',
+    'Web Development',
+    'Social Media Marketing',
+    'Brand Strategy',
+    'Content Creation',
+    'SEO',
+  ],
+};
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Drishyam Media',
+  url: 'https://drishyammedia.com',
+  description:
+    'Creative marketing agency offering video production, graphic design, web development, and brand growth strategy.',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Drishyam Media',
+    url: 'https://drishyammedia.com',
+  },
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+
       {/* ══════════════════════════════════════
           HERO WRAPPER
       ══════════════════════════════════════ */}

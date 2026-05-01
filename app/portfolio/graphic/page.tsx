@@ -4,8 +4,10 @@ import HeroSection from '@/components/HeroSection';
 import GallerySection from '@/components/GallerySection';
 
 export const metadata: Metadata = {
-  title: 'Graphic Design Portfolio — Drishyam Media',
-  description: 'Premium graphic design portfolio — social media posts, thumbnails, reel covers, posters, album art, and brochures.',
+  title: 'Graphic Design Portfolio — Social Media, Thumbnails & Branding',
+  description:
+    'Explore Drishyam Media\'s graphic design portfolio — social media posts, YouTube thumbnails, reel covers, posters, album art, and brochures.',
+  alternates: { canonical: '/portfolio/graphic' },
 };
 
 const SECTIONS = [

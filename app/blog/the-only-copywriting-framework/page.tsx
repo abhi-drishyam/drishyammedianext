@@ -3,14 +3,17 @@ import BlogPostLayout from '../../../components/BlogPostLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'The Only Copywriting Framework You\'ll Ever Need — Drishyam Media',
-  description: 'A no-fluff, hands-on masterclass on copywriting from 3+ years of practice — why some ads print crazy money while others die, and exactly how to fix it.',
+  title: 'The Only Copywriting Framework You\'ll Ever Need',
+  description:
+    'A no-fluff, hands-on masterclass on copywriting from 3+ years of practice — why some ads print crazy money while others die, and exactly how to fix it.',
+  alternates: { canonical: '/blog/the-only-copywriting-framework' },
 };
 
 export default function BlogPostPage() {
   return (
     <BlogPostLayout
       title={<>The Only Copywriting Framework <span className="grad-text">You&apos;ll Ever Need</span></>}
+      titleText="The Only Copywriting Framework You'll Ever Need"
       date="Mar 15, 2026"
       readTime="22 min read"
       image="/image/Blog/blog-1.webp"

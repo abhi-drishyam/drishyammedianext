@@ -1,6 +1,14 @@
 import '../pricing.css';
 import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Editing Services Pricing — Video Editing, Graphic Design & Shoots',
+  description:
+    'Unlimited video editing, graphic design, and shoot packages starting at $249/month. Structured delivery, predictable quality. Cancel anytime.',
+  alternates: { canonical: '/pricing/creative' },
+};
 
 // Helper SVG components
 const Check = ({ pink = false }) => (

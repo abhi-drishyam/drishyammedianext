@@ -10,6 +10,7 @@ interface RelatedPost {
 
 interface BlogPostLayoutProps {
   title: ReactNode;
+  titleText?: string;
   date: string;
   readTime: string;
   image: string;
@@ -19,14 +20,45 @@ interface BlogPostLayoutProps {
 
 export default function BlogPostLayout({
   title,
+  titleText,
   date,
   readTime,
   image,
   relatedPosts,
   children,
 }: BlogPostLayoutProps) {
+  const articleJsonLd = titleText
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: titleText,
+        image: `https://drishyammedia.com${image}`,
+        datePublished: new Date(date).toISOString(),
+        dateModified: new Date(date).toISOString(),
+        author: {
+          '@type': 'Organization',
+          name: 'Drishyam Media',
+          url: 'https://drishyammedia.com',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Drishyam Media',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://drishyammedia.com/icons/icon-512x512.png',
+          },
+        },
+      }
+    : null;
+
   return (
     <>
+      {articleJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        />
+      )}
       <div className="hero-wrapper">
         <section className="post-hero" aria-label="Blog post header">
           <div className="grain" aria-hidden="true" />

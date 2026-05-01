@@ -4,8 +4,10 @@ import BlogCard from '@/components/BlogCard';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blog — Drishyam Media',
-  description: 'Insights, tips, and creative stories from the Drishyam team.',
+  title: 'Blog — Marketing Tips, Copywriting & Growth Strategies',
+  description:
+    'Insights on copywriting, paid advertising, email marketing, video ad scripts, and creative growth strategies from the Drishyam Media team.',
+  alternates: { canonical: '/blog' },
 };
 
 const posts = [

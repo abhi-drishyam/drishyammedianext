@@ -3,14 +3,17 @@ import BlogPostLayout from '../../../components/BlogPostLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'How to Write Killer, High-Converting Video Ad Scripts — Drishyam Media',
-  description: 'The only video ad script framework you need — word by word, without templates, AI guesswork, or agencies. Based on 1,000+ tested video ads.',
+  title: 'How to Write Killer, High-Converting Video Ad Scripts',
+  description:
+    'The only video ad script framework you need — word by word, without templates, AI guesswork, or agencies. Based on 1,000+ tested video ads.',
+  alternates: { canonical: '/blog/killer-video-ad-scripts' },
 };
 
 export default function BlogPostPage() {
   return (
     <BlogPostLayout
       title={<>How to Write Killer, High-Converting Video Ad Scripts <span className="grad-text">(Without Templates, AI Guesswork, or Agencies)</span></>}
+      titleText="How to Write Killer, High-Converting Video Ad Scripts"
       date="Mar 15, 2026"
       readTime="12 min read"
       image="/image/Blog/blog-6.webp"

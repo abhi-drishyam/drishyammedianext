@@ -1,6 +1,7 @@
 import '../pricing.css';
 import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
+import type { Metadata } from 'next';
 
 // Helper SVG components
 const Check = ({ pink = false }) => (
@@ -19,9 +20,11 @@ const Cross = () => (
   </div>
 );
 
-export const metadata = {
-  title: 'Photography / Videography Pricing | Drishyam',
-  description: 'Photography and videography pricing — project packages for creators and businesses. Shoots bundled or à la carte.',
+export const metadata: Metadata = {
+  title: 'Photography & Videography Pricing — Shoots for Creators & Businesses',
+  description:
+    'Photography and videography pricing — project packages for creators and businesses. Professional shoots bundled or à la carte.',
+  alternates: { canonical: '/pricing/photography-videography' },
 };
 
 export default function PhotographyVideographyPricingPage() {

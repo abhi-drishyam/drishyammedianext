@@ -106,7 +106,7 @@ export default function WebPortfolioPage() {
             <p className="wp-modal-url">{redirectTarget.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</p>
             <div className="wp-modal-actions">
               <button className="wp-modal-cancel" onClick={() => setRedirectTarget(null)}>Go Back</button>
-              <a className="wp-modal-continue" href={redirectTarget.url} target="_blank" rel="noopener noreferrer" onClick={() => setRedirectTarget(null)}>
+              <a className="wp-modal-continue" href={redirectTarget.url} target="_blank" rel="noopener noreferrer nofollow" onClick={() => setRedirectTarget(null)}>
                 Continue
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path d="M4 12L12 4M12 4H5M12 4v7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -185,7 +185,7 @@ export default function WebPortfolioPage() {
               key={project.id}
               href={project.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className={`wp-card${hoveredId && hoveredId !== project.id ? ' dimmed' : ''}`}
               onMouseEnter={() => setHoveredId(project.id)}
               onMouseLeave={() => setHoveredId(null)}

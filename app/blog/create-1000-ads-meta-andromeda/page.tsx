@@ -3,20 +3,23 @@ import BlogPostLayout from '../../../components/BlogPostLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Create 1000 Ads Without Recording Anything — Drishyam Media',
-  description: 'How to scale Meta Ads with Andromeda by building a creative machine that produces 1,000 video ads without recording anything new.',
+  title: 'Create 1000 Ads Without Recording Anything',
+  description:
+    'How to scale Meta Ads with Andromeda by building a creative machine that produces 1,000 video ads without recording anything new.',
+  alternates: { canonical: '/blog/create-1000-ads-meta-andromeda' },
 };
 
 export default function BlogPostPage() {
   return (
     <BlogPostLayout
       title={<>Create 1000 Ads Without Recording Anything <span className="grad-text">(How To Scale Meta Ads Andromeda)</span></>}
+      titleText="Create 1000 Ads Without Recording Anything"
       date="Mar 15, 2025"
       readTime="20 min read"
       image="/image/Blog/blog-3.webp"
       relatedPosts={[
         { href: '/blog/why-my-ads-print-money', title: 'Why My ADs Print Money While Others Bleed Cash', description: 'The ultimate secret to paid advertising is economics, funnels, and long-term thinking.' },
-        { href: '#', title: 'The Only Copywriting Framework You Need', description: 'Coming soon' },
+        { href: '/blog/the-only-copywriting-framework', title: 'The Only Copywriting Framework You\'ll Ever Need', description: 'A no-fluff masterclass on copywriting from 3+ years of practice.' },
       ]}
     >
           <h2>What If You Never Recorded an Ad Again — But Still Had an Endless Supply of Video Ads?</h2>

@@ -3,14 +3,17 @@ import BlogPostLayout from '../../../components/BlogPostLayout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '24 Marketing Lessons That Took Me 3 Years — Drishyam Media',
-  description: 'Distilled patterns from 3 years of testing, thousands of dollars in ad spend, and hundreds of tests — 24 marketing lessons that actually work.',
+  title: '24 Marketing Lessons That Took Me 3 Years to Learn',
+  description:
+    'Distilled patterns from 3 years of testing, thousands of dollars in ad spend, and hundreds of tests — 24 marketing lessons that actually work.',
+  alternates: { canonical: '/blog/24-marketing-lessons' },
 };
 
 export default function BlogPostPage() {
   return (
     <BlogPostLayout
       title={<>24 Marketing Lessons That Took Me <span className="grad-text">3 Years, Thousands of Dollars, and Hundreds of Tests</span> to Learn</>}
+      titleText="24 Marketing Lessons That Took Me 3 Years to Learn"
       date="Mar 15, 2026"
       readTime="25 min read"
       image="/image/Blog/blog-4.webp"
