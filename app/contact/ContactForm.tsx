@@ -16,11 +16,11 @@ export default function ContactForm() {
     <div className="contact-form-wrapper">
       <div className="form-header">
         <h3>Send us a message</h3>
-        <p>Or fill out the form below and our team will get back to you within 24 hours.</p>
+        <p>Or fill out the form below and our team will get back to you within 12 hours.</p>
       </div>
       {submitted ? (
         <p style={{ color: '#c084ff', fontWeight: 600, fontSize: 16 }}>
-          ✓ Thank you! We&apos;ll get back to you within 24 hours.
+          ✓ Thank you! We&apos;ll get back to you within 12 hours.
         </p>
       ) : (
         <form className="contact-form" onSubmit={handleSubmit}>

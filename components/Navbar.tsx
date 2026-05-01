@@ -14,7 +14,7 @@ const navLinks = [
 
 const portfolioItems = [
   { href: '/portfolio/shoot', label: 'Photography/Videography' },
-  { href: '/portfolio/video', label: 'Video Production' },
+  { href: '/portfolio/video', label: 'Video Editing' },
   { href: '/portfolio/graphic', label: 'Graphic Designing' },
   { href: '/portfolio/web', label: 'Web/App Development' },
 ];
