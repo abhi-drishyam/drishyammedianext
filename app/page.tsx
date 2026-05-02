@@ -113,7 +113,7 @@ export default function HomePage() {
             <p className="hero-sub">
               If you&apos;re a busy creator/business with no time to create, edit or post consistently on social media but still recognize the need to grow your brand faster, then we are for you.
             </p>
-            <Link href="/contact" className="hero-cta">See Our Work</Link>
+            <Link href="/video" className="hero-cta">See Our Work</Link>
           </div>
 
           <HeroVideoStrip videos={[
