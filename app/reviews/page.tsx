@@ -22,13 +22,13 @@ const clientPhotos = [
   { initials: 'DM', gradient: 'linear-gradient(135deg,#4b3fff,#ff3c2f)', image: '/image/homepage/client-10.webp' },
 ];
 
-const videoTestimonials = [
-  { featured: true,  initials: 'SH', accent: '#9b2fff', avatarGrad: 'linear-gradient(135deg,#4b3fff,#9b2fff)', quote: '"These guys don\'t mess around. We saw results from month one. If you want to grow your business, look no further."', author: 'Scott Henry',  role: 'Content Creator'      },
-  { featured: false, initials: 'RS', accent: '#d4007a', avatarGrad: 'linear-gradient(135deg,#9b2fff,#d4007a)', quote: '"Working with Drishyam was a game-changer. Their designs gave our brand a fresh identity."',                          author: 'Rahul Sharma', role: 'Content Creator'      },
-  { featured: false, initials: 'TH', accent: '#4b3fff', avatarGrad: 'linear-gradient(135deg,#d4007a,#ff3c2f)', quote: '"We design content that gets noticed, attracts followers, and builds your online presence."',                           author: 'Thomas',       role: 'Content Creator'      },
-  { featured: false, initials: 'SM', accent: '#ff3c2f', avatarGrad: 'linear-gradient(135deg,#ff3c2f,#9b2fff)', quote: '"The ROI has been incredible. Our engagement tripled in just 3 months."',                                              author: 'Simon',        role: 'Marketing Director'   },
-  { featured: false, initials: 'PP', accent: '#9b2fff', avatarGrad: 'linear-gradient(135deg,#4b3fff,#d4007a)', quote: '"Professional, creative, and always on time. Exactly what we needed."',                                               author: 'Priya Patel',  role: 'Small Business Owner' },
-];
+// const videoTestimonials = [
+//   { featured: true,  initials: 'SH', accent: '#9b2fff', avatarGrad: 'linear-gradient(135deg,#4b3fff,#9b2fff)', quote: '"These guys don\'t mess around. We saw results from month one. If you want to grow your business, look no further."', author: 'Scott Henry',  role: 'Content Creator'      },
+//   { featured: false, initials: 'RS', accent: '#d4007a', avatarGrad: 'linear-gradient(135deg,#9b2fff,#d4007a)', quote: '"Working with Drishyam was a game-changer. Their designs gave our brand a fresh identity."',                          author: 'Rahul Sharma', role: 'Content Creator'      },
+//   { featured: false, initials: 'TH', accent: '#4b3fff', avatarGrad: 'linear-gradient(135deg,#d4007a,#ff3c2f)', quote: '"We design content that gets noticed, attracts followers, and builds your online presence."',                           author: 'Thomas',       role: 'Content Creator'      },
+//   { featured: false, initials: 'SM', accent: '#ff3c2f', avatarGrad: 'linear-gradient(135deg,#ff3c2f,#9b2fff)', quote: '"The ROI has been incredible. Our engagement tripled in just 3 months."',                                              author: 'Simon',        role: 'Marketing Director'   },
+//   { featured: false, initials: 'PP', accent: '#9b2fff', avatarGrad: 'linear-gradient(135deg,#4b3fff,#d4007a)', quote: '"Professional, creative, and always on time. Exactly what we needed."',                                               author: 'Priya Patel',  role: 'Small Business Owner' },
+// ];
 
 const textTestimonials = [
   { initials: 'RS', gradient: 'linear-gradient(135deg,#4b3fff,#9b2fff)', quote: 'We worked closely with you and through research you not only understand our industry, but enhanced our brand across multiple platforms in a way that connects with our customers.', name: 'Rahul Sharma', role: 'Content Creator' },
@@ -122,7 +122,7 @@ export default function ReviewsPage() {
         </section>
       </div>
 
-      {/* Video Testimonials */}
+      {/* Video Testimonials — temporarily hidden
       <section className="video-testimonials" aria-label="Video testimonials">
         <div className="section-header">
           <h2>Listen to our <span className="grad-text">clients</span></h2>
@@ -151,6 +151,7 @@ export default function ReviewsPage() {
           ))}
         </div>
       </section>
+      */}
 
       {/* Text Testimonials */}
       <section className="text-testimonials" aria-label="Written testimonials">

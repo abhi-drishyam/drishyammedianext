@@ -337,7 +337,7 @@ export default function HomePage() {
           <p className="tm-sub">Real results, real people. Here&apos;s what our clients say about working with us.</p>
         </div>
 
-        <div className="tm-video-row">
+        <div className="tm-video-row" style={{ display: 'none' }}>
           <div className="tm-video-card">
             <div className="tm-video-thumb" style={{ ['--c1' as any]: '#0d0828', ['--c2' as any]: '#1e0848' }}>
               <div className="tm-video-overlay" aria-hidden="true"></div>
@@ -386,28 +386,34 @@ export default function HomePage() {
         <div className="tm-quote-strip">
           <div className="tm-quote-card">
             <div className="tm-quote-mark" aria-hidden="true">&ldquo;</div>
-            <p className="tm-quote-text">Within 60 days our engagement tripled. The content quality is on another level entirely.</p>
+            <p className="tm-quote-text">We had almost no social media presence, and as a dairy farmer, I had very little knowledge about social media marketing. 
+              A friend introduced me to Abhishek when I was looking to increase my sales. 
+              Abhishek clearly explained the strategy he planned to use to grow my business and improve sales. 
+              Almost everything worked exactly as he said. By the second month, I was already getting more sales directly through Instagram.</p>
             <div className="tm-quote-author">
               <div className="tm-avatar tm-avatar-sm" style={{ background: 'linear-gradient(135deg,#9b2fff,#d4007a)' }} aria-hidden="true">PR</div>
-              <div><div className="tm-author-name">Priya R.</div><div className="tm-author-role">E-Commerce Brand</div></div>
+              <div><div className="tm-author-name">Sourav</div><div className="tm-author-role">Dairy Business Owner</div></div>
             </div>
           </div>
 
           <div className="tm-quote-card tm-quote-card-featured">
             <div className="tm-quote-mark" aria-hidden="true">&ldquo;</div>
-            <p className="tm-quote-text">I went from 2K to 48K followers in 4 months. Their strategy is unlike anything I&apos;ve seen before.</p>
+            <p className="tm-quote-text">We started a new music and podcast studio in November with absolutely no social media presence. 
+              Drishyam came in and helped us build everything from scratch. Within four months, nearly 80% of our sales were coming through social media marketing. 
+              Their team planned everything specifically for our niche, managed the campaigns for us, and consistently delivered the best ROI possible.</p>
             <div className="tm-quote-author">
               <div className="tm-avatar tm-avatar-sm" style={{ background: 'linear-gradient(135deg,#4b3fff,#d4007a)' }} aria-hidden="true">AM</div>
-              <div><div className="tm-author-name">Arjun M.</div><div className="tm-author-role">Fitness Coach</div></div>
+              <div><div className="tm-author-name">Aditya Gulati</div><div className="tm-author-role">Music & Podcast Studio</div></div>
             </div>
           </div>
 
           <div className="tm-quote-card">
             <div className="tm-quote-mark" aria-hidden="true">&ldquo;</div>
-            <p className="tm-quote-text">The ROI was immediate. Our DMs filled up with qualified leads after the very first batch of content.</p>
+            <p className="tm-quote-text">I run a marketing agency, and for all our shoot-related backend work, Christian Studios was our trusted production partner. 
+              Whenever we had a project, we knew we could rely on them to handle everything professionally and deliver quality work on time.</p>
             <div className="tm-quote-author">
               <div className="tm-avatar tm-avatar-sm" style={{ background: 'linear-gradient(135deg,#ff3c2f,#d4007a)' }} aria-hidden="true">NK</div>
-              <div><div className="tm-author-name">Neha K.</div><div className="tm-author-role">Course Creator</div></div>
+              <div><div className="tm-author-name">Rueben</div><div className="tm-author-role">Marketing Agency Owner</div></div>
             </div>
           </div>
         </div>
@@ -419,7 +425,7 @@ export default function HomePage() {
           <div className="tm-stat-divider" aria-hidden="true"></div>
           <div className="tm-stat" role="listitem"><div className="tm-stat-num">4.9<span>★</span></div><div className="tm-stat-label">Average Rating</div></div>
           <div className="tm-stat-divider" aria-hidden="true"></div>
-          <div className="tm-stat" role="listitem"><div className="tm-stat-num">M<span>+</span></div><div className="tm-stat-label">Views Generated</div></div>
+          <div className="tm-stat" role="listitem"><div className="tm-stat-num">Millions<span>+</span></div><div className="tm-stat-label">Views Generated</div></div>
         </div>
       </section>
     </>

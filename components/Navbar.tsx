@@ -25,17 +25,24 @@ const pricingItems = [
   { href: '/pricing/website-seo', label: 'Website & SEO' },
 ];
 
+const locationItems = [
+  { href: '/locations/tampa', label: 'Tampa, FL' },
+];
+
 export default function Navbar() {
   const pathname = usePathname();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [pricingDropdownOpen, setPricingDropdownOpen] = useState(false);
+  const [locationsDropdownOpen, setLocationsDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const pricingDropdownRef = useRef<HTMLDivElement>(null);
+  const locationsDropdownRef = useRef<HTMLDivElement>(null);
 
   const isPortfolioActive = pathname.startsWith('/portfolio');
   const isPricingActive = pathname.startsWith('/pricing');
+  const isLocationsActive = pathname.startsWith('/locations');
 
   function isActive(href: string) {
     if (href === '/') return pathname === '/';
@@ -68,11 +75,15 @@ export default function Navbar() {
       if (pricingDropdownRef.current && !pricingDropdownRef.current.contains(e.target as Node)) {
         setPricingDropdownOpen(false);
       }
+      if (locationsDropdownRef.current && !locationsDropdownRef.current.contains(e.target as Node)) {
+        setLocationsDropdownOpen(false);
+      }
     }
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === 'Escape') {
         setDropdownOpen(false);
         setPricingDropdownOpen(false);
+        setLocationsDropdownOpen(false);
         setDrawerOpen(false);
       }
     }
@@ -115,6 +126,7 @@ export default function Navbar() {
                 e.stopPropagation();
                 setDropdownOpen((prev) => !prev);
                 setPricingDropdownOpen(false);
+                setLocationsDropdownOpen(false);
               }}
             >
               Portfolio
@@ -152,6 +164,45 @@ export default function Navbar() {
             </Link>
           ))}
 
+          {/* Locations Dropdown */}
+          <div
+            className={`nav-dropdown${locationsDropdownOpen ? ' open' : ''}`}
+            role="none"
+            ref={locationsDropdownRef}
+          >
+            <button
+              className={`nav-tab nav-dropdown-trigger${isLocationsActive ? ' active' : ''}`}
+              aria-haspopup="true"
+              aria-expanded={locationsDropdownOpen}
+              onClick={(e) => {
+                e.stopPropagation();
+                setLocationsDropdownOpen((prev) => !prev);
+                setDropdownOpen(false);
+                setPricingDropdownOpen(false);
+              }}
+            >
+              Locations
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <div className="nav-dropdown-menu" role="menu">
+              <div className="nav-dropdown-menu-inner">
+                {locationItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="nav-dropdown-item"
+                    role="menuitem"
+                    onClick={() => setLocationsDropdownOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Pricing Dropdown */}
           <div
             className={`nav-dropdown${pricingDropdownOpen ? ' open' : ''}`}
@@ -166,6 +217,7 @@ export default function Navbar() {
                 e.stopPropagation();
                 setPricingDropdownOpen((prev) => !prev);
                 setDropdownOpen(false);
+                setLocationsDropdownOpen(false);
               }}
             >
               Pricing
@@ -205,7 +257,7 @@ export default function Navbar() {
         </div>
 
         <div className="nav-right">
-          <Link href="/contact" className="btn-book">Book a Call</Link>
+          <Link href="/contact" className="btn-book">Contact Now</Link>
         </div>
 
         <button
@@ -244,6 +296,12 @@ export default function Navbar() {
         ))}
         <Link href="/about" onClick={() => setDrawerOpen(false)}>About</Link>
         <Link href="/reviews" onClick={() => setDrawerOpen(false)}>Reviews</Link>
+        <span className="drawer-group-label">Locations</span>
+        {locationItems.map((item) => (
+          <Link key={item.href} href={item.href} className="drawer-sub-item" onClick={() => setDrawerOpen(false)}>
+            {item.label}
+          </Link>
+        ))}
         <span className="drawer-group-label">Pricing</span>
         {pricingItems.map((item) => (
           <Link key={item.href} href={item.href} className="drawer-sub-item" onClick={() => setDrawerOpen(false)}>
@@ -252,7 +310,7 @@ export default function Navbar() {
         ))}
         <Link href="/blog" onClick={() => setDrawerOpen(false)}>Blog</Link>
         <Link href="/contact" onClick={() => setDrawerOpen(false)}>Contact</Link>
-        <Link href="/contact" className="drawer-cta" onClick={() => setDrawerOpen(false)}>Book a Call</Link>
+        <Link href="/contact" className="drawer-cta" onClick={() => setDrawerOpen(false)}>Contact Now</Link>
       </div>
     </>
   );
