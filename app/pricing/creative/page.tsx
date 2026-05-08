@@ -1,4 +1,5 @@
 import '../pricing.css';
+import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
 import CalButton from '@/components/CalButton';
 import type { Metadata } from 'next';
