@@ -1,6 +1,6 @@
 import '../pricing.css';
-import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
+import CalButton from '@/components/CalButton';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -90,7 +90,7 @@ export default function CreativePricingPage() {
               </div>
 
               <br />
-              <Link href="/contact" className="btn-solid" style={{marginTop:'auto'}}>Get Started</Link>
+              <CalButton variant="solid" style={{marginTop:'auto'}} />
             </div>
           </div>
 
@@ -132,7 +132,7 @@ export default function CreativePricingPage() {
               </div>
 
               <br />
-              <Link href="/contact" className="btn-solid" style={{marginTop:'auto'}}>Get Started</Link>
+              <CalButton variant="solid" style={{marginTop:'auto'}} />
             </div>
           </div>
 
@@ -259,9 +259,9 @@ export default function CreativePricingPage() {
 
           <div className="pt-cta-row">
             <div className="pt-cta-spacer"></div>
-            <div className="pt-cta-cell"><Link href="/contact" className="btn-outline">Get Started</Link></div>
+            <div className="pt-cta-cell"><CalButton variant="outline" /></div>
             <div className="pt-cta-cell"><Link href="/contact" className="btn-solid">Get Started</Link></div>
-            <div className="pt-cta-cell"><Link href="/contact" className="btn-outline">Get Started</Link></div>
+            <div className="pt-cta-cell"><CalButton variant="outline" /></div>
           </div>
         </div>
 
@@ -380,9 +380,9 @@ export default function CreativePricingPage() {
 
           <div className="pt-cta-row">
             <div className="pt-cta-spacer"></div>
-            <div className="pt-cta-cell"><Link href="/contact" className="btn-outline">Get Started</Link></div>
+            <div className="pt-cta-cell"><CalButton variant="outline" /></div>
             <div className="pt-cta-cell"><Link href="/contact" className="btn-solid">Get Started</Link></div>
-            <div className="pt-cta-cell"><Link href="/contact" className="btn-outline">Get Started</Link></div>
+            <div className="pt-cta-cell"><CalButton variant="outline" /></div>
           </div>
         </div>
       </section>

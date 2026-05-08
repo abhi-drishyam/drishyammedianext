@@ -1,6 +1,6 @@
 import '../pricing.css';
-import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
+import CalButton from '@/components/CalButton';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -52,7 +52,7 @@ export default function WebsiteSeoPricingPage() {
             <div className="wd-period">one-time</div>
             <div className="wd-divider"></div>
             <div className="wd-desc">Setup, theme customization, mobile responsive.</div>
-            <Link href="/contact" className="btn-outline">Get Started</Link>
+            <CalButton variant="outline" />
           </div>
 
           <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
@@ -62,7 +62,7 @@ export default function WebsiteSeoPricingPage() {
             <div className="wd-period">5–7 pages · one-time</div>
             <div className="wd-divider"></div>
             <div className="wd-desc">Custom pages, responsive layout, basic SEO.</div>
-            <Link href="/contact" className="btn-solid">Get Started</Link>
+            <CalButton variant="solid" />
           </div>
 
           <div className="wd-card">
@@ -72,7 +72,7 @@ export default function WebsiteSeoPricingPage() {
             <div className="wd-period">one-time</div>
             <div className="wd-divider"></div>
             <div className="wd-desc">WooCommerce setup, checkout configuration.</div>
-            <Link href="/contact" className="btn-outline">Get Started</Link>
+            <CalButton variant="outline" />
           </div>
         </div>
 
@@ -101,7 +101,7 @@ export default function WebsiteSeoPricingPage() {
             <div className="wd-period">one-time</div>
             <div className="wd-divider"></div>
             <div className="wd-desc">Custom coded site, optimized performance.</div>
-            <Link href="/contact" className="btn-outline">Get Started</Link>
+            <CalButton variant="outline" />
           </div>
 
           <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
@@ -111,7 +111,7 @@ export default function WebsiteSeoPricingPage() {
             <div className="wd-period">5–7 pages · one-time</div>
             <div className="wd-divider"></div>
             <div className="wd-desc">Custom layout, responsive structure.</div>
-            <Link href="/contact" className="btn-solid">Get Started</Link>
+            <CalButton variant="solid" />
           </div>
 
           <div className="wd-card">
@@ -121,7 +121,7 @@ export default function WebsiteSeoPricingPage() {
             <div className="wd-period">one-time</div>
             <div className="wd-divider"></div>
             <div className="wd-desc">Scalable custom store architecture.</div>
-            <Link href="/contact" className="btn-outline">Get Started</Link>
+            <CalButton variant="outline" />
           </div>
         </div>
 
@@ -152,7 +152,7 @@ export default function WebsiteSeoPricingPage() {
               <div className="maint-price grad-text">$199<sub>/mo</sub></div>
               <div className="maint-period">cancel anytime</div>
               <br />
-              <Link href="/contact" className="btn-outline" style={{marginTop:'16px'}}>Get Started</Link>
+              <CalButton variant="outline" style={{marginTop:'16px'}} />
             </div>
           </div>
         </div>
@@ -232,8 +232,8 @@ export default function WebsiteSeoPricingPage() {
 
           <div className="seo-cta-row">
             <div></div>
-            <div style={{display:'flex',justifyContent:'center'}}><Link href="/contact" className="btn-outline">Get Started</Link></div>
-            <div style={{display:'flex',justifyContent:'center'}}><Link href="/contact" className="btn-solid">Get Started</Link></div>
+            <div style={{display:'flex',justifyContent:'center'}}><CalButton variant="outline" /></div>
+            <div style={{display:'flex',justifyContent:'center'}}><CalButton variant="solid" /></div>
           </div>
         </div>
 

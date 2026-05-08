@@ -4,6 +4,10 @@ import WebsiteShowcase from './WebsiteShowcase';
 import AtaTimeline from '@/components/AtaTimeline';
 import HeroVideoStrip from '@/components/HeroVideoStrip';
 import WwfTrack from '@/components/WwfTrack';
+import TestimonialCard from '@/components/TestimonialCard';
+import { getTestimonials } from '@/data/testimonials';
+
+const homepageTestimonials = getTestimonials(1, 2, 3);
 
 const organizationJsonLd = {
   '@context': 'https://schema.org',
@@ -384,38 +388,17 @@ export default function HomePage() {
         </div>
 
         <div className="tm-quote-strip">
-          <div className="tm-quote-card">
-            <div className="tm-quote-mark" aria-hidden="true">&ldquo;</div>
-            <p className="tm-quote-text">We had almost no social media presence, and as a dairy farmer, I had very little knowledge about social media marketing. 
-              A friend introduced me to Abhishek when I was looking to increase my sales. 
-              Abhishek clearly explained the strategy he planned to use to grow my business and improve sales. 
-              Almost everything worked exactly as he said. By the second month, I was already getting more sales directly through Instagram.</p>
-            <div className="tm-quote-author">
-              <div className="tm-avatar tm-avatar-sm" style={{ background: 'linear-gradient(135deg,#9b2fff,#d4007a)' }} aria-hidden="true">PR</div>
-              <div><div className="tm-author-name">Sourav</div><div className="tm-author-role">Dairy Business Owner</div></div>
-            </div>
-          </div>
-
-          <div className="tm-quote-card tm-quote-card-featured">
-            <div className="tm-quote-mark" aria-hidden="true">&ldquo;</div>
-            <p className="tm-quote-text">We started a new music and podcast studio in November with absolutely no social media presence. 
-              Drishyam came in and helped us build everything from scratch. Within four months, nearly 80% of our sales were coming through social media marketing. 
-              Their team planned everything specifically for our niche, managed the campaigns for us, and consistently delivered the best ROI possible.</p>
-            <div className="tm-quote-author">
-              <div className="tm-avatar tm-avatar-sm" style={{ background: 'linear-gradient(135deg,#4b3fff,#d4007a)' }} aria-hidden="true">AM</div>
-              <div><div className="tm-author-name">Aditya Gulati</div><div className="tm-author-role">Music & Podcast Studio</div></div>
-            </div>
-          </div>
-
-          <div className="tm-quote-card">
-            <div className="tm-quote-mark" aria-hidden="true">&ldquo;</div>
-            <p className="tm-quote-text">I run a marketing agency, and for all our shoot-related backend work, Christian Studios was our trusted production partner. 
-              Whenever we had a project, we knew we could rely on them to handle everything professionally and deliver quality work on time.</p>
-            <div className="tm-quote-author">
-              <div className="tm-avatar tm-avatar-sm" style={{ background: 'linear-gradient(135deg,#ff3c2f,#d4007a)' }} aria-hidden="true">NK</div>
-              <div><div className="tm-author-name">Rueben</div><div className="tm-author-role">Marketing Agency Owner</div></div>
-            </div>
-          </div>
+          {homepageTestimonials.map((t) => (
+            <TestimonialCard
+              key={t.id}
+              quote={t.quote}
+              initials={t.initials}
+              name={t.name}
+              role={t.role}
+              avatarGradient={t.gradient}
+              featured={t.featured}
+            />
+          ))}
         </div>
 
         <div className="tm-stats-bar" role="list">
@@ -426,6 +409,100 @@ export default function HomePage() {
           <div className="tm-stat" role="listitem"><div className="tm-stat-num">4.9<span>★</span></div><div className="tm-stat-label">Average Rating</div></div>
           <div className="tm-stat-divider" aria-hidden="true"></div>
           <div className="tm-stat" role="listitem"><div className="tm-stat-num">Millions<span>+</span></div><div className="tm-stat-label">Views Generated</div></div>
+        </div>
+      </section>
+
+
+      {/* ══════════════════════════════════════
+          GLOBAL PRESENCE
+      ══════════════════════════════════════ */}
+      <section className="gp-section" aria-label="Our office locations">
+        <div className="gp-bg" aria-hidden="true">
+          <div className="gp-glow-l"></div>
+          <div className="gp-glow-r"></div>
+        </div>
+
+        <div className="gp-inner">
+          <div className="gp-header">
+            <div className="gp-eyebrow">Now Operating In</div>
+            <h2 className="gp-heading">We Shoot Where<br /><span className="gp-grad">You Do Business.</span></h2>
+            <p className="gp-sub">From social content to full brand campaigns — our team is on the ground across the globe, ready to shoot, edit, and grow your brand.</p>
+          </div>
+
+          <div className="gp-grid">
+            <div className="gp-card gp-card-featured">
+              <div className="gp-card-inner">
+                <div className="gp-card-top">
+                  <span className="gp-pill gp-pill-new">Now Open</span>
+                  <span className="gp-arrow" aria-hidden="true">↗</span>
+                </div>
+                <h3 className="gp-city">Tampa</h3>
+                <p className="gp-state">Florida · Tampa Bay Area</p>
+                <div className="gp-services">
+                  <span className="gp-tag">Photography</span>
+                  <span className="gp-tag">Videography</span>
+                  <span className="gp-tag">Social Content</span>
+                  <span className="gp-tag">Brand Marketing</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="gp-card">
+              <div className="gp-card-inner">
+                <div className="gp-card-top">
+                  <span className="gp-pill gp-pill-active">Active</span>
+                  <span className="gp-arrow" aria-hidden="true">↗</span>
+                </div>
+                <h3 className="gp-city">Chandigarh</h3>
+                <p className="gp-state">India · Punjab</p>
+                <div className="gp-services">
+                  <span className="gp-tag">Video Production</span>
+                  <span className="gp-tag">Video Editing</span>
+                  <span className="gp-tag">Graphic Design</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="gp-card">
+              <div className="gp-card-inner">
+                <div className="gp-card-top">
+                  <span className="gp-pill gp-pill-active">Active</span>
+                  <span className="gp-arrow" aria-hidden="true">↗</span>
+                </div>
+                <h3 className="gp-city">Niagara</h3>
+                <p className="gp-state">Canada · Ontario</p>
+                <div className="gp-services">
+                  <span className="gp-tag">Photography</span>
+                  <span className="gp-tag">Videography</span>
+                  <span className="gp-tag">Web &amp; SEO</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="gp-card">
+              <div className="gp-card-inner">
+                <div className="gp-card-top">
+                  <span className="gp-pill gp-pill-active">Active</span>
+                  <span className="gp-arrow" aria-hidden="true">↗</span>
+                </div>
+                <h3 className="gp-city">Mumbai</h3>
+                <p className="gp-state">India · Maharashtra</p>
+                <div className="gp-services">
+                  <span className="gp-tag">Photography</span>
+                  <span className="gp-tag">Videography</span>
+                  <span className="gp-tag">Graphic Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="gp-strip">
+            <span className="gp-strip-text">Each city gets a dedicated team, local expertise, and fast turnaround.</span>
+            <Link href="/locations/tampa" className="gp-strip-cta">
+              Explore Tampa
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </Link>
+          </div>
         </div>
       </section>
     </>

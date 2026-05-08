@@ -1,6 +1,7 @@
 import '../pricing.css';
 import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
+import CalButton from '@/components/CalButton';
 import type { Metadata } from 'next';
 
 // Helper SVG components
@@ -141,7 +142,7 @@ export default function PhotographyVideographyPricingPage() {
               <li><span className="tick"></span>Interior + exterior coverage</li>
               <li><span className="tick"></span>MLS-ready delivery</li>
             </ul>
-            <Link href="/contact" className="btn-outline">Get Started</Link>
+            <CalButton variant="outline" />
           </div>
 
           <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
@@ -155,7 +156,7 @@ export default function PhotographyVideographyPricingPage() {
               <li><span className="tick"></span>Cinematic walkthrough video</li>
               <li><span className="tick"></span>1 vertical social media reel</li>
             </ul>
-            <Link href="/contact" className="btn-solid">Get Started</Link>
+            <CalButton variant="solid" />
           </div>
 
           <div className="wd-card">
@@ -170,7 +171,7 @@ export default function PhotographyVideographyPricingPage() {
               <li><span className="tick"></span>Day-to-dusk / twilight edits</li>
               <li><span className="tick"></span>Virtual staging (key areas)</li>
             </ul>
-            <Link href="/contact" className="btn-outline">Get Started</Link>
+            <CalButton variant="outline" />
           </div>
 
         </div>
@@ -199,7 +200,7 @@ export default function PhotographyVideographyPricingPage() {
               <li><span className="tick"></span>Highlight video</li>
               <li><span className="tick"></span>Basic photo coverage</li>
             </ul>
-            <Link href="/contact" className="btn-outline">Get Started</Link>
+            <CalButton variant="outline" />
           </div>
 
           <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
@@ -215,7 +216,7 @@ export default function PhotographyVideographyPricingPage() {
               <li><span className="tick"></span>Social media cutdowns</li>
               <li><span className="tick"></span>Edited photos</li>
             </ul>
-            <Link href="/contact" className="btn-solid">Get Started</Link>
+            <CalButton variant="solid" />
           </div>
 
           <div className="wd-card">
@@ -231,7 +232,7 @@ export default function PhotographyVideographyPricingPage() {
               <li><span className="tick"></span>Edited pictures</li>
               <li><span className="tick"></span>Social media videos</li>
             </ul>
-            <Link href="/contact" className="btn-outline">Get Started</Link>
+            <CalButton variant="outline" />
           </div>
 
         </div>
@@ -388,7 +389,7 @@ export default function PhotographyVideographyPricingPage() {
               </div>
 
               <br />
-              <Link href="/contact" className="btn-solid" style={{marginTop:'auto'}}>Get Started</Link>
+              <CalButton variant="solid" style={{marginTop:'auto'}} />
             </div>
           </div>
 
@@ -431,7 +432,7 @@ export default function PhotographyVideographyPricingPage() {
               </div>
 
               <br />
-              <Link href="/contact" className="btn-solid" style={{marginTop:'auto'}}>Get Started</Link>
+              <CalButton variant="solid" style={{marginTop:'auto'}} />
             </div>
           </div>
 
