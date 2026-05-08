@@ -53,14 +53,11 @@
   background: linear-gradient(135deg, #2a1060, #1a0838);
   box-shadow: 0 20px 60px rgba(155,47,255,0.3);
 }
-.vision-image-placeholder {
+.vision-image-fill {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 120px;
-  opacity: 0.2;
+  object-fit: cover;
+  display: block;
 }
 .vision-content h2 {
   font-size: clamp(32px, 4vw, 48px);

@@ -22,7 +22,7 @@ export default function AboutPage() {
       <section className="vision-section" aria-label="The vision behind Drishyam">
         <div className="vision-container">
           <div className="vision-image">
-            <div className="vision-image-placeholder" aria-hidden="true">🎨</div>
+            <img src="/image/drishyam team.webp" alt="Drishyam team" className="vision-image-fill" loading="lazy" />
           </div>
           <div className="vision-content">
             <h2>The Vision Behind <span className="grad-text">Drishyam</span></h2>
@@ -31,7 +31,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
+      
       {/* Journey */}
       <section className="journey-section" aria-label="From idea to agency">
         <div className="journey-container">
