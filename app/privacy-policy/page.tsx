@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <HeroSection
-        badge="Legal Document"
+        badge="Policy Information"
         heading={
           <>
             Privacy <span className="grad-text">Policy</span>

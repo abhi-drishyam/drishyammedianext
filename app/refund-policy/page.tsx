@@ -14,7 +14,7 @@ export default function RefundPolicyPage() {
   return (
     <>
       <HeroSection
-        badge="Legal Document"
+        badge="Refund Terms"
         heading={
           <>
             Refund &amp; <span className="grad-text">Cancellation Policy</span>

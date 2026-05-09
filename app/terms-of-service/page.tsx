@@ -14,7 +14,7 @@ export default function TermsOfServicePage() {
   return (
     <>
       <HeroSection
-        badge="Legal Document"
+        badge="Service Terms"
         heading={
           <>
             Terms of <span className="grad-text">Service</span>
