@@ -1,0 +1,358 @@
+/* ═══════════════════════════════════════════════════════════
+   DRISHYAM MEDIA — Privacy Policy Page Styles
+═══════════════════════════════════════════════════════════ */
+
+/* ── Page Wrapper ── */
+.pp-page {
+  background: var(--bg-deep);
+  padding: 80px 24px 120px;
+}
+
+.pp-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+
+/* ── Meta / Disclaimer Card ── */
+.pp-meta-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 32px 40px;
+  margin-bottom: 64px;
+}
+
+.pp-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 6px 0;
+}
+
+.pp-meta-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--white-dim);
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.pp-meta-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.pp-meta-divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 6px 0;
+}
+
+.pp-disclaimer {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--white-dim);
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+  font-style: italic;
+}
+
+
+/* ── Section ── */
+.pp-section {
+  padding: 52px 0;
+}
+
+.pp-section h2 {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  font-size: clamp(19px, 2.4vw, 24px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.pp-art-num {
+  font-size: 0.72em;
+  font-weight: 600;
+  color: var(--white-dim);
+  flex-shrink: 0;
+  font-family: var(--font-manrope), 'Manrope', sans-serif;
+  letter-spacing: 0;
+}
+
+.pp-section > p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--white-muted);
+  margin-bottom: 18px;
+}
+
+.pp-section > p:last-child {
+  margin-bottom: 0;
+}
+
+.pp-section strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+
+/* ── Sub-sections (a), (b) … ── */
+.pp-sub-section {
+  margin: 22px 0;
+  padding-left: 20px;
+  border-left: 2px solid rgba(155, 47, 255, 0.22);
+}
+
+.pp-sub-section h3 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 7px;
+  letter-spacing: 0.01em;
+}
+
+.pp-sub-section p {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--white-muted);
+  margin-bottom: 0;
+}
+
+.pp-sub-section strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+
+/* ── Horizontal rule ── */
+.pp-rule {
+  height: 1px;
+  background: var(--border-subtle);
+  border: none;
+}
+
+
+/* ── Inline links ── */
+.pp-link {
+  color: rgba(175, 80, 255, 0.95);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.pp-link:hover {
+  color: #d4007a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+/* ── Contact info grid (Article 2) ── */
+.pp-contact-grid {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 28px 0;
+}
+
+.pp-contact-item {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding: 15px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 14px;
+  color: var(--white-muted);
+}
+
+.pp-contact-item:last-child {
+  border-bottom: none;
+}
+
+.pp-contact-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white-dim);
+  min-width: 138px;
+  flex-shrink: 0;
+}
+
+
+/* ── Data Retention Table ── */
+.pp-table-wrapper {
+  margin: 32px 0;
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid var(--border-subtle);
+  -webkit-overflow-scrolling: touch;
+}
+
+.pp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 480px;
+}
+
+.pp-table thead tr {
+  background: rgba(155, 47, 255, 0.10);
+}
+
+.pp-table th {
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white-dim);
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+}
+
+.pp-table td {
+  padding: 14px 20px;
+  color: var(--white-muted);
+  line-height: 1.65;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+}
+
+.pp-table td:first-child {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+.pp-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.pp-table tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+
+/* ── Address / info card ── */
+.pp-address-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 26px 30px;
+  margin: 28px 0;
+}
+
+.pp-address-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--white-muted);
+  margin-bottom: 8px;
+}
+
+.pp-address-card p:last-child {
+  margin-bottom: 0;
+}
+
+.pp-address-label {
+  font-weight: 700 !important;
+  color: var(--white) !important;
+  font-size: 15px !important;
+  margin-bottom: 14px !important;
+}
+
+
+/* ════════════════════════
+   RESPONSIVE
+════════════════════════ */
+
+@media (max-width: 768px) {
+  .pp-page {
+    padding: 60px 20px 80px;
+  }
+
+  .pp-meta-card {
+    padding: 24px 28px;
+  }
+
+  .pp-meta-label {
+    min-width: 100px;
+  }
+
+  .pp-section {
+    padding: 40px 0;
+  }
+
+  .pp-contact-item {
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 20px;
+  }
+
+  .pp-contact-label {
+    min-width: auto;
+  }
+
+  .pp-sub-section {
+    padding-left: 16px;
+  }
+
+  .pp-address-card {
+    padding: 22px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pp-page {
+    padding: 48px 16px 64px;
+  }
+
+  .pp-meta-card {
+    padding: 20px;
+    margin-bottom: 48px;
+  }
+
+  .pp-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .pp-section {
+    padding: 32px 0;
+  }
+
+  .pp-section h2 {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .pp-art-num {
+    font-size: 11px;
+  }
+
+  .pp-table th,
+  .pp-table td {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .pp-address-card {
+    padding: 18px 20px;
+  }
+
+  .pp-contact-grid {
+    border-radius: 14px;
+  }
+}

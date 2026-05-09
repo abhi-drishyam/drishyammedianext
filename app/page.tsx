@@ -21,7 +21,7 @@ const organizationJsonLd = {
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      telephone: '+1-813-965-7606',
+      telephone: '+1-(813) 965-7606',
       contactType: 'sales',
       areaServed: ['US', 'CA'],
       availableLanguage: 'English',

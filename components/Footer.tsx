@@ -83,6 +83,7 @@ export default function Footer() {
         <ul className="footer-copy-links">
           <li><Link href="/privacy-policy">Privacy Policy</Link></li>
           <li><Link href="/terms-of-service">Terms of Service</Link></li>
+          <li><Link href="/refund-policy">Refund Policy</Link></li>
         </ul>
       </div>
 

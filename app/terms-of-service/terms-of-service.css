@@ -1,0 +1,42 @@
+/* ═══════════════════════════════════════════════════════════
+   DRISHYAM MEDIA — Terms of Service: additions only
+   Base legal-page styles live in privacy-policy/privacy-policy.css
+═══════════════════════════════════════════════════════════ */
+
+/* ── Important Notice Card ── */
+.pp-notice-card {
+  background: rgba(155, 47, 255, 0.08);
+  border: 1px solid rgba(155, 47, 255, 0.28);
+  border-radius: 16px;
+  padding: 28px 36px;
+  margin-bottom: 28px;
+}
+
+.pp-notice-heading {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: rgba(175, 80, 255, 0.95) !important;
+  margin-bottom: 12px !important;
+}
+
+.pp-notice-card p:not(.pp-notice-heading) {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--white-muted);
+  margin-bottom: 0;
+}
+
+/* ── ALL-CAPS legal disclaimer blocks ── */
+.pp-legal-caps {
+  font-size: 13px !important;
+  line-height: 1.8 !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 16px 18px !important;
+  margin-bottom: 14px !important;
+  letter-spacing: 0.01em;
+}

@@ -20,7 +20,7 @@ const localBusinessJsonLd = {
   description:
     'Creative marketing agency specializing in video production, graphic design, web development, and brand growth strategy.',
   email: 'contact@drishyammedia.com',
-  telephone: '+1-813-965-7606',
+  telephone: '+1-(813) 965-7606',
   priceRange: '$$',
   aggregateRating: {
     '@type': 'AggregateRating',
