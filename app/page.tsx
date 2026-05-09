@@ -13,8 +13,8 @@ const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Drishyam Media',
-  url: 'https://drishyammedia.com',
-  logo: 'https://drishyammedia.com/icons/icon-512x512.png',
+  url: 'https://www.drishyammedia.com',
+  logo: 'https://www.drishyammedia.com/icons/icon-512x512.png',
   description:
     'Creative marketing agency specializing in video production, graphic design, web development, and brand growth strategy for creators and businesses worldwide.',
   foundingDate: '2022',
@@ -77,13 +77,13 @@ const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Drishyam Media',
-  url: 'https://drishyammedia.com',
+  url: 'https://www.drishyammedia.com',
   description:
     'Creative marketing agency offering video production, graphic design, web development, and brand growth strategy.',
   publisher: {
     '@type': 'Organization',
     name: 'Drishyam Media',
-    url: 'https://drishyammedia.com',
+    url: 'https://www.drishyammedia.com',
   },
 };
 
@@ -117,7 +117,7 @@ export default function HomePage() {
             <p className="hero-sub">
               If you&apos;re a busy creator/business with no time to create, edit or post consistently on social media but still recognize the need to grow your brand faster, then we are for you.
             </p>
-            <Link href="/video" className="hero-cta">See Our Work</Link>
+            <Link href="/portfolio/shoot" className="hero-cta">See Our Work</Link>
           </div>
 
           <HeroVideoStrip videos={[

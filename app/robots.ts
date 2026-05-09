@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: 'https://drishyammedia.com/sitemap.xml',
+    sitemap: 'https://www.drishyammedia.com/sitemap.xml',
   };
 }

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://drishyammedia.com';
+  const baseUrl = 'https://www.drishyammedia.com';
 
   const staticPages: MetadataRoute.Sitemap = [
     {

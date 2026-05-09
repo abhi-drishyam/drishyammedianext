@@ -32,20 +32,20 @@ export default function BlogPostLayout({
         '@context': 'https://schema.org',
         '@type': 'Article',
         headline: titleText,
-        image: `https://drishyammedia.com${image}`,
+        image: `https://www.drishyammedia.com${image}`,
         datePublished: new Date(date).toISOString(),
         dateModified: new Date(date).toISOString(),
         author: {
           '@type': 'Organization',
           name: 'Drishyam Media',
-          url: 'https://drishyammedia.com',
+          url: 'https://www.drishyammedia.com',
         },
         publisher: {
           '@type': 'Organization',
           name: 'Drishyam Media',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://drishyammedia.com/icons/icon-512x512.png',
+            url: 'https://www.drishyammedia.com/icons/icon-512x512.png',
           },
         },
       }

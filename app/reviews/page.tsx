@@ -39,7 +39,7 @@ const reviewsJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Drishyam Media',
-  url: 'https://drishyammedia.com',
+  url: 'https://www.drishyammedia.com',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',

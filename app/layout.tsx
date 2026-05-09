@@ -19,7 +19,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://drishyammedia.com'),
+  metadataBase: new URL('https://www.drishyammedia.com'),
   title: {
     default: 'Drishyam Media — Creative Marketing Agency | Video, Design & Web',
     template: '%s | Drishyam Media',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     'video editing services',
     'Drishyam Media',
   ],
-  authors: [{ name: 'Drishyam Media', url: 'https://drishyammedia.com' }],
+  authors: [{ name: 'Drishyam Media', url: 'https://www.drishyammedia.com' }],
   creator: 'Drishyam Media',
   publisher: 'Drishyam Media',
   formatDetection: {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://drishyammedia.com',
+    url: 'https://www.drishyammedia.com',
     siteName: 'Drishyam Media',
     title: 'Drishyam Media — Creative Marketing Agency | Video, Design & Web',
     description:
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     images: ['/icons/icon-512x512.png'],
   },
   alternates: {
-    canonical: 'https://drishyammedia.com',
+    canonical: 'https://www.drishyammedia.com',
   },
   robots: {
     index: true,

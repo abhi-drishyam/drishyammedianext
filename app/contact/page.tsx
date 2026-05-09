@@ -14,9 +14,9 @@ const localBusinessJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'Drishyam Media',
-  url: 'https://drishyammedia.com',
-  logo: 'https://drishyammedia.com/icons/icon-512x512.png',
-  image: 'https://drishyammedia.com/icons/icon-512x512.png',
+  url: 'https://www.drishyammedia.com',
+  logo: 'https://www.drishyammedia.com/icons/icon-512x512.png',
+  image: 'https://www.drishyammedia.com/icons/icon-512x512.png',
   description:
     'Creative marketing agency specializing in video production, graphic design, web development, and brand growth strategy.',
   email: 'contact@drishyammedia.com',
