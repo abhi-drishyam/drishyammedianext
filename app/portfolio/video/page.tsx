@@ -38,7 +38,7 @@ const SECTIONS = [
     items: [
       { src: '/video/event-1.mp4',  label: '', cls: 'card-landscape' },
       { src: '/video/eventv-2.mp4',  label: '', cls: 'card-portrait'  },
-            { src: '/video/event-2.mp4', label: '', cls: 'card-landscape' },
+      { src: '/video/event-2.mp4', label: '', cls: 'card-landscape' },
       { src: '/video/eventv-3.mp4',  label: '', cls: 'card-portrait'  },
       { src: '/video/event-3.mp4', label: '', cls: 'card-landscape' },
       { src: '/video/eventv-1.mp4', label: '', cls: 'card-portrait'  },
