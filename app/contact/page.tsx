@@ -106,7 +106,7 @@ export default function ContactPage() {
                 </div>
                 <div className="contact-method-content">
                   <h3>Instagram</h3>
-                  <p>@studio.drisyhyam</p>
+                  <p>@studio.drishyam</p>
                 </div>
               </a>
               {(() => { const phoneUS = '+1 813 965 7606'; return (

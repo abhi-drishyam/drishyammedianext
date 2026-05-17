@@ -18,6 +18,122 @@ const poppins = Poppins({
   display: 'swap',
 });
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": [
+    "Organization",
+    "LocalBusiness",
+    "ProfessionalService",
+    "MarketingAgency"
+  ],
+  "@id": "https://www.drishyammedia.com/#organization",
+  "name": "Drishyam Media",
+  "alternateName": "Drishyam",
+  "url": "https://www.drishyammedia.com/",
+  "logo": "https://www.drishyammedia.com/og/logo-1200.png",
+  "image": "https://www.drishyammedia.com/og/logo-1200.png",
+  "description": "Drishyam Media is a Tampa-based creative production and marketing agency specializing in cinematic video production, photography, podcast production, social media marketing, branding, website development, graphic design, and high-converting content systems for creators, brands, and businesses.",
+  "email": "contact@drishyammedia.com",
+  "telephone": "+1-813-965-7606",
+  "priceRange": "$50-$2000",
+  "foundingLocation": {
+    "@type": "City",
+    "name": "Chandigarh"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "9946 Brompton Dr.",
+    "addressLocality": "Tampa",
+    "addressRegion": "FL",
+    "postalCode": "33626",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Tampa" },
+    { "@type": "City", "name": "Chandigarh" },
+    { "@type": "City", "name": "Mumbai" },
+    { "@type": "City", "name": "Niagara" }
+  ],
+  "serviceArea": [
+    { "@type": "Place", "name": "Tampa, Florida" },
+    { "@type": "Place", "name": "Chandigarh, India" },
+    { "@type": "Place", "name": "Mumbai, India" },
+    { "@type": "Place", "name": "Niagara, Canada" }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/studio.drishyam",
+    "https://www.linkedin.com/company/drishyammedia/",
+    "https://x.com/studiodrishyam"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-813-965-7606",
+    "contactType": "customer support",
+    "areaServed": ["US", "IN", "CA"],
+    "availableLanguage": ["English", "Hindi", "Punjabi"]
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Abhishek Nagar"
+  },
+  "knowsAbout": [
+    "Video Production",
+    "Commercial Photography",
+    "Podcast Production",
+    "Social Media Marketing",
+    "Content Strategy",
+    "Brand Strategy",
+    "Video Editing",
+    "Short-form Content",
+    "Graphic Design",
+    "Website Development",
+    "SEO",
+    "Creative Direction",
+    "Event Coverage",
+    "Advertising Content",
+    "Reels Editing",
+    "Cinematography"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Creative & Marketing Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Video Production" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Photography" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Podcast Production" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Social Media Marketing" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Video Editing" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Graphic Design" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Website Development" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "SEO Services" }
+      }
+    ]
+  }
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.drishyammedia.com'),
   title: {
@@ -98,6 +214,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+      </head>
       <body className={`${manrope.variable} ${poppins.variable}`}>
         <Navbar />
         <main id="main-content">

@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Website & SEO Pricing — WordPress, Custom Dev & Local SEO',
   description:
-    'Website development and SEO pricing — WordPress sites, custom-coded websites, maintenance plans, and local SEO packages. Transparent pricing, no hidden fees.',
+    'Affordable website design and local SEO pricing in Tampa Bay. WordPress, custom dev, and monthly SEO retainers. View packages',
 };
 
 // Helper SVG components

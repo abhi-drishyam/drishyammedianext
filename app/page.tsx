@@ -165,7 +165,6 @@ export default function HomePage() {
           { name: 'Arnmaan Bedil',   rot: '3deg',  img: '/image/homepage/client-14.webp' },
           { name: 'Falcon',          rot: '-5deg', img: '/image/homepage/client-15.webp' },
           { name: 'RJ Shanky',       rot: '-3deg', img: '/image/homepage/client-16.webp' },
-          { name: 'Dominoz',         rot: '5deg',  img: '/image/homepage/client-17.webp' },
         ]} />
       </section>
 
