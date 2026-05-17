@@ -37,8 +37,10 @@ const jsonLd = {
       founder: { '@id': 'https://drishyammedia.com/#founder' },
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Westchase',
+        streetAddress: '9946 Brompton Dr.',
+        addressLocality: 'Tampa',
         addressRegion: 'FL',
+        postalCode: '33626',
         addressCountry: 'US',
       },
       contactPoint: {
@@ -70,8 +72,10 @@ const jsonLd = {
       ],
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Westchase',
+        streetAddress: '9946 Brompton Dr.',
+        addressLocality: 'Tampa',
         addressRegion: 'FL',
+        postalCode: '33626',
         addressCountry: 'US',
       },
     },
