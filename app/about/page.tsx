@@ -54,7 +54,12 @@ const jsonLd = {
       '@id': 'https://drishyammedia.com/#founder',
       name: 'Abhishek Nagar',
       jobTitle: 'Founder & Creative Director',
+      image: 'https://drishyammedia.com/image/about/team-2.webp',
       worksFor: { '@id': 'https://drishyammedia.com/#organization' },
+      sameAs: [
+        'https://www.linkedin.com/in/abhisheknagar815/',
+        'https://www.instagram.com/em_abhi_nagar/',
+      ],
       knowsAbout: [
         'Cinematography',
         'Video Production',
