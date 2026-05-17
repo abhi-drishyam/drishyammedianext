@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: 'Email Marketing Is Not About Yes',
   description:
     "Email marketing isn't about getting yeses. It's about converting maybes and nos — the principles, mistakes, and hacks that build real email revenue.",
-  alternates: { canonical: '/blog/email-marketing-is-not-about-yes' },
 };
 
 export default function BlogPostPage() {

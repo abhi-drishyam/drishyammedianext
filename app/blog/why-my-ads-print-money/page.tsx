@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: 'Why My Ads Print Money While Others Bleed Cash',
   description:
     'The ultimate secret to paid advertising is economics, funnels, and long-term thinking. Learn how to build ads that actually generate profit.',
-  alternates: { canonical: '/blog/why-my-ads-print-money' },
 };
 
 export default function BlogPostPage() {

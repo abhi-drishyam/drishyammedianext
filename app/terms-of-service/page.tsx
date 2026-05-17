@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: 'Terms of Service — Drishyam Media',
   description:
     'Read the Drishyam Media Terms and Conditions governing all creative media production and marketing engagements.',
-  alternates: { canonical: '/terms-of-service' },
 };
 
 export default function TermsOfServicePage() {

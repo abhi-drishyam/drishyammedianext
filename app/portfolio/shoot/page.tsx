@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   title: 'Photography & Videography Shoot Portfolio',
   description:
     'Explore Drishyam Media\'s shoot portfolio — BTS footage, event coverage, portrait sessions, product shoots, and aerial cinematography.',
-  alternates: { canonical: '/portfolio/shoot' },
 };
 
 const SECTIONS = [

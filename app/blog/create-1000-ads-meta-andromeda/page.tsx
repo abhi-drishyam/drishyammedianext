@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: 'Create 1000 Ads Without Recording Anything',
   description:
     'How to scale Meta Ads with Andromeda by building a creative machine that produces 1,000 video ads without recording anything new.',
-  alternates: { canonical: '/blog/create-1000-ads-meta-andromeda' },
 };
 
 export default function BlogPostPage() {

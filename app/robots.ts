@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/'],
+        disallow: ['/admin/', '/thank-you'],
       },
     ],
     sitemap: 'https://www.drishyammedia.com/sitemap.xml',

@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: "Why Your Landing Page Isn't Converting",
   description:
     "You've changed the copy, the design, the ads — and still nothing converts. Here's what actually fixes a landing page.",
-  alternates: { canonical: '/blog/landing-page-not-converting' },
 };
 
 export default function BlogPostPage() {

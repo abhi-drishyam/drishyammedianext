@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: 'Client Reviews & Testimonials',
   description:
     'Real testimonials and success stories from Drishyam Media clients. 500+ happy clients, 4.9★ average rating, 98% retention rate.',
-  alternates: { canonical: '/reviews' },
 };
 
 const clientPhotos = [

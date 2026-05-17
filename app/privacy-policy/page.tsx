@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: 'Privacy Policy — Drishyam Media',
   description:
     'Learn how Drishyam Media collects, uses, discloses, retains, and protects your personal information when you use our services.',
-  alternates: { canonical: '/privacy-policy' },
 };
 
 export default function PrivacyPolicyPage() {

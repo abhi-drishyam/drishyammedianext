@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   title: 'Video Editing Portfolio — Motion Graphics, Events & Animations',
   description:
     'Explore Drishyam Media\'s video editing portfolio — motion graphics, event edits, speedramp edits, long-format content, and animation videos.',
-  alternates: { canonical: '/portfolio/video' },
 };
 
 const SECTIONS = [

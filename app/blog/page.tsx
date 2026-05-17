@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: 'Blog — Marketing Tips, Copywriting & Growth Strategies',
   description:
     'Insights on copywriting, paid advertising, email marketing, video ad scripts, and creative growth strategies from the Drishyam Media team.',
-  alternates: { canonical: '/blog' },
 };
 
 const posts = [

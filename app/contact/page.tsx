@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: 'Contact Us — Get a Free Strategy Call',
   description:
     "Have a project in mind? Contact Drishyam Media for video production, graphic design, web development, and brand growth. Offices in Tampa, Chandigarh, Niagara, and Mumbai.",
-  alternates: { canonical: '/contact' },
 };
 
 const localBusinessJsonLd = {

@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: 'About Drishyam Media | Founder Abhishek Nagar & Team — Tampa Bay',
   description:
     'Drishyam Media is a Tampa Bay creative studio founded by Abhishek Nagar. 500+ shoots, 50+ brands, premium cinematography & social-first content.',
-  alternates: { canonical: '/about' },
   openGraph: {
     title: 'About Drishyam Media | Founder Abhishek Nagar & Team — Tampa Bay',
     description:

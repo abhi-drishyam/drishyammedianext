@@ -8,7 +8,6 @@ export const metadata: Metadata = {
     'Top-rated photography & videography in Tampa, FL. Drishyam Media delivers cinematic brand video, social media content, corporate videography & event photography across Tampa Bay, Ybor City, Hyde Park, St. Pete & Clearwater. Book a free call.',
   keywords:
     'photographer in Tampa, videographer Tampa FL, Tampa photography services, Tampa videography, Tampa Bay video production, social media videographer Tampa, brand photography Tampa, corporate video Tampa, event photographer Tampa Bay, content creator Tampa, real estate videographer Tampa, restaurant videography Tampa, Tampa Florida photo studio',
-  alternates: { canonical: '/locations/tampa' },
   openGraph: {
     title: 'Tampa Photographer & Videographer | Drishyam Media',
     description:

@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: 'The Only Copywriting Framework You\'ll Ever Need',
   description:
     'A no-fluff, hands-on masterclass on copywriting from 3+ years of practice — why some ads print crazy money while others die, and exactly how to fix it.',
-  alternates: { canonical: '/blog/the-only-copywriting-framework' },
 };
 
 export default function BlogPostPage() {

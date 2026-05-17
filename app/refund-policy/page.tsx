@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: 'Refund & Cancellation Policy — Drishyam Media',
   description:
     'Understand Drishyam Media\'s refund and cancellation policy covering deposits, project cancellations, rescheduling, and dispute procedures.',
-  alternates: { canonical: '/refund-policy' },
 };
 
 export default function RefundPolicyPage() {

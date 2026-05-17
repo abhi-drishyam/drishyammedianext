@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   title: 'Photography & Videography Pricing — Shoots for Creators & Businesses',
   description:
     'Photography and videography pricing — project packages for creators and businesses. Professional shoots bundled or à la carte.',
-  alternates: { canonical: '/pricing/photography-videography' },
 };
 
 export default function PhotographyVideographyPricingPage() {

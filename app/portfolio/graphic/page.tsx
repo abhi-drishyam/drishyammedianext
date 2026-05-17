@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: 'Graphic Design Portfolio — Social Media, Thumbnails & Branding',
   description:
     'Explore Drishyam Media\'s graphic design portfolio — social media posts, YouTube thumbnails, reel covers, posters, album art, and brochures.',
-  alternates: { canonical: '/portfolio/graphic' },
 };
 
 const SECTIONS = [

@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: 'Website & SEO Pricing — WordPress, Custom Dev & Local SEO',
   description:
     'Website development and SEO pricing — WordPress sites, custom-coded websites, maintenance plans, and local SEO packages. Transparent pricing, no hidden fees.',
-  alternates: { canonical: '/pricing/website-seo' },
 };
 
 // Helper SVG components

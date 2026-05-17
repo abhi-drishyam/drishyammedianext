@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: '24 Marketing Lessons That Took Me 3 Years to Learn',
   description:
     'Distilled patterns from 3 years of testing, thousands of dollars in ad spend, and hundreds of tests — 24 marketing lessons that actually work.',
-  alternates: { canonical: '/blog/24-marketing-lessons' },
 };
 
 export default function BlogPostPage() {
