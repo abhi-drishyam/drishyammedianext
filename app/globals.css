@@ -983,6 +983,11 @@ html, body {
   to   { transform: translateX(-50%); }
 }
 
+/* Reduced motion: drop GPU layer + halt animation to free decoder/compositor budget on low-end devices */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track { will-change: auto; animation: none !important; }
+}
+
 /* Shared responsive: page-hero + filter-bar + anchor-pills */
 @media (max-width: 768px) {
   .gallery-page { padding: 60px 20px 80px; }

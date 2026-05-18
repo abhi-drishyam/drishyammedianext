@@ -1,5 +1,6 @@
 import './about.css';
 import HeroSection from '@/components/HeroSection';
+import GatedVideo from '@/components/GatedVideo';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -272,15 +273,11 @@ export default function AboutPage() {
             <div key={item.title} className="about-bts-card">
               <div className="about-bts-thumb">
                 {item.type === 'video' ? (
-                  <video
+                  <GatedVideo
                     className="about-bts-media"
                     src={item.src}
                     poster={(item as { poster?: string }).poster}
-                    muted
-                    playsInline
-                    loop
-                    autoPlay
-                    aria-label={item.title}
+                    ariaLabel={item.title}
                   />
                 ) : (
                   <img

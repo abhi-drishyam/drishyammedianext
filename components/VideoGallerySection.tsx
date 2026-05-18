@@ -52,9 +52,9 @@ export default function VideoGallerySection({
           {items.map((item, i) => (
             <VideoCard key={i} src={item.src} label={item.label} cls={item.cls} sectionActive={sectionActive} />
           ))}
-          {/* Duplicates for infinite scroll loop */}
+          {/* Duplicates for infinite scroll loop — render as placeholders so we don't double the decoder count */}
           {items.map((item, i) => (
-            <VideoCard key={`dup-${i}`} src={item.src} label={item.label} cls={item.cls} ariaHidden sectionActive={sectionActive} />
+            <VideoCard key={`dup-${i}`} src={item.src} label={item.label} cls={item.cls} ariaHidden sectionActive={sectionActive} placeholder />
           ))}
         </div>
       </div>

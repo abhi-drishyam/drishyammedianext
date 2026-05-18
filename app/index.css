@@ -1751,4 +1751,14 @@
   .gp-card-inner { padding: 22px 18px; }
 }
 
+/* Reduced motion: free GPU layers + halt marquee animations on low-end devices */
+@media (prefers-reduced-motion: reduce) {
+  .card-strip,
+  .wwf-track,
+  .gallery-track {
+    will-change: auto;
+    animation: none !important;
+  }
+}
+
 
