@@ -138,7 +138,7 @@
   display: flex;
   gap: 14px;
   padding: 8px 0 24px;
-  animation: scrollStrip 28s linear infinite;
+  animation: scrollStrip 42s linear infinite;
   width: max-content;
   /* FIX: promote to GPU layer for smoother animation */
   will-change: transform;

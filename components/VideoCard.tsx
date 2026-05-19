@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useRef } from 'react';
-import { requestPlay, releasePlay } from './videoBudget';
+import { isScrollingFast, subscribeSettled } from './scrollVelocity';
 
 interface VideoCardProps {
   src: string;
@@ -10,7 +10,7 @@ interface VideoCardProps {
   sectionActive?: boolean;
   /**
    * If true, renders a styled placeholder div instead of a <video> element.
-   * Used for marquee duplicates so we don't double the live decoder count.
+   * Used for marquee duplicates so we don't double the mounted decoder count.
    */
   placeholder?: boolean;
 }
@@ -31,31 +31,37 @@ export default function VideoCard({
     if (!video) return;
 
     if (!sectionActive) {
-      releasePlay(video);
+      video.pause();
       return;
     }
 
-    let release: (() => void) | null = null;
+    let inView = false;
+
+    const tryPlay = () => {
+      if (!inView) return;
+      if (isScrollingFast()) return; // defer until scroll settles
+      video.play().catch(() => {});
+    };
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          release = requestPlay(video);
-        } else if (release) {
-          release();
-          release = null;
+        inView = entry.isIntersecting;
+        if (inView) {
+          tryPlay();
         } else {
-          releasePlay(video);
+          video.pause();
         }
       },
       { threshold: 0.1 }
     );
-
     observer.observe(video);
+
+    // When fast scrolling settles, any in-view card should resume
+    const unsubSettled = subscribeSettled(tryPlay);
+
     return () => {
       observer.disconnect();
-      if (release) release();
-      else releasePlay(video);
+      unsubSettled();
     };
   }, [sectionActive, placeholder]);
 
@@ -67,7 +73,7 @@ export default function VideoCard({
     >
       <div className="card-img">
         {!placeholder && (
-          <video ref={videoRef} src={src} loop muted playsInline preload="none" />
+          <video ref={videoRef} src={src} loop muted playsInline preload="metadata" />
         )}
       </div>
       <div className="card-overlay">

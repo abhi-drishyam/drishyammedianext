@@ -1,6 +1,5 @@
 'use client';
 import { useEffect, useRef } from 'react';
-import { requestPlay, releasePlay } from './videoBudget';
 
 interface GatedVideoProps {
   src: string;
@@ -10,9 +9,8 @@ interface GatedVideoProps {
 }
 
 /**
- * Standalone autoplay video that participates in the global video budget
- * and only plays while visible. For pages that need a one-off looping video
- * outside a gallery context.
+ * Standalone autoplay video that only plays while visible.
+ * For one-off looping videos outside a gallery context.
  */
 export default function GatedVideo({ src, poster, className, ariaLabel }: GatedVideoProps) {
   const ref = useRef<HTMLVideoElement>(null);
@@ -21,27 +19,19 @@ export default function GatedVideo({ src, poster, className, ariaLabel }: GatedV
     const video = ref.current;
     if (!video) return;
 
-    let release: (() => void) | null = null;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          release = requestPlay(video);
-        } else if (release) {
-          release();
-          release = null;
+          video.play().catch(() => {});
         } else {
-          releasePlay(video);
+          video.pause();
         }
       },
       { threshold: 0.1 }
     );
 
     observer.observe(video);
-    return () => {
-      observer.disconnect();
-      if (release) release();
-      else releasePlay(video);
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -53,7 +43,7 @@ export default function GatedVideo({ src, poster, className, ariaLabel }: GatedV
       muted
       playsInline
       loop
-      preload="none"
+      preload="metadata"
       aria-label={ariaLabel}
     />
   );

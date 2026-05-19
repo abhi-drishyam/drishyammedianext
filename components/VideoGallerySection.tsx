@@ -1,6 +1,7 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import VideoCard from './VideoCard';
+import { registerStrip, reportRatio } from './activeStrip';
 
 interface VideoItem {
   src: string;
@@ -27,18 +28,26 @@ export default function VideoGallerySection({
 }: VideoGallerySectionProps) {
   const [sectionActive, setSectionActive] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const reactId = useId();
 
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
-    // Watches the whole section — flips sectionActive on/off as user scrolls
+
+    const unregister = registerStrip(reactId, (active) => setSectionActive(active));
+
+    // 5 thresholds is enough to pick the most-visible strip; more just burns JS on every scroll frame
     const observer = new IntersectionObserver(
-      ([entry]) => setSectionActive(entry.isIntersecting),
-      { threshold: 0.05 } // triggers when 5% of section enters/leaves viewport
+      ([entry]) => reportRatio(reactId, entry.intersectionRatio),
+      { threshold: [0, 0.25, 0.5, 0.75, 1] }
     );
     observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+
+    return () => {
+      observer.disconnect();
+      unregister();
+    };
+  }, [reactId]);
 
   return (
     <section ref={sectionRef} className="cat-block" id={id} aria-label={ariaLabel}>
@@ -52,9 +61,9 @@ export default function VideoGallerySection({
           {items.map((item, i) => (
             <VideoCard key={i} src={item.src} label={item.label} cls={item.cls} sectionActive={sectionActive} />
           ))}
-          {/* Duplicates for infinite scroll loop — render as placeholders so we don't double the decoder count */}
+          {/* Duplicates for infinite scroll loop — must be real videos so the marquee back-half doesn't show blank cards */}
           {items.map((item, i) => (
-            <VideoCard key={`dup-${i}`} src={item.src} label={item.label} cls={item.cls} ariaHidden sectionActive={sectionActive} placeholder />
+            <VideoCard key={`dup-${i}`} src={item.src} label={item.label} cls={item.cls} ariaHidden sectionActive={sectionActive} />
           ))}
         </div>
       </div>

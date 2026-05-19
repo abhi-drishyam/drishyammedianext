@@ -14,22 +14,22 @@
 /* ─────────────────────────────────────────
    CAROUSEL — Card widths & speeds (shoot page)
 ───────────────────────────────────────── */
-.bts-carousel .gallery-card      { width: calc((100vw - 72px) / 7); aspect-ratio: 9/16; }
-.portrait-carousel .gallery-card { width: calc((100vw - 72px) / 7); aspect-ratio: 9/16; }
-.brand-carousel .gallery-card   { width: calc((100vw - 72px) / 7); aspect-ratio: 9/16; }
-.podcast-carousel .gallery-card  { width: calc((100vw - 48px) / 5); aspect-ratio: 16/9; }
+.bts-carousel .gallery-card      { width: calc((100vw - 96px) / 5); aspect-ratio: 9/16; }
+.portrait-carousel .gallery-card { width: calc((100vw - 96px) / 5); aspect-ratio: 9/16; }
+.brand-carousel .gallery-card   { width: calc((100vw - 96px) / 5); aspect-ratio: 9/16; }
+.podcast-carousel .gallery-card  { width: calc((100vw - 80px) / 4); aspect-ratio: 16/9; }
 
 /* Event Coverage — mixed aspect ratios via per-card classes */
 .shoot-event-carousel .carousel-track { align-items: center; }
-.shoot-event-carousel .gallery-card.card-landscape { width: calc((100vw - 48px) / 5); aspect-ratio: 16/9; }
-.shoot-event-carousel .gallery-card.card-portrait  { width: calc((100vw - 72px) / 7); aspect-ratio: 9/16; }
+.shoot-event-carousel .gallery-card.card-landscape { width: calc((100vw - 80px) / 4); aspect-ratio: 16/9; }
+.shoot-event-carousel .gallery-card.card-portrait  { width: calc((100vw - 96px) / 5); aspect-ratio: 9/16; }
 
-/* Scroll speeds */
-.bts-carousel .carousel-track          { animation: carouselScroll 28s linear infinite; }
-.shoot-event-carousel .carousel-track  { animation: carouselScroll 38s linear infinite; }
-.portrait-carousel .carousel-track     { animation: carouselScroll 26s linear infinite; }
-.podcast-carousel .carousel-track      { animation: carouselScroll 40s linear infinite; }
-.brand-carousel .carousel-track       { animation: carouselScroll 30s linear infinite; }
+/* Scroll speeds — slowed ~35% for calmer pacing and fewer play() events as cards enter view */
+.bts-carousel .carousel-track          { animation: carouselScroll 42s linear infinite; }
+.shoot-event-carousel .carousel-track  { animation: carouselScroll 55s linear infinite; }
+.portrait-carousel .carousel-track     { animation: carouselScroll 40s linear infinite; }
+.podcast-carousel .carousel-track      { animation: carouselScroll 58s linear infinite; }
+.brand-carousel .carousel-track       { animation: carouselScroll 45s linear infinite; }
 
 /* Placeholder gradients */
 .bts-carousel .gallery-card:nth-child(8n+1) .card-img    { background: linear-gradient(160deg,#0a0818,#1e0848); }

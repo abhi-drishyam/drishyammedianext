@@ -30,7 +30,7 @@ export const testimonials: Testimonial[] = [
     id: 3,
     initials: 'RB',
     gradient: 'linear-gradient(135deg,#ff3c2f,#d4007a)',
-    quote: 'I run a marketing agency, and for all our shoot-related backend work, Christian Studios was our trusted production partner. We could always rely on them to deliver professional and high-quality work on time.',
+    quote: 'I run a marketing agency, and for all our shoot-related backend work, Drishyam Studios was our trusted production partner. We could always rely on them to deliver professional and high-quality work on time.',
     name: 'Rueben',
     role: 'Marketing Agency Owner',
   },

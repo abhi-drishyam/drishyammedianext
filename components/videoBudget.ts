@@ -1,122 +1,42 @@
 'use client';
 
-type VideoEntry = {
-  el: HTMLVideoElement;
-  // monotonically increasing so we can evict the least-recently-activated
-  activatedAt: number;
-};
+/**
+ * Device-class detection for sizing video-heavy components.
+ * - low-end: <=4 cores or <=4GB RAM (hardware decoder cap typically 4)
+ * - mid: 5-6 cores
+ * - high: 8+ cores
+ *
+ * Use the returned `videoLimit` to cap how many <video> elements a marquee
+ * mounts. The rest should render as CSS-styled placeholder divs.
+ */
 
-let cap = 12;
-let staggerMs = 35;
-let detected = false;
+export type DeviceClass = 'low' | 'mid' | 'high';
 
-function detectDeviceClass() {
-  if (detected || typeof navigator === 'undefined') return;
-  detected = true;
+export interface DeviceProfile {
+  deviceClass: DeviceClass;
+  videoLimit: number;
+}
+
+const FALLBACK: DeviceProfile = { deviceClass: 'high', videoLimit: 99 };
+
+let cached: DeviceProfile | null = null;
+
+export function getDeviceProfile(): DeviceProfile {
+  if (cached) return cached;
+  if (typeof navigator === 'undefined') return FALLBACK;
 
   const cores = navigator.hardwareConcurrency ?? 8;
   const mem = (navigator as Navigator & { deviceMemory?: number }).deviceMemory;
 
-  // Low-end: <=4 cores or <=4GB RAM (when reported)
+  let profile: DeviceProfile;
   if (cores <= 4 || (mem !== undefined && mem <= 4)) {
-    cap = 4;
-    staggerMs = 80;
+    profile = { deviceClass: 'low', videoLimit: 4 };
   } else if (cores <= 6) {
-    cap = 8;
-    staggerMs = 50;
+    profile = { deviceClass: 'mid', videoLimit: 8 };
   } else {
-    cap = 12;
-    staggerMs = 35;
-  }
-}
-
-const active = new Map<HTMLVideoElement, VideoEntry>();
-let activationCounter = 0;
-let nextStaggerSlot = 0;
-
-function evictOldest() {
-  let oldest: VideoEntry | null = null;
-  for (const entry of active.values()) {
-    if (!oldest || entry.activatedAt < oldest.activatedAt) {
-      oldest = entry;
-    }
-  }
-  if (oldest) {
-    try {
-      oldest.el.pause();
-    } catch {
-      // ignore
-    }
-    active.delete(oldest.el);
-  }
-}
-
-/**
- * Request to play a video, respecting the global budget.
- * - If under cap: plays after a staggered delay (prevents decode storm on first paint)
- * - If at cap: evicts the least-recently-activated video first
- * Returns a cleanup function to call when the video should be released.
- */
-export function requestPlay(el: HTMLVideoElement): () => void {
-  detectDeviceClass();
-
-  if (active.has(el)) {
-    // already active, just bump its activation timestamp
-    active.get(el)!.activatedAt = ++activationCounter;
-  } else {
-    if (active.size >= cap) {
-      evictOldest();
-    }
-    active.set(el, { el, activatedAt: ++activationCounter });
+    profile = { deviceClass: 'high', videoLimit: 99 };
   }
 
-  // Compute a stagger delay so simultaneous IntersectionObserver fires don't all hit play() in the same frame.
-  // Slots clear out 500ms after now, so subsequent (e.g. scroll-triggered) plays become immediate.
-  const now =
-    typeof performance !== 'undefined' ? performance.now() : Date.now();
-  if (nextStaggerSlot < now) nextStaggerSlot = now;
-  const delay = nextStaggerSlot - now;
-  nextStaggerSlot += staggerMs;
-  // cap the queue depth so a huge burst doesn't push the last play far into the future
-  if (nextStaggerSlot - now > 600) nextStaggerSlot = now + 600;
-
-  let cancelled = false;
-  const timer = window.setTimeout(() => {
-    if (cancelled) return;
-    if (!active.has(el)) return; // got evicted before we even started
-    const p = el.play();
-    if (p && typeof p.catch === 'function') p.catch(() => {});
-  }, delay);
-
-  return () => {
-    cancelled = true;
-    window.clearTimeout(timer);
-    if (active.has(el)) {
-      try {
-        el.pause();
-      } catch {
-        // ignore
-      }
-      active.delete(el);
-    }
-  };
-}
-
-/**
- * Release a video without playing — used when a card scrolls out of view.
- */
-export function releasePlay(el: HTMLVideoElement) {
-  if (active.has(el)) {
-    try {
-      el.pause();
-    } catch {
-      // ignore
-    }
-    active.delete(el);
-  }
-}
-
-/** Test/debug helper — current active count */
-export function _activeCount() {
-  return active.size;
+  cached = profile;
+  return profile;
 }

@@ -962,18 +962,14 @@ html, body {
   color: rgba(255,255,255,0.90); letter-spacing: 0.03em;
 }
 
-/* Carousel system */
+/* Carousel system — carousel respects .cat-block's 1100px max-width on desktop/tablet */
 .carousel-wrap {
   position: relative; overflow: hidden;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
 }
 .carousel-wrap:hover .carousel-track { animation-play-state: paused; }
 
 .carousel-track {
-  display: flex; gap: 12px;
+  display: flex; gap: 18px;
   width: max-content; will-change: transform;
 }
 .carousel-track .gallery-card { flex-shrink: 0; }
@@ -1003,6 +999,11 @@ html, body {
   .anchor-pill { font-size: 12px; padding: 7px 14px; }
   .section-header { margin: 0 auto 40px; }
   .section-header h2 { margin-bottom: 12px; }
+  /* Mobile: restore edge-to-edge carousel (overrides the desktop contained layout) */
+  .carousel-wrap {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
 }
 @media (max-width: 400px) {
   .page-hero { padding: 100px 14px 16px; }
