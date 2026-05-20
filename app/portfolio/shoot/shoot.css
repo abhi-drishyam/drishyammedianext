@@ -10,6 +10,12 @@
 /* Override globals.css — scroll must never pause on this page */
 .carousel-wrap:hover .carousel-track { animation-play-state: running !important; }
 
+/* DualStripSection — hide the inner section headers rendered by GallerySection & VideoGallerySection */
+.dual-strip-section .cat-block .cat-header { display: none; }
+/* Small gap between the two strips, no extra space after the last one */
+.dual-strip-section .cat-block { margin-bottom: 16px; }
+.dual-strip-section .cat-block:last-child { margin-bottom: 0; }
+
 
 /* ─────────────────────────────────────────
    CAROUSEL — Card widths & speeds (shoot page)
@@ -18,6 +24,50 @@
 .portrait-carousel .gallery-card { width: calc((100vw - 96px) / 5); aspect-ratio: 9/16; }
 .brand-carousel .gallery-card   { width: calc((100vw - 96px) / 5); aspect-ratio: 9/16; }
 .podcast-carousel .gallery-card  { width: calc((100vw - 80px) / 4); aspect-ratio: 16/9; }
+
+/* ── Dual Strip Section carousels ── */
+
+/* Image carousels: fixed height, width adapts to each image's natural ratio — no cropping */
+.modeling-img-carousel .gallery-card,
+.portrait-img-carousel .gallery-card,
+.portrait-vid-carousel .gallery-card,
+.event-img-carousel .gallery-card {
+  width: auto;
+  aspect-ratio: unset;
+  height: var(--img-carousel-height, 420px);
+}
+.modeling-img-carousel .gallery-card .card-img,
+.portrait-img-carousel .gallery-card .card-img,
+.portrait-vid-carousel .gallery-card .card-img,
+.event-img-carousel .gallery-card .card-img {
+  position: static;
+  width: auto;
+  height: 100%;
+}
+.modeling-img-carousel .gallery-card .card-img img,
+.portrait-img-carousel .gallery-card .card-img img,
+.portrait-vid-carousel .gallery-card .card-img img,
+.event-img-carousel .gallery-card .card-img img {
+  width: auto;
+  height: 100%;
+  object-fit: unset;
+}
+
+/* Modeling */
+.modeling-vid-carousel .gallery-card   { width: calc((100vw - 96px) / 5); aspect-ratio: 9/16; }
+.modeling-img-carousel .carousel-track { animation: carouselScroll 38s linear infinite; }
+.modeling-vid-carousel .carousel-track { animation: carouselScrollReverse 42s linear infinite; }
+
+/* Portraits / Candids */
+.portrait-img-carousel .carousel-track { animation: carouselScroll 36s linear infinite; }
+.portrait-vid-carousel .carousel-track { animation: carouselScrollReverse 40s linear infinite; }
+
+/* Events */
+.event-vid-carousel .carousel-track                  { align-items: center; }
+.event-vid-carousel .gallery-card.card-landscape     { width: calc((100vw - 36px) / 4); aspect-ratio: 16/9; }
+.event-vid-carousel .gallery-card.card-portrait      { width: calc((100vw - 96px) / 5); aspect-ratio: 9/16; }
+.event-img-carousel .carousel-track { animation: carouselScroll 48s linear infinite; }
+.event-vid-carousel .carousel-track { animation: carouselScrollReverse 55s linear infinite; }
 
 /* Event Coverage — mixed aspect ratios via per-card classes */
 .shoot-event-carousel .carousel-track { align-items: center; }
@@ -157,6 +207,13 @@
   }
   .shoot-event-carousel .gallery-card.card-landscape { width: calc((100vw - 36px) / 4); }
   .shoot-event-carousel .gallery-card.card-portrait  { width: calc((100vw - 60px) / 6); }
+  .modeling-vid-carousel .gallery-card { width: calc((100vw - 60px) / 6); }
+  .event-vid-carousel .gallery-card.card-landscape { width: calc((100vw - 36px) / 4); }
+  .event-vid-carousel .gallery-card.card-portrait  { width: calc((100vw - 60px) / 6); }
+  .modeling-img-carousel .gallery-card,
+  .portrait-img-carousel .gallery-card,
+  .portrait-vid-carousel .gallery-card,
+  .event-img-carousel .gallery-card { --img-carousel-height: 340px; }
 }
 @media (max-width: 900px) {
   .gallery-page { padding: 60px 24px 80px; }
@@ -171,6 +228,13 @@
   }
   .shoot-event-carousel .gallery-card.card-landscape { width: calc((100vw - 24px) / 3); }
   .shoot-event-carousel .gallery-card.card-portrait  { width: calc((100vw - 48px) / 5); }
+  .modeling-vid-carousel .gallery-card { width: calc((100vw - 48px) / 5); }
+  .event-vid-carousel .gallery-card.card-landscape { width: calc((100vw - 24px) / 3); }
+  .event-vid-carousel .gallery-card.card-portrait  { width: calc((100vw - 48px) / 5); }
+  .modeling-img-carousel .gallery-card,
+  .portrait-img-carousel .gallery-card,
+  .portrait-vid-carousel .gallery-card,
+  .event-img-carousel .gallery-card { --img-carousel-height: 280px; }
 }
 @media (max-width: 640px) {
   .gallery-page { padding: 48px 0 64px; }
@@ -184,9 +248,15 @@
   .podcast-carousel .gallery-card,
   .brand-carousel .gallery-card,
   .shoot-event-carousel .gallery-card.card-landscape,
-  .shoot-event-carousel .gallery-card.card-portrait {
+  .shoot-event-carousel .gallery-card.card-portrait,
+  .modeling-vid-carousel .gallery-card,
+  .event-vid-carousel .gallery-card {
     width: calc((100vw - 24px) / 3);
   }
+  .modeling-img-carousel .gallery-card,
+  .portrait-img-carousel .gallery-card,
+  .portrait-vid-carousel .gallery-card,
+  .event-img-carousel .gallery-card { --img-carousel-height: 220px; }
   .cta-strip { padding: 60px 20px 72px; }
   .cta-strip-actions { flex-direction: column; }
   .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
@@ -197,7 +267,13 @@
   .podcast-carousel .gallery-card,
   .brand-carousel .gallery-card,
   .shoot-event-carousel .gallery-card.card-landscape,
-  .shoot-event-carousel .gallery-card.card-portrait {
+  .shoot-event-carousel .gallery-card.card-portrait,
+  .modeling-vid-carousel .gallery-card,
+  .event-vid-carousel .gallery-card {
     width: calc((100vw - 12px) / 2);
   }
+  .modeling-img-carousel .gallery-card,
+  .portrait-img-carousel .gallery-card,
+  .portrait-vid-carousel .gallery-card,
+  .event-img-carousel .gallery-card { --img-carousel-height: 180px; }
 }
