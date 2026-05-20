@@ -52,27 +52,29 @@ export default function DualStripSection({
         carouselClass={imageCarouselClass}
         items={imageItems}
       />
-      <LazySection>
-        {secondImageItems ? (
-          <GallerySection
-            id={`${id}-images-2`}
-            title=""
-            count=""
-            ariaLabel={`${ariaLabel} photos row 2`}
-            carouselClass={videoCarouselClass}
-            items={secondImageItems}
-          />
-        ) : (
-          <VideoGallerySection
-            id={`${id}-videos`}
-            title=""
-            count=""
-            ariaLabel={`${ariaLabel} videos`}
-            carouselClass={videoCarouselClass}
-            items={videoItems}
-          />
-        )}
-      </LazySection>
+      {(secondImageItems || videoItems.length > 0) && (
+        <LazySection>
+          {secondImageItems ? (
+            <GallerySection
+              id={`${id}-images-2`}
+              title=""
+              count=""
+              ariaLabel={`${ariaLabel} photos row 2`}
+              carouselClass={videoCarouselClass}
+              items={secondImageItems}
+            />
+          ) : (
+            <VideoGallerySection
+              id={`${id}-videos`}
+              title=""
+              count=""
+              ariaLabel={`${ariaLabel} videos`}
+              carouselClass={videoCarouselClass}
+              items={videoItems}
+            />
+          )}
+        </LazySection>
+      )}
     </section>
   );
 }

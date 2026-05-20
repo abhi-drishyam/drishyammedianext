@@ -18,14 +18,12 @@ const BTS_SECTION = {
   ariaLabel: 'BTS Footage',
   carouselClass: 'bts-carousel',
   items: [
-    { src: '/shoot/bts-1.mp4', label: '' },
-    { src: '/shoot/bts-2.mp4', label: '' },
-    { src: '/shoot/bts-3.mp4', label: '' },
-    { src: '/shoot/bts-4.mp4', label: '' },
-    { src: '/shoot/bts-5.mp4', label: '' },
-    { src: '/shoot/bts-6.mp4', label: '' },
-    { src: '/shoot/bts-7.mp4', label: '' },
-    { src: '/shoot/bts-8.mp4', label: '' },
+    { src: '/video/bts-1.mp4', label: '' },
+    { src: '/video/bts-2.mp4', label: '' },
+    { src: '/video/bts-3.mp4', label: '' },
+    { src: '/video/bts-4.mp4', label: '' },
+    { src: '/video/bts-5.mp4', label: '' },
+    { src: '/video/bts-6.mp4', label: '' },
   ],
 };
 
@@ -47,8 +45,12 @@ const DUAL_SECTIONS = [
       { src: '/image/shoot/model-6.webp', alt: '', label: '' },
       { src: '/image/shoot/model-7.webp', alt: '', label: '' },
       { src: '/image/shoot/model-8.webp', alt: '', label: '' },
+      { src: '/image/shoot/model-9.webp', alt: '', label: '' },
+      { src: '/image/shoot/model-10.webp', alt: '', label: '' },
     ],
-    videoItems: [
+    // TODO: add modeling videos later
+    videoItems: [],
+    /* videoItems: [
       { src: '/shoot/modeling-1.mp4', label: '' },
       { src: '/shoot/modeling-2.mp4', label: '' },
       { src: '/shoot/modeling-3.mp4', label: '' },
@@ -57,7 +59,7 @@ const DUAL_SECTIONS = [
       { src: '/shoot/modeling-6.mp4', label: '' },
       { src: '/shoot/modeling-7.mp4', label: '' },
       { src: '/shoot/modeling-8.mp4', label: '' },
-    ],
+    ], */
   },
   {
     id: 'portraits',
@@ -86,6 +88,7 @@ const DUAL_SECTIONS = [
       { src: '/image/shoot/candid-6.webp', alt: '', label: '' },
       { src: '/image/shoot/candid-7.webp', alt: '', label: '' },
       { src: '/image/shoot/candid-8.webp', alt: '', label: '' },
+      { src: '/image/shoot/candid-9.webp', alt: '', label: '' },
     ],
   },
   {
@@ -104,6 +107,9 @@ const DUAL_SECTIONS = [
       { src: '/image/shoot/event-6.webp', alt: '', label: '' },
       { src: '/image/shoot/event-7.webp', alt: '', label: '' },
       { src: '/image/shoot/event-8.webp', alt: '', label: '' },
+      { src: '/image/shoot/event-9.webp', alt: '', label: '' },
+      { src: '/image/shoot/event-10.webp', alt: '', label: '' },
+      { src: '/image/shoot/event-11.webp', alt: '', label: '' },
     ],
     videoItems: [
       { src: '/video/event-1.mp4',  label: '', cls: 'card-landscape' },
