@@ -1,0 +1,119 @@
+.ann-spacer {
+  height: 44px;
+  margin-top: 88px;
+}
+
+.ann-banner {
+  position: fixed;
+  top: 88px;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  width: 100%;
+  background: linear-gradient(90deg, #1a0030 0%, #0d0d0d 60%, #1a0030 100%);
+  border-bottom: 1px solid rgba(255, 80, 180, 0.25);
+  border-top: 1px solid rgba(255, 80, 180, 0.15);
+  box-shadow: 0 2px 24px 0 rgba(200, 40, 140, 0.10);
+}
+
+.ann-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 11px 48px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.ann-tag {
+  font-family: var(--font-manrope, sans-serif);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(90deg, #e0198c, #a020c8);
+  border-radius: 4px;
+  padding: 3px 9px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ann-text {
+  font-family: var(--font-manrope, sans-serif);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ann-text strong {
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff4ec7, #c060ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ann-note {
+  font-family: var(--font-manrope, sans-serif);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.42);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .ann-spacer {
+    margin-top: 65px;
+  }
+  .ann-banner {
+    top: 65px;
+  }
+  .ann-inner {
+    padding: 10px 20px;
+    gap: 8px;
+  }
+  .ann-text {
+    font-size: 13px;
+  }
+}
+
+/* When banner precedes a hero, reduce hero's top padding since navbar offset is handled by banner margin-top */
+.ann-banner + .hero-wrapper .page-hero {
+  padding-top: 60px;
+}
+
+/* Tampa page: breadcrumbs follow the banner, reduce their top padding */
+.ann-banner + nav.tampa-breadcrumbs {
+  padding-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .ann-banner + nav.tampa-breadcrumbs {
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ann-banner + .hero-wrapper .page-hero {
+    padding-top: 40px;
+  }
+  .ann-banner + nav.tampa-breadcrumbs {
+    padding-top: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ann-inner {
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 16px;
+  }
+  .ann-note {
+    font-size: 11px;
+  }
+}

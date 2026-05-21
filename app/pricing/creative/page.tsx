@@ -2,6 +2,7 @@ import '../pricing.css';
 import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
 import CalButton from '@/components/CalButton';
+import AnnouncementBanner from '@/components/AnnouncementBanner';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ const Cross = () => (
 export default function CreativePricingPage() {
   return (
     <>
+      <AnnouncementBanner />
       <HeroSection
         badge="Monthly subscriptions & project packages"
         heading={<>Editing Services <span className="grad-text">Pricing</span></>}

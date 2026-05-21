@@ -1,6 +1,7 @@
 import './tampa.css';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import AnnouncementBanner from '@/components/AnnouncementBanner';
 
 export const metadata: Metadata = {
   title: 'Tampa Photographer & Videographer | Drishyam Media — Photo & Video Production in Tampa, FL',
@@ -319,6 +320,8 @@ export default function TampaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <AnnouncementBanner />
 
       {/* Breadcrumbs */}
       <nav className="tampa-breadcrumbs" aria-label="Breadcrumb">

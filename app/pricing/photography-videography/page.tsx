@@ -2,6 +2,7 @@ import '../pricing.css';
 import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
 import CalButton from '@/components/CalButton';
+import AnnouncementBanner from '@/components/AnnouncementBanner';
 import type { Metadata } from 'next';
 
 // Helper SVG components
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
 export default function PhotographyVideographyPricingPage() {
   return (
     <>
+      <AnnouncementBanner />
       <HeroSection
         badge="Project packages & Hourly Price"
         heading={<>Photography/Videography <span className="grad-text">Pricing</span></>}

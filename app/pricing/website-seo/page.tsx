@@ -1,6 +1,7 @@
 import '../pricing.css';
 import HeroSection from '@/components/HeroSection';
 import CalButton from '@/components/CalButton';
+import AnnouncementBanner from '@/components/AnnouncementBanner';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ const SeoCheck = ({ pink = false }) => (
 export default function WebsiteSeoPricingPage() {
   return (
     <>
+      <AnnouncementBanner />
       <HeroSection
         badge="Monthly retainers & one-time project packages"
         heading={<>Website &amp; SEO <span className="grad-text">Pricing</span></>}
