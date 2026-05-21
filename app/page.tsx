@@ -1,5 +1,6 @@
 import './index.css';
 import Link from 'next/link';
+import AnnouncementBanner from '@/components/AnnouncementBanner';
 import WebsiteShowcase from './WebsiteShowcase';
 import AtaTimeline from '@/components/AtaTimeline';
 import HeroVideoStrip from '@/components/HeroVideoStrip';
@@ -98,6 +99,8 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
       />
+
+      <AnnouncementBanner />
 
       {/* ══════════════════════════════════════
           HERO WRAPPER

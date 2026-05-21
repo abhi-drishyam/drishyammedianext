@@ -106,10 +106,13 @@ export default function AboutPage() {
           </div>
           <div className="vision-content">
             <h2>The person behind <span className="grad-text">the lens</span></h2>
-            <p>Abhishek Nagar grew up with a camera in his hands and a question in his mind: <em>why do some brands feel alive while others are forgotten the moment the scroll moves on?</em> That question became his career.</p>
-            <p>He started shooting professionally in India — taking every job, learning the hard way, and building a reputation one frame at a time. Over two years and more than <strong>500 completed shoots</strong>, he moved from solo freelancer to founding <strong>Drishyam</strong>, a full-service creative production agency that grew to serve over <strong>50 clients</strong> across industries.</p>
-            <p>At Drishyam India, Abhishek built and led an in-house team across graphic design, video editing, social media, SEO, and development — managing the full pipeline from ideation to distribution. He directed multi-camera coverage for concerts headlined by <strong>Badshah</strong>, <strong>Parmish Verma</strong>, and <strong>Prince Narula</strong>, and produced fast-turnaround content for large-scale events including Riwayat, Apratim, Fur Fest, and a Domino&apos;s flagship event.</p>
-            <p>In 2024, Abhishek relocated to the United States as a permanent resident, settling in Westchase, Tampa, Florida — bringing Drishyam with him as an evolution, not a reset. The philosophy hasn&apos;t changed: good visual storytelling isn&apos;t decoration — it&apos;s infrastructure for growth.</p>
+            <p>I started my journey with a camera, not with a business plan.</p>
+            <p>In the beginning, I was taking every project I could get — learning through real shoots, real pressure, and real clients. Over time, what started as freelance videography turned into something much bigger. In just over two years, I completed <strong>500+ shoots</strong> across concerts, brand campaigns, podcasts, events, advertisements, and social media productions.</p>
+            <p>That journey led me to build <strong>Drishyam</strong> in India — a full-service creative production agency that worked with more than <strong>50 clients</strong> across different industries. I wasn&apos;t just shooting videos; I was building systems, managing teams, handling client strategy, and overseeing the complete production pipeline from concept to final delivery.</p>
+            <p>As Drishyam grew, I built an in-house team of graphic designers, editors, social media managers, SEO specialists, and developers. Alongside client projects, we also worked as a white-label creative partner for other agencies.</p>
+            <p>My work gave me the opportunity to shoot personal content for artists like and, while also covering large-scale concerts featuring and. I also led coverage for major events including Riwayat, Apratim, Fur Fest, cyclothons, pet events, and brand activations including a Domino&apos;s event.</p>
+            <p>In End 2025, I relocated to the United States and now I am based in Tampa, Florida. For me, moving countries was never about starting over — it was about expanding the vision behind Drishyam.</p>
+            <p>I&apos;ve always believed that strong visual storytelling does more than just &ldquo;look good.&rdquo; Good content builds trust, shapes perception, and helps brands stay remembered long after people stop scrolling.</p>
           </div>
         </div>
       </section>
