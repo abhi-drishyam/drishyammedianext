@@ -133,66 +133,82 @@ const faqJsonLd = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Who is the best photographer and videographer in Tampa, FL?',
+      name: 'Who is Drishyam Media and are you actually based in Tampa?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Drishyam Media is a top-rated photography and videography agency serving Tampa, Florida. We specialize in brand photography, corporate videography, social media content production, and event coverage across Tampa Bay — including downtown Tampa, Ybor City, Hyde Park, Channelside, St. Petersburg, and Clearwater. With a 4.9-star average rating and 50+ happy clients, we are trusted by Tampa businesses, creators, and brands.',
+        text: 'Yes — we have a real presence in Tampa. Abhishek (the person you\'ll actually talk to and shoot with) is on the ground here. Our post-production team operates out of Chandigarh, India — and that\'s intentional. It\'s how we deliver international-quality editing at rates that make sense for local Tampa businesses. You get a single point of contact in your timezone, and a full creative team working behind the scenes.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does professional photography and videography cost in Tampa?',
+      name: 'How much does a shoot cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Photography and videography pricing in Tampa typically ranges from $500 for a half-day shoot to $5,000+ for full brand campaigns or monthly content packages. Drishyam Media offers transparent project pricing and monthly retainer options for Tampa Bay businesses. Book a free strategy call for a custom quote.',
+        text: 'Shoots start at $75 for a 30-minute session. From there, pricing scales based on time, deliverables, and what your project needs. We don\'t believe in hiding numbers — book a free call and we\'ll give you a clear quote without the runaround.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What areas does Drishyam Media cover in Tampa Bay?',
+      name: 'How fast will I get my photos and videos?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We serve all of Tampa Bay including downtown Tampa, Ybor City, Hyde Park, Channelside, Westshore, South Tampa, New Tampa, Brandon, Riverview, Wesley Chapel, St. Petersburg, and Clearwater — with no travel fee within the region.',
+        text: 'For most shoots, you\'ll have your edited deliverables within 2–3 business days. Real estate photography is typically turned around in 1 business day, because we know listings can\'t wait. We build in a small buffer for unexpected factors — weather, technical issues, volume — so when we commit to a timeline, we mean it.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do you offer real estate videography in Tampa?',
+      name: 'Can you rush my delivery if I need it faster?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. We produce real estate photography and videography for Tampa agents and brokerages, including drone aerials, walkthrough videos, twilight shoots, and listing photography across Tampa Bay.',
+        text: 'Yes. If you have a hard deadline — a listing going live, a campaign launch, an event recap — tell us upfront. We\'ll have an honest conversation about what\'s possible and lock in a timeline that works. Rush delivery is handled case by case, not as a blanket policy with a fixed fee.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Can you film social media content for Tampa restaurants and small businesses?',
+      name: 'Do you do real estate photography and video in Tampa?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Absolutely. Tampa restaurants, cafes, retail shops, and service businesses are our specialty for social media video. We produce Instagram Reels, TikTok content, and YouTube Shorts that bring foot traffic and online engagement.',
+        text: 'It\'s one of our most requested services. We shoot listing photography, walkthrough video tours, drone aerials, and twilight shoots for agents, brokerages, and developers across Tampa Bay. Real estate photos turnaround is 1 business day because we understand how time-sensitive listings are.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How quickly can you deliver photos and videos after a Tampa shoot?',
+      name: 'What areas of Tampa Bay do you cover?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Standard turnaround is 5–7 business days for edited deliverables. Rush delivery within 48 hours is available for time-sensitive Tampa events and campaigns.',
+        text: 'All of it — Downtown Tampa, Ybor City, Hyde Park, Channelside, Westshore, South Tampa, New Tampa, Brandon, Riverview, Wesley Chapel, St. Petersburg, and Clearwater. No travel fee within the greater Tampa Bay region.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Why should Tampa businesses invest in professional video content?',
+      name: 'Are you a local company or an international agency?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Tampa is one of the fastest-growing US business markets. Local businesses that invest in professional video content see up to 3× faster brand growth, higher engagement on social media, and significantly more inbound leads compared to those relying on photos alone.',
+        text: 'Both, honestly. Drishyam Media operates across 4 cities in 3 countries — Tampa (US), Niagara (Canada), Chandigarh, and Mumbai (India). The shoot happens with a local team member here in Tampa. The editing, motion graphics, and post-production happen with our India-based team. This structure is why our pricing is accessible without cutting corners on quality.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is Drishyam Media a local Tampa company?',
+      name: 'Why is your pricing more affordable than other Tampa agencies?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Drishyam Media is a global creative agency now operating in Tampa, FL with a dedicated local production team. We bring international-quality content production with deep on-the-ground knowledge of the Tampa Bay market.',
+        text: 'Because our model is different. Most local agencies carry high overhead — local editors, studio space, full-time staff. We operate lean by design: one shooter on the ground in Tampa, a skilled post-production team in India, and no unnecessary middlemen. You\'re not paying for overhead. You\'re paying for the work.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What kind of businesses do you work with in Tampa?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Real estate agents, restaurants, fitness brands, healthcare practices, coaches, law firms, event planners, content creators, retail — if your business needs to look credible and compelling online, we\'ve probably worked with someone like you. We work with solo operators and growing teams alike.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I get started?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Book a free 20-minute strategy call. We\'ll understand your goals, figure out what you actually need (not just what sounds good), and give you a clear plan and quote. No pressure, no pitch deck. Just a real conversation.',
       },
     },
   ],
@@ -274,36 +290,44 @@ const processSteps = [
 
 const faqs = [
   {
-    q: 'Who is the best photographer and videographer in Tampa, FL?',
-    a: 'Drishyam Media is among Tampa\'s most trusted creative agencies for photography and videography, with a 4.9-star average rating, 50+ brands served, and same-week turnaround. We work across Tampa Bay including Ybor City, Hyde Park, Channelside, St. Petersburg, and Clearwater.',
+    q: 'Who is Drishyam Media and are you actually based in Tampa?',
+    a: 'Yes — we have a real presence in Tampa. Abhishek (the person you\'ll actually talk to and shoot with) is on the ground here. Our post-production team operates out of Chandigarh, India — and that\'s intentional. It\'s how we deliver international-quality editing at rates that make sense for local Tampa businesses. You get a single point of contact in your timezone, and a full creative team working behind the scenes.',
   },
   {
-    q: 'How much does professional photography or videography cost in Tampa?',
-    a: 'Pricing in Tampa typically ranges from around $500 for a half-day photo shoot to $5,000+ for full brand campaigns or monthly video retainers. We offer transparent project pricing and monthly content packages designed for Tampa Bay businesses at every stage. Book a free call for a custom quote.',
+    q: 'How much does a shoot cost?',
+    a: 'Shoots start at $75 for a 30-minute session. From there, pricing scales based on time, deliverables, and what your project needs. We don\'t believe in hiding numbers — book a free call and we\'ll give you a clear quote without the runaround.',
   },
   {
-    q: 'What areas of Tampa Bay does Drishyam Media cover?',
-    a: 'We serve all of Tampa Bay — including downtown Tampa, Ybor City, Hyde Park, Channelside, Westshore, South Tampa, New Tampa, Brandon, Riverview, Wesley Chapel, St. Petersburg, and Clearwater — with no travel fee within the region.',
+    q: 'How fast will I get my photos and videos?',
+    a: 'For most shoots, you\'ll have your edited deliverables within 2–3 business days. Real estate photography is typically turned around in 1 business day, because we know listings can\'t wait. We build in a small buffer for unexpected factors — weather, technical issues, volume — so when we commit to a timeline, we mean it.',
   },
   {
-    q: 'Do you offer real estate videography and photography in Tampa?',
-    a: 'Yes. We produce listing photography, video walkthroughs, drone aerials, and twilight shoots for Tampa real estate agents, brokerages, and developers across Tampa Bay.',
+    q: 'Can you rush my delivery if I need it faster?',
+    a: 'Yes. If you have a hard deadline — a listing going live, a campaign launch, an event recap — tell us upfront. We\'ll have an honest conversation about what\'s possible and lock in a timeline that works. Rush delivery is handled case by case, not as a blanket policy with a fixed fee.',
   },
   {
-    q: 'Can you produce social media video content for Tampa restaurants and small businesses?',
-    a: 'Yes — Tampa restaurants, cafes, retailers, and service businesses are some of our favorite clients. We produce Instagram Reels, TikTok content, and YouTube Shorts that drive foot traffic and online engagement.',
+    q: 'Do you do real estate photography and video in Tampa?',
+    a: 'It\'s one of our most requested services. We shoot listing photography, walkthrough video tours, drone aerials, and twilight shoots for agents, brokerages, and developers across Tampa Bay. Real estate photos turnaround is 1 business day because we understand how time-sensitive listings are.',
   },
   {
-    q: 'How quickly can you deliver photos and videos after a Tampa shoot?',
-    a: 'Standard turnaround is 5–7 business days. Rush 48-hour delivery is available for time-sensitive Tampa events and campaigns.',
+    q: 'What areas of Tampa Bay do you cover?',
+    a: 'All of it — Downtown Tampa, Ybor City, Hyde Park, Channelside, Westshore, South Tampa, New Tampa, Brandon, Riverview, Wesley Chapel, St. Petersburg, and Clearwater. No travel fee within the greater Tampa Bay region.',
   },
   {
-    q: 'Are you a local Tampa company or international agency?',
-    a: 'Drishyam Media is a global creative agency with a dedicated Tampa production team. You get international production quality combined with on-the-ground local expertise — the best of both.',
+    q: 'Are you a local company or an international agency?',
+    a: 'Both, honestly. Drishyam Media operates across 4 cities in 3 countries — Tampa (US), Niagara (Canada), Chandigarh, and Mumbai (India). The shoot happens with a local team member here in Tampa. The editing, motion graphics, and post-production happen with our India-based team. This structure is why our pricing is accessible without cutting corners on quality.',
   },
   {
-    q: 'Why should Tampa businesses invest in professional video content?',
-    a: 'Tampa is one of the fastest-growing US business markets. Brands that invest early in professional video see up to 3× faster brand growth, higher social media engagement, and significantly more inbound leads than competitors who don\'t.',
+    q: 'Why is your pricing more affordable than other Tampa agencies?',
+    a: 'Because our model is different. Most local agencies carry high overhead — local editors, studio space, full-time staff. We operate lean by design: one shooter on the ground in Tampa, a skilled post-production team in India, and no unnecessary middlemen. You\'re not paying for overhead. You\'re paying for the work.',
+  },
+  {
+    q: 'What kind of businesses do you work with in Tampa?',
+    a: 'Real estate agents, restaurants, fitness brands, healthcare practices, coaches, law firms, event planners, content creators, retail — if your business needs to look credible and compelling online, we\'ve probably worked with someone like you. We work with solo operators and growing teams alike.',
+  },
+  {
+    q: 'How do I get started?',
+    a: 'Book a free 20-minute strategy call. We\'ll understand your goals, figure out what you actually need (not just what sounds good), and give you a clear plan and quote. No pressure, no pitch deck. Just a real conversation.',
   },
 ];
 
