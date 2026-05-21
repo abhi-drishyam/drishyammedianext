@@ -1,6 +1,6 @@
 import './about.css';
 import HeroSection from '@/components/HeroSection';
-import GatedVideo from '@/components/GatedVideo';
+import VideoGallerySection from '@/components/VideoGallerySection';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -124,8 +124,8 @@ export default function AboutPage() {
           <div className="about-stats-grid">
             {[
               { number: '500+', label: 'Completed Shoots' },
-              { number: '50+',  label: 'Brand Clients'    },
-              { number: '2',    label: 'Continents'       },
+              { number: '50+',  label: 'Clients'    },
+              { number: '2',    label: 'Works in Continents'       },
               { number: '2+',   label: 'Years in Production' },
             ].map((stat) => (
               <div key={stat.label} className="about-stat-card">
@@ -223,79 +223,21 @@ export default function AboutPage() {
           <h2>Behind the <span className="grad-text">scenes</span></h2>
           <p>Not every story makes it into the final cut. Here&apos;s what production actually looks like — the setup, the crew, the controlled chaos that turns into content.</p>
         </div>
-        <div className="about-bts-cards">
-          {[
-            {
-              src: '/image/about/bts-1.webp',
-              type: 'image' as const,
-              tag: 'Live Event · Chandigarh',
-              title: 'Multi-camera night at a 5,000-person concert',
-              desc: 'Coordinating three camera positions, live lighting changes, and a crowd that doesn\'t stop moving. This is where fast decisions and good prep separate a great shoot from a scramble.',
-            },
-            {
-              src: '/image/about/bts-2.webp',
-              type: 'image' as const,
-              tag: 'Brand Shoot · Tampa Bay',
-              title: 'Setting the frame before the client arrives',
-              desc: 'Most of the work happens before action is called — checking exposure, positioning lights, running test shots until everything is exactly right.',
-            },
-            {
-              src: '/video/about/bts-1.mp4',
-              poster: '/image/about/bts-video-1-poster.webp',
-              type: 'video' as const,
-              tag: 'Commercial · India',
-              title: 'Fast-turnaround product shoot for a brand campaign',
-              desc: 'High-output shoot days with multiple setups, tight timelines, and deliverables needed same-day for social. The kind of pressure we\'ve learned to enjoy.',
-            },
-            {
-              src: '/image/about/bts-3.webp',
-              type: 'image' as const,
-              tag: 'Event Coverage · Chandigarh',
-              title: 'On the floor at Fur Fest',
-              desc: 'Large-scale events need a crew that communicates without radio chatter. We\'ve shot enough of them to move like one unit across a venue.',
-            },
-            {
-              src: '/image/about/bts-4.webp',
-              type: 'image' as const,
-              tag: 'Corporate · Tampa Bay',
-              title: 'Interview setup for a brand documentary',
-              desc: 'Getting a subject comfortable on camera is half the job. The other half is building a frame that makes them look as credible as they are.',
-            },
-            {
-              src: '/video/about/bts-2.mp4',
-              poster: '/image/about/bts-video-2-poster.webp',
-              type: 'video' as const,
-              tag: 'Post-Production · Remote',
-              title: 'The edit room is where the story actually gets made',
-              desc: 'Raw footage tells you what happened. Editing tells you what it meant. We spend as much time in post as we do on location — because it shows in the final cut.',
-            },
-          ].map((item) => (
-            <div key={item.title} className="about-bts-card">
-              <div className="about-bts-thumb">
-                {item.type === 'video' ? (
-                  <GatedVideo
-                    className="about-bts-media"
-                    src={item.src}
-                    poster={(item as { poster?: string }).poster}
-                    ariaLabel={item.title}
-                  />
-                ) : (
-                  <img
-                    className="about-bts-media"
-                    src={item.src}
-                    alt={item.title}
-                    loading="lazy"
-                  />
-                )}
-              </div>
-              <div className="about-bts-text">
-                <span className="about-bts-tag">{item.tag}</span>
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <VideoGallerySection
+          id="bts"
+          title=""
+          count=""
+          ariaLabel="BTS Footage"
+          carouselClass="bts-carousel"
+          items={[
+            { src: '/video/bts-1.mp4', label: '' },
+            { src: '/video/bts-2.mp4', label: '' },
+            { src: '/video/bts-3.mp4', label: '' },
+            { src: '/video/bts-4.mp4', label: '' },
+            { src: '/video/bts-5.mp4', label: '' },
+            { src: '/video/bts-6.mp4', label: '' },
+          ]}
+        />
       </section>
 
       {/* Where We Work */}

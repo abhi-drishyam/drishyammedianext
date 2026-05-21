@@ -51,11 +51,13 @@ export default function VideoGallerySection({
 
   return (
     <section ref={sectionRef} className="cat-block" id={id} aria-label={ariaLabel}>
-      <div className="cat-header">
-        <h3 className="cat-title">{title}</h3>
-        <span className="cat-count">{count}</span>
-        <div className="cat-line" aria-hidden="true" />
-      </div>
+      {title && (
+        <div className="cat-header">
+          <h3 className="cat-title">{title}</h3>
+          <span className="cat-count">{count}</span>
+          <div className="cat-line" aria-hidden="true" />
+        </div>
+      )}
       <div className={`carousel-wrap ${carouselClass}`} aria-label="Scrolling gallery">
         <div className="carousel-track" role="list">
           {items.map((item, i) => (

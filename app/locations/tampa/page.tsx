@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
 const localBusinessJsonLd = {
   '@context': 'https://schema.org',
-  '@type': ['LocalBusiness', 'ProfessionalService', 'Photograph'],
+  '@type': ['LocalBusiness', 'ProfessionalService', 'MarketingAgency'],
   '@id': 'https://www.drishyammedia.com/locations/tampa#business',
   name: 'Drishyam Media — Tampa Photography & Videography',
   alternateName: 'Drishyam Tampa',
@@ -47,24 +47,26 @@ const localBusinessJsonLd = {
     'https://www.drishyammedia.com/image/tampa/hero-2.jpg',
     'https://www.drishyammedia.com/image/tampa/hero-3.jpg',
   ],
-  logo: 'https://www.drishyammedia.com/image/logo.png',
-  telephone: '+1-YOUR-NUMBER',
-  email: 'hello@drishyammedia.com',
-  priceRange: '$$',
+  logo: 'https://www.drishyammedia.com/og/logo-1200.png',
+  telephone: '+1-813-965-7606',
+  email: 'contact@drishyammedia.com',
+  priceRange: '$50-$2000',
   currenciesAccepted: 'USD',
   paymentAccepted: 'Cash, Credit Card, Bank Transfer',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Service Area Tampa Bay',
+    streetAddress: '9946 Brompton Dr.',
     addressLocality: 'Tampa',
     addressRegion: 'FL',
-    postalCode: '33602',
+    postalCode: '33626',
     addressCountry: 'US',
   },
   geo: { '@type': 'GeoCoordinates', latitude: 27.9506, longitude: -82.4572 },
   areaServed: [
     { '@type': 'City', name: 'Tampa', '@id': 'https://en.wikipedia.org/wiki/Tampa,_Florida' },
     { '@type': 'City', name: 'St. Petersburg' },
+    { '@type': 'Place', name: 'Westchase' },
+    { '@type': 'Place', name: 'Town N Country' },
     { '@type': 'City', name: 'Clearwater' },
     { '@type': 'City', name: 'Brandon' },
     { '@type': 'City', name: 'Riverview' },
@@ -83,10 +85,9 @@ const localBusinessJsonLd = {
     },
   ],
   sameAs: [
-    'https://www.instagram.com/drishyammedia',
-    'https://www.youtube.com/@drishyammedia',
-    'https://www.linkedin.com/company/drishyammedia',
-    'https://www.facebook.com/drishyammedia',
+    'https://www.instagram.com/studio.drishyam',
+    'https://www.linkedin.com/company/drishyammedia/',
+    'https://x.com/studiodrishyam',
   ],
   aggregateRating: {
     '@type': 'AggregateRating',
@@ -262,29 +263,6 @@ const locations = [
   { name: 'Wesley Chapel', sub: 'Pasco County brands' },
 ];
 
-const testimonials = [
-  {
-    initials: 'RS',
-    gradient: 'linear-gradient(135deg,#4b3fff,#9b2fff)',
-    quote: '"They made our restaurant in Ybor City actually look as good on Instagram as it does in person. Reservations doubled in 6 weeks."',
-    name: 'R. Sanchez',
-    role: 'Restaurant Owner · Ybor City',
-  },
-  {
-    initials: 'JM',
-    gradient: 'linear-gradient(135deg,#9b2fff,#d4007a)',
-    quote: '"I\'m a real estate agent in South Tampa — their listing videos are next-level. I\'m winning more listings just because of how my marketing looks."',
-    name: 'J. Martinez',
-    role: 'Realtor · South Tampa',
-  },
-  {
-    initials: 'AK',
-    gradient: 'linear-gradient(135deg,#d4007a,#ff3c2f)',
-    quote: '"We\'ve worked with three production teams in Tampa. Drishyam is the only one that delivered fast, on budget, and above expectations."',
-    name: 'A. Khan',
-    role: 'Founder · Westshore',
-  },
-];
 
 const processSteps = [
   { num: 'Step 01', title: 'Free Tampa Strategy Call', desc: '30-minute call to understand your brand, goals, and audience. We map out exactly what your Tampa business needs.' },
@@ -375,7 +353,7 @@ export default function TampaPage() {
 
       {/* ── TRUST BAR ── */}
       <div className="tampa-trust-bar" role="list" aria-label="Trust indicators">
-        <div className="tampa-trust-item" role="listitem"><span className="tampa-trust-accent">4.9★</span> Average Rating</div>
+        <div className="tampa-trust-item" role="listitem"><span className="tampa-trust-accent">500+</span> Shoots Done</div>
         <div className="tampa-trust-dot" aria-hidden="true" />
         <div className="tampa-trust-item" role="listitem"><span className="tampa-trust-accent">50+</span> Brands Served</div>
         <div className="tampa-trust-dot" aria-hidden="true" />
@@ -387,10 +365,10 @@ export default function TampaPage() {
       {/* ── STATS BAR ── */}
       <div className="tampa-stats-bar" role="list" aria-label="Key statistics">
         {[
-          { num: '50+', label: 'Tampa Brands' },
-          { num: '4.9★', label: 'Avg. Rating' },
-          { num: '85%', label: 'Client Retention' },
-          { num: 'M+', label: 'Views Generated' },
+          { num: '50+', label: 'Brands' },
+          { num: '500+', label: 'Shoots Done' },
+          { num: '95%', label: 'Client Retention' },
+          { num: 'Million+', label: 'Views Generated' },
         ].map((s) => (
           <div key={s.label} className="tampa-stat-item" role="listitem">
             <span className="tampa-stat-num grad-text">{s.num}</span>
@@ -510,37 +488,6 @@ export default function TampaPage() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ── */}
-      <section className="tampa-section" aria-labelledby="testimonials-heading">
-        <p className="tampa-eyebrow-label">Client Stories</p>
-        <h2 id="testimonials-heading" className="tampa-section-h2">
-          Tampa Brands. <span className="grad-text">Real Results.</span>
-        </h2>
-        <p className="tampa-section-desc">
-          Just a few of the businesses we&apos;ve helped in the Tampa Bay area.
-        </p>
-        <div className="tampa-testimonials-grid" role="list">
-          {testimonials.map((t) => (
-            <article key={t.name} className="tampa-testi-card" role="listitem">
-              <div className="tampa-testi-stars" aria-label="5 stars">★★★★★</div>
-              <blockquote className="tampa-testi-quote">{t.quote}</blockquote>
-              <div className="tampa-testi-author">
-                <div
-                  className="tampa-testi-avatar"
-                  style={{ background: t.gradient }}
-                  aria-hidden="true"
-                >
-                  {t.initials}
-                </div>
-                <div>
-                  <strong className="tampa-testi-name">{t.name}</strong>
-                  <span className="tampa-testi-role">{t.role}</span>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
 
       {/* ── PROCESS ── */}
       <section className="tampa-section tampa-section--alt" aria-labelledby="process-heading">
@@ -612,25 +559,6 @@ export default function TampaPage() {
           </ul>
         </div>
       </section>
-
-      {/* ── CTA BLOCK ── */}
-      <div className="tampa-cta-block">
-        <div className="grain" aria-hidden="true" />
-        <div className="tampa-cta-inner">
-          <p className="tampa-eyebrow-label">Ready to Start?</p>
-          <h2>
-            Let&apos;s Build Your Brand<br />
-            in <span className="grad-text">Tampa Bay.</span>
-          </h2>
-          <p>
-            Free 30-minute strategy call. We&apos;ll map exactly what your brand needs to stand out in the Tampa market — no pressure, no fluff.
-          </p>
-          <div className="tampa-cta-actions">
-            <Link href="/contact" className="btn-primary">Book Your Free Tampa Call</Link>
-            <Link href="/pricing/photography-videography" className="btn-secondary">View Pricing</Link>
-          </div>
-        </div>
-      </div>
     </>
   );
 }

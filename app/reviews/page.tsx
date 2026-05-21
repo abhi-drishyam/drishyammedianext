@@ -101,7 +101,7 @@ export default function ReviewsPage() {
                 <div className="stat-label">Average Rating</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">92%</div>
+                <div className="stat-number">95%</div>
                 <div className="stat-label">Retention Rate</div>
               </div>
             </div>
