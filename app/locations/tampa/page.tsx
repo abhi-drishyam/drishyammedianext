@@ -321,16 +321,7 @@ export default function TampaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <AnnouncementBanner />
-
-      {/* Breadcrumbs */}
-      <nav className="tampa-breadcrumbs" aria-label="Breadcrumb">
-        <Link href="/">Home</Link>
-        <span className="tampa-bc-sep">/</span>
-        <Link href="/locations">Locations</Link>
-        <span className="tampa-bc-sep">/</span>
-        <span className="tampa-bc-current">Tampa, FL</span>
-      </nav>
+      <AnnouncementBanner generic />
 
       {/* ── HERO ── */}
       <div className="hero-wrapper">
