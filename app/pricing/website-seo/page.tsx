@@ -108,7 +108,7 @@ export default function WebsiteSeoPricingPage() {
           <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
             <div className="wd-package">Package</div>
             <div className="wd-name">Multi-Page Website</div>
-            <div className="wd-price grad-text">$1,999</div>
+            <div className="wd-price grad-text">$1,599</div>
             <div className="wd-period">5–7 pages · one-time</div>
             <div className="wd-divider"></div>
             <div className="wd-desc">Custom layout, responsive structure.</div>
