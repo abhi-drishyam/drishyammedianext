@@ -122,6 +122,25 @@ const DUAL_SECTIONS = [
   },
 ];
 
+const REAL_ESTATE_SECTION = {
+  id: 'realestate',
+  title: 'Real Estate',
+  count: '7 photos',
+  ariaLabel: 'Real Estate',
+  imageCarouselClass: 'realestate-img-carousel',
+  videoCarouselClass: 'realestate-vid-carousel',
+  imageItems: [
+    { src: '/image/shoot/real-1.webp', alt: '', label: '' },
+    { src: '/image/shoot/real-2.webp', alt: '', label: '' },
+    { src: '/image/shoot/real-3.webp', alt: '', label: '' },
+    { src: '/image/shoot/real-4.webp', alt: '', label: '' },
+    { src: '/image/shoot/real-5.webp', alt: '', label: '' },
+    { src: '/image/shoot/real-6.webp', alt: '', label: '' },
+    { src: '/image/shoot/real-7.webp', alt: '', label: '' },
+  ],
+  videoItems: [],
+};
+
 export default function ShootPage() {
   return (
     <>
@@ -134,6 +153,7 @@ export default function ShootPage() {
           { href: '#modeling',  label: 'Modeling'           },
           { href: '#portraits', label: 'Portraits & Candids'},
           { href: '#events',    label: 'Events'             },
+          { href: '#realestate',label: 'Real Estate'        },
           { href: '#bts',       label: 'BTS Footage'        },
         ]}
       />
@@ -157,6 +177,10 @@ export default function ShootPage() {
             <DualStripSection {...section} />
           </LazySection>
         ))}
+
+        <LazySection>
+          <DualStripSection {...REAL_ESTATE_SECTION} />
+        </LazySection>
 
         <LazySection>
           <VideoGallerySection {...BTS_SECTION} />
