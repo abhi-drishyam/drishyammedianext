@@ -166,8 +166,8 @@ export default function CreativePricingPage() {
 
             <div className="pt-plan-card">
               <div className="pt-plan-name">Starter</div>
-              <del className="sp-original">$649</del>
-              <div className="pt-plan-price grad-text">$499</div>
+              <del className="sp-original">$799</del>
+              <div className="pt-plan-price grad-text">$599</div>
               <div className="pt-plan-period">per month</div>
               <div className="pt-plan-requests">1 active request</div>
             </div>
@@ -175,16 +175,16 @@ export default function CreativePricingPage() {
             <div className="pt-plan-card featured">
               <div className="pt-badge">Most Popular</div>
               <div className="pt-plan-name">Growth</div>
-              <del className="sp-original">$849</del>
-              <div className="pt-plan-price grad-text">$699</div>
+              <del className="sp-original">$1199</del>
+              <div className="pt-plan-price grad-text">$899</div>
               <div className="pt-plan-period">per month</div>
               <div className="pt-plan-requests">2 active requests</div>
             </div>
 
             <div className="pt-plan-card">
               <div className="pt-plan-name">Scale</div>
-              <del className="sp-original">$1149</del>
-              <div className="pt-plan-price grad-text">$999</div>
+              <del className="sp-original">$1599</del>
+              <div className="pt-plan-price grad-text">$1299</div>
               <div className="pt-plan-period">per month</div>
               <div className="pt-plan-requests">3 active requests</div>
             </div>
