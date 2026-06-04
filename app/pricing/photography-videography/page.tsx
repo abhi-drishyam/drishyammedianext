@@ -51,8 +51,8 @@ export default function PhotographyVideographyPricingPage() {
       {/* PHOTO / VIDEO SHOOTS */}
       <section className="svc-section" id="photo-video-shoots" aria-label="Photography and Video Shoot packages">
         <div className="svc-header">
-          <h2>Photography / Video Shoots — <span className="grad-text">Project Based</span></h2>
-          <p>Same gear. Same quality. Pricing based on time. <strong style={{color:'rgba(255,255,255,0.6)'}}></strong></p>
+          <h2>Raw Footage — <span className="grad-text">Photo/Video</span></h2>
+          <p>Same gear. Same quality. when you need some to shoot it. <strong style={{color:'rgba(255,255,255,0.6)'}}></strong></p>
         </div>
 
         <div className="shoot-cards">
@@ -65,7 +65,7 @@ export default function PhotographyVideographyPricingPage() {
               <div className="shoot-price-note">one-time project fee</div>
               <div className="shoot-divider" aria-hidden="true"></div>
               <div className="shoot-equipment">
-                Quick shoots, short-form content, or basic coverage
+                Quick shoots, suitable for photo shoot and short-form content, or basic coverage
               </div>
             </div>
           </div>
