@@ -1,6 +1,7 @@
 import './AnnouncementBanner.css';
 
 export default function AnnouncementBanner({ generic = false }: { generic?: boolean }) {
+  return null;
   return (
     <>
       <div className="ann-banner" role="region" aria-label="Promotional offer">
