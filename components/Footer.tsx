@@ -9,7 +9,7 @@ export default function Footer() {
         heading={<>Ready to Make Your Brand <span className="grad-text">Stand Out?</span></>}
         subheading={<>Book a free strategy call and let&apos;s build content that grows your brand<br />and drives real, lasting results.</>}
         primaryBtn={{ href: '/contact', label: 'Book a Free Call' }}
-        secondaryBtn={{ href: '/pricing', label: 'View Pricing' }}
+        secondaryBtn={{ href: '/pricing/photography-videography', label: 'View Pricing' }}
         primaryAsCal
       />
 
