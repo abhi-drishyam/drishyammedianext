@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Email config
 const FROM_ADDRESS = 'Drishyam Media <contact@drishyammedia.com>';
 const NOTIFY_INBOX = 'abhisheknagarinbox@gmail.com';
@@ -70,6 +68,8 @@ export async function POST(req: NextRequest) {
       { status: 400 }
     );
   }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   const fullName = `${firstName.trim()} ${lastName.trim()}`;
   const cleanEmail = email.trim();
