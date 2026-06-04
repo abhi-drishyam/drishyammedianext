@@ -1,4 +1,4 @@
-import '../pricing.css';
+﻿import '../pricing.css';
 import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
 import CalButton from '@/components/CalButton';
@@ -34,24 +34,207 @@ export default function PhotographyVideographyPricingPage() {
       <AnnouncementBanner />
       <HeroSection
         badge="Project packages & Hourly Price"
-        heading={<>Photography/Videography <span className="grad-text">Pricing</span></>}
+        heading={<>Photo/Video <span className="grad-text">Pricing</span></>}
         description={<>Professional shoots. Structured delivery. Predictable quality.<br />Photo &amp; video shoots — bundled or à la carte.</>}
         ariaLabel="Photography and videography pricing overview"
         categories={[
-          { href: '#special', label: 'Special Packages' },
-          { href: '#general-shoot', label: 'General Shoot Pricing' },
+          { href: '#photoshoots', label: 'Photoshoots' },
           { href: '#events', label: 'Events' },
           { href: '#real-estate', label: 'Real Estate' },
+          { href: '#photo-video-shoots', label: 'Raw Footage' },
           { href: '#social-content', label: 'Social Media Content' },
-          { href: '#photoshoots', label: 'Photoshoots' },
-          { href: '#photo-video-shoots', label: 'Photo / Video Shoots' },
+          { href: '#special', label: 'Special Packages' },
         ]}
       />
+
+      {/* PHOTOSHOOTS */}
+      <section className="svc-section" id="photoshoots" aria-label="Photography session packages">
+        <div className="svc-header">
+          <h2>Photo<span className="grad-text">shoots</span></h2>
+          <p>Clean, professional photography for individuals, creators, and brands.</p>
+        </div>
+
+        <div className="webdev-grid">
+
+          <div className="wd-card">
+            <div className="wd-package">Session</div>
+            <div className="wd-name">Mini Session</div>
+            <div className="wd-price grad-text">$149</div>
+            <div className="wd-period">30 minutes · one-time</div>
+            <div className="wd-divider"></div>
+            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
+              <li><span className="tick"></span>10 edited images</li>
+              <li><span className="tick"></span>All raw previews included</li>
+              <li><span className="tick"></span>Best for quick headshots</li>
+            </ul>
+            <Link href="/contact" className="btn-outline">Book Now</Link>
+          </div>
+
+          <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
+            <div className="wd-package">Session</div>
+            <div className="wd-name">Standard Session</div>
+            <div className="wd-price grad-text">$199</div>
+            <div className="wd-period">1 hour · one-time</div>
+            <div className="wd-divider"></div>
+            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
+              <li><span className="tick"></span>20–30 edited images</li>
+              <li><span className="tick"></span>Multiple poses and angles</li>
+              <li><span className="tick"></span>Best for personal or creator shoots</li>
+            </ul>
+            <Link href="/contact" className="btn-solid">Book Now</Link>
+          </div>
+
+          <div className="wd-card">
+            <div className="wd-package">Session</div>
+            <div className="wd-name">Enhanced Session</div>
+            <div className="wd-price grad-text">$349</div>
+            <div className="wd-period">1.5–2 hours · one-time</div>
+            <div className="wd-divider"></div>
+            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
+              <li><span className="tick"></span>40+ edited images</li>
+              <li><span className="tick"></span>Outfit and location variations</li>
+              <li><span className="tick"></span>Best for personal branding and portfolios</li>
+            </ul>
+            <Link href="/contact" className="btn-outline">Book Now</Link>
+          </div>
+
+        </div>
+
+        <div className="shoot-delivery-note" style={{maxWidth:'960px'}}>
+          <strong>Book your shoot or get a custom quote.</strong>
+        </div>
+      </section>
+
+      <div className="section-sep" />
+
+      <div className="section-sep" />
+
+      {/* EVENT COVERAGE */}
+      <section className="svc-section" id="events" aria-label="Event coverage pricing">
+        <div className="svc-header">
+          <h2>Event <span className="grad-text">Coverage</span></h2>
+          <p>Introductory Pricing — Limited Time (30% Off)</p>
+        </div>
+
+        <div className="webdev-grid">
+
+          <div className="wd-card">
+            <div className="wd-package">Package</div>
+            <div className="wd-name">Starter — Event Highlight</div>
+            <del className="sp-original" style={{fontSize:'16px',marginTop:'8px'}}>$499</del>
+            <div className="wd-price grad-text">$449</div>
+            <div className="wd-period">one-time</div>
+            <div className="wd-divider"></div>
+            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
+              <li><span className="tick"></span>Up to 2 hours coverage</li>
+              <li><span className="tick"></span>Highlight video</li>
+              <li><span className="tick"></span>Edited photo</li>
+            </ul>
+            <CalButton variant="outline" />
+          </div>
+
+          <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
+            <div className="wd-package">Package</div>
+            <div className="wd-name">Growth — Half-Day Coverage</div>
+            <del className="sp-original" style={{fontSize:'16px',marginTop:'8px'}}>$899</del>
+            <div className="wd-price grad-text">$799</div>
+            <div className="wd-period">one-time</div>
+            <div className="wd-divider"></div>
+            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
+              <li><span className="tick"></span>Up to 4 hours coverage</li>
+              <li><span className="tick"></span>Cinematic highlight video</li>
+              <li><span className="tick"></span>Social media cutdowns</li>
+              <li><span className="tick"></span>Edited photos</li>
+            </ul>
+            <CalButton variant="solid" />
+          </div>
+
+          <div className="wd-card">
+            <div className="wd-package">Package</div>
+            <div className="wd-name">Premium — Full Event Coverage</div>
+            <del className="sp-original" style={{fontSize:'16px',marginTop:'8px'}}>$1,499</del>
+            <div className="wd-price grad-text">$1,099</div>
+            <div className="wd-period">one-time</div>
+            <div className="wd-divider"></div>
+            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
+              <li><span className="tick"></span>Up to 8 hours coverage</li>
+              <li><span className="tick"></span>Full cinematic recap</li>
+              <li><span className="tick"></span>Edited photos</li>
+              <li><span className="tick"></span>Social media videos</li>
+            </ul>
+            <CalButton variant="outline" />
+          </div>
+
+        </div>
+      </section>
+
+      <div className="section-sep" />
+
+      <div className="section-sep" />
+
+      {/* REAL ESTATE SERVICES */}
+      <section className="svc-section" id="real-estate" aria-label="Real estate services pricing">
+        <div className="svc-header">
+          <h2>Real Estate <span className="grad-text">Services</span></h2>
+          <p>Professional visuals to help your listings stand out and sell faster.</p>
+        </div>
+
+        <div className="webdev-grid">
+
+          <div className="wd-card">
+            <div className="wd-package">Package</div>
+            <div className="wd-name">Starter — Photos Only</div>
+            <div className="wd-price grad-text">$249</div>
+            <div className="wd-period">one-time</div>
+            <div className="wd-divider"></div>
+            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
+              <li><span className="tick"></span>25–40 edited images</li>
+              <li><span className="tick"></span>Interior + exterior coverage</li>
+              <li><span className="tick"></span>MLS-ready delivery</li>
+            </ul>
+            <CalButton variant="outline" />
+          </div>
+
+          <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
+            <div className="wd-package">Package</div>
+            <div className="wd-name">Growth — Photo + Video</div>
+            <div className="wd-price grad-text">$499</div>
+            <div className="wd-period">one-time</div>
+            <div className="wd-divider"></div>
+            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
+              <li><span className="tick"></span>Everything in Starter</li>
+              <li><span className="tick"></span>Cinematic walkthrough video</li>
+              <li><span className="tick"></span>1 vertical social media reel</li>
+            </ul>
+            <CalButton variant="solid" />
+          </div>
+
+          <div className="wd-card">
+            <div className="wd-package">Package</div>
+            <div className="wd-name">Premium — Full Listing Package</div>
+            <div className="wd-price grad-text">$699</div>
+            <div className="wd-period">one-time</div>
+            <div className="wd-divider"></div>
+            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
+              <li><span className="tick"></span>Everything in Growth</li>
+              <li><span className="tick"></span>Drone footage</li>
+              <li><span className="tick"></span>Day-to-dusk / twilight edits</li>
+              <li><span className="tick"></span>Virtual staging (key areas)</li>
+            </ul>
+            <CalButton variant="outline" />
+          </div>
+
+        </div>
+      </section>
+
+      <div className="section-sep" />
+
+      <div className="section-sep" />
 
       {/* PHOTO / VIDEO SHOOTS */}
       <section className="svc-section" id="photo-video-shoots" aria-label="Photography and Video Shoot packages">
         <div className="svc-header">
-          <h2>Raw Footage — <span className="grad-text">Photo/Video</span></h2>
+          <h2>Raw Footage Hourly Pricing— <span className="grad-text">Photo/Video</span></h2>
           <p>Same gear. Same quality. when you need some to shoot it. <strong style={{color:'rgba(255,255,255,0.6)'}}></strong></p>
         </div>
 
@@ -123,185 +306,7 @@ export default function PhotographyVideographyPricingPage() {
 
       <div className="section-sep" />
 
-      {/* EVENT COVERAGE */}
-      <section className="svc-section" id="events" aria-label="Event coverage pricing">
-        <div className="svc-header">
-          <h2>Event <span className="grad-text">Coverage</span></h2>
-          <p>Introductory Pricing — Limited Time (30% Off)</p>
-        </div>
-
-        <div className="webdev-grid">
-
-          <div className="wd-card">
-            <div className="wd-package">Package</div>
-            <div className="wd-name">Starter — Event Highlight</div>
-            <del className="sp-original" style={{fontSize:'16px',marginTop:'8px'}}>$499</del>
-            <div className="wd-price grad-text">$449</div>
-            <div className="wd-period">one-time</div>
-            <div className="wd-divider"></div>
-            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
-              <li><span className="tick"></span>Up to 2 hours coverage</li>
-              <li><span className="tick"></span>Highlight video</li>
-              <li><span className="tick"></span>Edited photo</li>
-            </ul>
-            <CalButton variant="outline" />
-          </div>
-
-          <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
-            <div className="wd-package">Package</div>
-            <div className="wd-name">Growth — Half-Day Coverage</div>
-            <del className="sp-original" style={{fontSize:'16px',marginTop:'8px'}}>$899</del>
-            <div className="wd-price grad-text">$799</div>
-            <div className="wd-period">one-time</div>
-            <div className="wd-divider"></div>
-            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
-              <li><span className="tick"></span>Up to 4 hours coverage</li>
-              <li><span className="tick"></span>Cinematic highlight video</li>
-              <li><span className="tick"></span>Social media cutdowns</li>
-              <li><span className="tick"></span>Edited photos</li>
-            </ul>
-            <CalButton variant="solid" />
-          </div>
-
-          <div className="wd-card">
-            <div className="wd-package">Package</div>
-            <div className="wd-name">Premium — Full Event Coverage</div>
-            <del className="sp-original" style={{fontSize:'16px',marginTop:'8px'}}>$1,499</del>
-            <div className="wd-price grad-text">$1,099</div>
-            <div className="wd-period">one-time</div>
-            <div className="wd-divider"></div>
-            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
-              <li><span className="tick"></span>Up to 8 hours coverage</li>
-              <li><span className="tick"></span>Full cinematic recap</li>
-              <li><span className="tick"></span>Edited photos</li>
-              <li><span className="tick"></span>Social media videos</li>
-            </ul>
-            <CalButton variant="outline" />
-          </div>
-
-        </div>
-      </section>
-
-      <div className="section-sep" />
-
-      {/* REAL ESTATE SERVICES */}
-      <section className="svc-section" id="real-estate" aria-label="Real estate services pricing">
-        <div className="svc-header">
-          <h2>Real Estate <span className="grad-text">Services</span></h2>
-          <p>Professional visuals to help your listings stand out and sell faster.</p>
-        </div>
-
-        <div className="webdev-grid">
-
-          <div className="wd-card">
-            <div className="wd-package">Package</div>
-            <div className="wd-name">Starter — Photos Only</div>
-            <div className="wd-price grad-text">$249</div>
-            <div className="wd-period">one-time</div>
-            <div className="wd-divider"></div>
-            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
-              <li><span className="tick"></span>25–40 edited images</li>
-              <li><span className="tick"></span>Interior + exterior coverage</li>
-              <li><span className="tick"></span>MLS-ready delivery</li>
-            </ul>
-            <CalButton variant="outline" />
-          </div>
-
-          <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
-            <div className="wd-package">Package</div>
-            <div className="wd-name">Growth — Photo + Video</div>
-            <div className="wd-price grad-text">$499</div>
-            <div className="wd-period">one-time</div>
-            <div className="wd-divider"></div>
-            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
-              <li><span className="tick"></span>Everything in Starter</li>
-              <li><span className="tick"></span>Cinematic walkthrough video</li>
-              <li><span className="tick"></span>1 vertical social media reel</li>
-            </ul>
-            <CalButton variant="solid" />
-          </div>
-
-          <div className="wd-card">
-            <div className="wd-package">Package</div>
-            <div className="wd-name">Premium — Full Listing Package</div>
-            <div className="wd-price grad-text">$699</div>
-            <div className="wd-period">one-time</div>
-            <div className="wd-divider"></div>
-            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
-              <li><span className="tick"></span>Everything in Growth</li>
-              <li><span className="tick"></span>Drone footage</li>
-              <li><span className="tick"></span>Day-to-dusk / twilight edits</li>
-              <li><span className="tick"></span>Virtual staging (key areas)</li>
-            </ul>
-            <CalButton variant="outline" />
-          </div>
-
-        </div>
-      </section>
-
-      <div className="section-sep" />
-
-      {/* PHOTOSHOOTS */}
-      <section className="svc-section" id="photoshoots" aria-label="Photography session packages">
-        <div className="svc-header">
-          <h2>Photo<span className="grad-text">shoots</span></h2>
-          <p>Clean, professional photography for individuals, creators, and brands.</p>
-        </div>
-
-        <div className="webdev-grid">
-
-          <div className="wd-card">
-            <div className="wd-package">Session</div>
-            <div className="wd-name">Mini Session</div>
-            <div className="wd-price grad-text">$149</div>
-            <div className="wd-period">30 minutes · one-time</div>
-            <div className="wd-divider"></div>
-            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
-              <li><span className="tick"></span>10 edited images</li>
-              <li><span className="tick"></span>All raw previews included</li>
-              <li><span className="tick"></span>Best for quick headshots</li>
-            </ul>
-            <Link href="/contact" className="btn-outline">Book Now</Link>
-          </div>
-
-          <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
-            <div className="wd-package">Session</div>
-            <div className="wd-name">Standard Session</div>
-            <div className="wd-price grad-text">$199</div>
-            <div className="wd-period">1 hour · one-time</div>
-            <div className="wd-divider"></div>
-            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
-              <li><span className="tick"></span>20–30 edited images</li>
-              <li><span className="tick"></span>Multiple poses and angles</li>
-              <li><span className="tick"></span>Best for personal or creator shoots</li>
-            </ul>
-            <Link href="/contact" className="btn-solid">Book Now</Link>
-          </div>
-
-          <div className="wd-card">
-            <div className="wd-package">Session</div>
-            <div className="wd-name">Enhanced Session</div>
-            <div className="wd-price grad-text">$349</div>
-            <div className="wd-period">1.5–2 hours · one-time</div>
-            <div className="wd-divider"></div>
-            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
-              <li><span className="tick"></span>40+ edited images</li>
-              <li><span className="tick"></span>Outfit and location variations</li>
-              <li><span className="tick"></span>Best for personal branding and portfolios</li>
-            </ul>
-            <Link href="/contact" className="btn-outline">Book Now</Link>
-          </div>
-
-        </div>
-
-        <div className="shoot-delivery-note" style={{maxWidth:'960px'}}>
-          <strong>Book your shoot or get a custom quote.</strong>
-        </div>
-      </section>
-
-      <div className="section-sep" />
-
-      {/* SOCIAL MEDIA CONTENT PRODUCTION */}
+            {/* SOCIAL MEDIA CONTENT PRODUCTION */}
       <section className="svc-section" id="social-content" aria-label="Social media content production">
         <div className="svc-header">
           <h2>Social Media Content <span className="grad-text">Production</span></h2>
