@@ -40,8 +40,8 @@ export default function PhotographyVideographyPricingPage() {
         categories={[
           { href: '#special', label: 'Special Packages' },
           { href: '#general-shoot', label: 'General Shoot Pricing' },
-          { href: '#real-estate', label: 'Real Estate' },
           { href: '#events', label: 'Events' },
+          { href: '#real-estate', label: 'Real Estate' },
           { href: '#social-content', label: 'Social Media Content' },
           { href: '#photoshoots', label: 'Photoshoots' },
           { href: '#photo-video-shoots', label: 'Photo / Video Shoots' },
@@ -253,7 +253,7 @@ export default function PhotographyVideographyPricingPage() {
           <div className="wd-card">
             <div className="wd-package">Session</div>
             <div className="wd-name">Mini Session</div>
-            <div className="wd-price grad-text">$99</div>
+            <div className="wd-price grad-text">$149</div>
             <div className="wd-period">30 minutes · one-time</div>
             <div className="wd-divider"></div>
             <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
@@ -267,7 +267,7 @@ export default function PhotographyVideographyPricingPage() {
           <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
             <div className="wd-package">Session</div>
             <div className="wd-name">Standard Session</div>
-            <div className="wd-price grad-text">$149</div>
+            <div className="wd-price grad-text">$199</div>
             <div className="wd-period">1 hour · one-time</div>
             <div className="wd-divider"></div>
             <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
@@ -281,7 +281,7 @@ export default function PhotographyVideographyPricingPage() {
           <div className="wd-card">
             <div className="wd-package">Session</div>
             <div className="wd-name">Enhanced Session</div>
-            <div className="wd-price grad-text">$249</div>
+            <div className="wd-price grad-text">$349</div>
             <div className="wd-period">1.5–2 hours · one-time</div>
             <div className="wd-divider"></div>
             <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
