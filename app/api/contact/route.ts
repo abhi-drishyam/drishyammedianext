@@ -1,5 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+// Email config
+const FROM_ADDRESS = 'Drishyam Media <contact@drishyammedia.com>';
+const NOTIFY_INBOX = 'abhisheknagarinbox@gmail.com';
+const CAL_LINK = 'https://cal.com/drishyam/discovery-call';
+const WHATSAPP_DISPLAY = '+1 (813) 965-7606';
+const WHATSAPP_LINK = 'https://wa.me/18139657606';
 
 // Simple in-memory rate limiter: max 5 requests per IP per 10 minutes
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
@@ -62,56 +71,82 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
+  const fullName = `${firstName.trim()} ${lastName.trim()}`;
+  const cleanEmail = email.trim();
+  const cleanMessage = message.trim();
 
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: 'abhisheknagarinbox@gmail.com',
-    replyTo: email,
-    subject: 'New Contact Form Message',
-    text: [
-      'You have received a new message from your contact form.',
-      '',
-      `Name:    ${firstName.trim()} ${lastName.trim()}`,
-      `Email:   ${email.trim()}`,
-      '',
-      'Message:',
-      message.trim(),
-    ].join('\n'),
-    html: `
-      <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:8px;">
-        <h2 style="margin-top:0;color:#1f2937;">New Contact Form Message</h2>
-        <table style="width:100%;border-collapse:collapse;">
-          <tr>
-            <td style="padding:8px 0;color:#6b7280;width:80px;vertical-align:top;">Name</td>
-            <td style="padding:8px 0;color:#111827;font-weight:600;">${firstName.trim()} ${lastName.trim()}</td>
-          </tr>
-          <tr>
-            <td style="padding:8px 0;color:#6b7280;vertical-align:top;">Email</td>
-            <td style="padding:8px 0;"><a href="mailto:${email.trim()}" style="color:#7c3aed;">${email.trim()}</a></td>
-          </tr>
-        </table>
-        <hr style="border:none;border-top:1px solid #e5e7eb;margin:16px 0;" />
-        <p style="color:#6b7280;margin:0 0 8px;">Message</p>
-        <p style="color:#111827;white-space:pre-wrap;margin:0;">${message.trim()}</p>
-      </div>
-    `,
-  };
+  // 1) Lead notification to us — critical
+  const notifyHtml = `
+    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:8px;">
+      <h2 style="margin-top:0;color:#1f2937;">New Contact Form Message</h2>
+      <table style="width:100%;border-collapse:collapse;">
+        <tr>
+          <td style="padding:8px 0;color:#6b7280;width:80px;vertical-align:top;">Name</td>
+          <td style="padding:8px 0;color:#111827;font-weight:600;">${fullName}</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 0;color:#6b7280;vertical-align:top;">Email</td>
+          <td style="padding:8px 0;"><a href="mailto:${cleanEmail}" style="color:#7c3aed;">${cleanEmail}</a></td>
+        </tr>
+      </table>
+      <hr style="border:none;border-top:1px solid #e5e7eb;margin:16px 0;" />
+      <p style="color:#6b7280;margin:0 0 8px;">Message</p>
+      <p style="color:#111827;white-space:pre-wrap;margin:0;">${cleanMessage}</p>
+    </div>
+  `;
 
   try {
-    await transporter.sendMail(mailOptions);
-    return NextResponse.json({ success: true });
+    const { error } = await resend.emails.send({
+      from: FROM_ADDRESS,
+      to: NOTIFY_INBOX,
+      replyTo: cleanEmail,
+      subject: 'New Contact Form Message',
+      html: notifyHtml,
+      text: [
+        'You have received a new message from your contact form.',
+        '',
+        `Name:    ${fullName}`,
+        `Email:   ${cleanEmail}`,
+        '',
+        'Message:',
+        cleanMessage,
+      ].join('\n'),
+    });
+    if (error) throw error;
   } catch (err) {
-    console.error('Email send error:', err);
+    console.error('Lead notification email error:', err);
     return NextResponse.json(
       { error: 'Failed to send message. Please try again later.' },
       { status: 500 }
     );
   }
+
+  // 2) Branded confirmation to the visitor — best-effort (never fails the request)
+  const confirmHtml = `
+    <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:32px 24px;border:1px solid #e5e7eb;border-radius:8px;">
+      <h2 style="margin-top:0;color:#1f2937;">Thanks, ${firstName.trim()} — we got your message 🎬</h2>
+      <p style="color:#374151;line-height:1.6;">Our team at <strong>Drishyam Media</strong> will get back to you within 12 hours. In the meantime, here are faster ways to reach us:</p>
+      <p style="margin:24px 0;">
+        <a href="${CAL_LINK}" style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:8px;">Book a free strategy call →</a>
+      </p>
+      <p style="color:#374151;line-height:1.6;">Prefer to chat? Message us on WhatsApp at <a href="${WHATSAPP_LINK}" style="color:#25d366;font-weight:600;">${WHATSAPP_DISPLAY}</a>.</p>
+      <hr style="border:none;border-top:1px solid #e5e7eb;margin:24px 0;" />
+      <p style="color:#6b7280;font-size:13px;margin:0 0 6px;">Here's a copy of what you sent us:</p>
+      <p style="color:#111827;white-space:pre-wrap;margin:0;font-size:13px;">${cleanMessage}</p>
+      <p style="color:#9ca3af;font-size:12px;margin-top:24px;">— Drishyam Media · drishyammedia.com</p>
+    </div>
+  `;
+
+  try {
+    await resend.emails.send({
+      from: FROM_ADDRESS,
+      to: cleanEmail,
+      subject: 'Thanks — we got your message | Drishyam Media',
+      html: confirmHtml,
+    });
+  } catch (err) {
+    console.error('Confirmation email failed (non-fatal):', err);
+  }
+
+  return NextResponse.json({ success: true });
 }

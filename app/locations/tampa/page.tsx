@@ -2,6 +2,7 @@ import './tampa.css';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnnouncementBanner from '@/components/AnnouncementBanner';
+import CalLink from '@/components/CalLink';
 
 export const metadata: Metadata = {
   title: 'Tampa Photographer & Videographer | Drishyam Media — Photo & Video Production in Tampa, FL',
@@ -362,7 +363,7 @@ export default function TampaPage() {
               From <strong>Ybor City</strong> to <strong>Hyde Park</strong>, <strong>Channelside</strong> to <strong>Clearwater</strong> — Drishyam Media produces cinematic photography, videography, and social media content for Tampa Bay&apos;s fastest-growing brands, restaurants, agents, and creators.
             </p>
             <div className="tampa-hero-actions">
-              <Link href="/contact" className="btn-primary">Book a Free Strategy Call</Link>
+              <CalLink className="btn-primary">Book a Free Strategy Call</CalLink>
               <Link href="/portfolio/shoot" className="btn-secondary">View Tampa Portfolio</Link>
             </div>
           </div>

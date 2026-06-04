@@ -10,6 +10,7 @@ export default function Footer() {
         subheading={<>Book a free strategy call and let&apos;s build content that grows your brand<br />and drives real, lasting results.</>}
         primaryBtn={{ href: '/contact', label: 'Book a Free Call' }}
         secondaryBtn={{ href: '/pricing', label: 'View Pricing' }}
+        primaryAsCal
       />
 
       {/* Body: brand col + 3 nav columns */}

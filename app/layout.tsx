@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import { Manrope, Poppins } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -215,6 +217,30 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* CookieYes — must load before any tracking so consent can gate GA4/Pixel/Clarity */}
+        <Script
+          id="cookieyes"
+          src="https://cdn-cookieyes.com/client_data/a27916205d016f15601d9656aeb5c4f1/script.js"
+          strategy="beforeInteractive"
+        />
+
+        {/* Google Tag Manager — container for GA4, Meta Pixel, Microsoft Clarity */}
+        <Script id="gtm" strategy="afterInteractive">{`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-M946NRP2');
+        `}</Script>
+
+        {/* Crisp live chat */}
+        <Script id="crisp" strategy="afterInteractive">{`
+          window.$crisp=[];window.CRISP_WEBSITE_ID="488c904d-a7f7-4f89-a1b4-918c829e646e";
+          (function(){var d=document,s=d.createElement("script");
+          s.src="https://client.crisp.chat/l.js";s.async=1;
+          d.getElementsByTagName("head")[0].appendChild(s);})();
+        `}</Script>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -223,11 +249,23 @@ export default function RootLayout({
         />
       </head>
       <body className={`${manrope.variable} ${poppins.variable}`}>
+        {/* Google Tag Manager (noscript fallback) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M946NRP2"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+            title="Google Tag Manager"
+          />
+        </noscript>
+
         <Navbar />
         <main id="main-content">
           {children}
         </main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
