@@ -217,11 +217,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* CookieYes — must load before any tracking so consent can gate GA4/Pixel/Clarity */}
-        <Script
+        {/* CookieYes — must load before any tracking so consent can gate GA4/Pixel/Clarity.
+            Plain <script> (not next/script): beforeInteractive only emits a preload link in the
+            App Router and never executes, so the banner never initializes. */}
+        <script
           id="cookieyes"
           src="https://cdn-cookieyes.com/client_data/a27916205d016f15601d9656aeb5c4f1/script.js"
-          strategy="beforeInteractive"
         />
 
         {/* Google Tag Manager — container for GA4, Meta Pixel, Microsoft Clarity */}
