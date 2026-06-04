@@ -61,7 +61,7 @@ export default function PhotographyVideographyPricingPage() {
               <div className="shoot-label">Package</div>
               <div className="shoot-name">Quick</div>
               <div className="shoot-duration">30 Minutes</div>
-              <div className="shoot-price grad-text">$75</div>
+              <div className="shoot-price grad-text">$100</div>
               <div className="shoot-price-note">one-time project fee</div>
               <div className="shoot-divider" aria-hidden="true"></div>
               <div className="shoot-equipment">
@@ -75,7 +75,7 @@ export default function PhotographyVideographyPricingPage() {
               <div className="shoot-label">Package</div>
               <div className="shoot-name">Standard</div>
               <div className="shoot-duration">1 Hour</div>
-              <div className="shoot-price grad-text">$100</div>
+              <div className="shoot-price grad-text">$150</div>
               <div className="shoot-price-note">one-time project fee</div>
               <div className="shoot-divider" aria-hidden="true"></div>
               <div className="shoot-equipment">
@@ -89,7 +89,7 @@ export default function PhotographyVideographyPricingPage() {
               <div className="shoot-label">Package</div>
               <div className="shoot-name">Half-Day</div>
               <div className="shoot-duration">4 Hours</div>
-              <div className="shoot-price grad-text">$349</div>
+              <div className="shoot-price grad-text">$500</div>
               <div className="shoot-price-note">one-time project fee</div>
               <div className="shoot-divider" aria-hidden="true"></div>
               <div className="shoot-equipment">
@@ -104,7 +104,7 @@ export default function PhotographyVideographyPricingPage() {
               <div className="shoot-label">Package</div>
               <div className="shoot-name">Full-Day</div>
               <div className="shoot-duration">8 Hours</div>
-              <div className="shoot-price grad-text">$549</div>
+              <div className="shoot-price grad-text">$800</div>
               <div className="shoot-price-note">one-time project fee</div>
               <div className="shoot-divider" aria-hidden="true"></div>
               <div className="shoot-equipment">
@@ -135,7 +135,7 @@ export default function PhotographyVideographyPricingPage() {
           <div className="wd-card">
             <div className="wd-package">Package</div>
             <div className="wd-name">Starter — Photos Only</div>
-            <div className="wd-price grad-text">$199</div>
+            <div className="wd-price grad-text">$299</div>
             <div className="wd-period">one-time</div>
             <div className="wd-divider"></div>
             <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
@@ -149,7 +149,7 @@ export default function PhotographyVideographyPricingPage() {
           <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
             <div className="wd-package">Package</div>
             <div className="wd-name">Growth — Photo + Video</div>
-            <div className="wd-price grad-text">$449</div>
+            <div className="wd-price grad-text">$499</div>
             <div className="wd-period">one-time</div>
             <div className="wd-divider"></div>
             <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
