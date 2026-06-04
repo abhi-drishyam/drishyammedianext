@@ -117,7 +117,7 @@ export default function PhotographyVideographyPricingPage() {
 
         <div className="shoot-delivery-note">
           <strong>Delivery:</strong> Final footage shared via Google Drive.<br />
-          <strong>Add-ons priced separately:</strong> Drone, extra camera, rush delivery.
+          <strong>Add-ons priced separately:</strong> Drone, extra camera, edited content, rush delivery.
         </div>
       </section>
 
