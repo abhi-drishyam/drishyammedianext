@@ -123,63 +123,6 @@ export default function PhotographyVideographyPricingPage() {
 
       <div className="section-sep" />
 
-      {/* REAL ESTATE SERVICES */}
-      <section className="svc-section" id="real-estate" aria-label="Real estate services pricing">
-        <div className="svc-header">
-          <h2>Real Estate <span className="grad-text">Services</span></h2>
-          <p>Professional visuals to help your listings stand out and sell faster.</p>
-        </div>
-
-        <div className="webdev-grid">
-
-          <div className="wd-card">
-            <div className="wd-package">Package</div>
-            <div className="wd-name">Starter — Photos Only</div>
-            <div className="wd-price grad-text">$249</div>
-            <div className="wd-period">one-time</div>
-            <div className="wd-divider"></div>
-            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
-              <li><span className="tick"></span>25–40 edited images</li>
-              <li><span className="tick"></span>Interior + exterior coverage</li>
-              <li><span className="tick"></span>MLS-ready delivery</li>
-            </ul>
-            <CalButton variant="outline" />
-          </div>
-
-          <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
-            <div className="wd-package">Package</div>
-            <div className="wd-name">Growth — Photo + Video</div>
-            <div className="wd-price grad-text">$499</div>
-            <div className="wd-period">one-time</div>
-            <div className="wd-divider"></div>
-            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
-              <li><span className="tick"></span>Everything in Starter</li>
-              <li><span className="tick"></span>Cinematic walkthrough video</li>
-              <li><span className="tick"></span>1 vertical social media reel</li>
-            </ul>
-            <CalButton variant="solid" />
-          </div>
-
-          <div className="wd-card">
-            <div className="wd-package">Package</div>
-            <div className="wd-name">Premium — Full Listing Package</div>
-            <div className="wd-price grad-text">$699</div>
-            <div className="wd-period">one-time</div>
-            <div className="wd-divider"></div>
-            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
-              <li><span className="tick"></span>Everything in Growth</li>
-              <li><span className="tick"></span>Drone footage</li>
-              <li><span className="tick"></span>Day-to-dusk / twilight edits</li>
-              <li><span className="tick"></span>Virtual staging (key areas)</li>
-            </ul>
-            <CalButton variant="outline" />
-          </div>
-
-        </div>
-      </section>
-
-      <div className="section-sep" />
-
       {/* EVENT COVERAGE */}
       <section className="svc-section" id="events" aria-label="Event coverage pricing">
         <div className="svc-header">
@@ -232,6 +175,63 @@ export default function PhotographyVideographyPricingPage() {
               <li><span className="tick"></span>Full cinematic recap</li>
               <li><span className="tick"></span>Edited photos</li>
               <li><span className="tick"></span>Social media videos</li>
+            </ul>
+            <CalButton variant="outline" />
+          </div>
+
+        </div>
+      </section>
+
+      <div className="section-sep" />
+
+      {/* REAL ESTATE SERVICES */}
+      <section className="svc-section" id="real-estate" aria-label="Real estate services pricing">
+        <div className="svc-header">
+          <h2>Real Estate <span className="grad-text">Services</span></h2>
+          <p>Professional visuals to help your listings stand out and sell faster.</p>
+        </div>
+
+        <div className="webdev-grid">
+
+          <div className="wd-card">
+            <div className="wd-package">Package</div>
+            <div className="wd-name">Starter — Photos Only</div>
+            <div className="wd-price grad-text">$249</div>
+            <div className="wd-period">one-time</div>
+            <div className="wd-divider"></div>
+            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
+              <li><span className="tick"></span>25–40 edited images</li>
+              <li><span className="tick"></span>Interior + exterior coverage</li>
+              <li><span className="tick"></span>MLS-ready delivery</li>
+            </ul>
+            <CalButton variant="outline" />
+          </div>
+
+          <div className="wd-card" style={{borderColor:'rgba(155,47,255,0.25)',background:'rgba(155,47,255,0.06)'}}>
+            <div className="wd-package">Package</div>
+            <div className="wd-name">Growth — Photo + Video</div>
+            <div className="wd-price grad-text">$499</div>
+            <div className="wd-period">one-time</div>
+            <div className="wd-divider"></div>
+            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
+              <li><span className="tick"></span>Everything in Starter</li>
+              <li><span className="tick"></span>Cinematic walkthrough video</li>
+              <li><span className="tick"></span>1 vertical social media reel</li>
+            </ul>
+            <CalButton variant="solid" />
+          </div>
+
+          <div className="wd-card">
+            <div className="wd-package">Package</div>
+            <div className="wd-name">Premium — Full Listing Package</div>
+            <div className="wd-price grad-text">$699</div>
+            <div className="wd-period">one-time</div>
+            <div className="wd-divider"></div>
+            <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
+              <li><span className="tick"></span>Everything in Growth</li>
+              <li><span className="tick"></span>Drone footage</li>
+              <li><span className="tick"></span>Day-to-dusk / twilight edits</li>
+              <li><span className="tick"></span>Virtual staging (key areas)</li>
             </ul>
             <CalButton variant="outline" />
           </div>
