@@ -135,7 +135,7 @@ export default function PhotographyVideographyPricingPage() {
           <div className="wd-card">
             <div className="wd-package">Package</div>
             <div className="wd-name">Starter — Photos Only</div>
-            <div className="wd-price grad-text">$299</div>
+            <div className="wd-price grad-text">$249</div>
             <div className="wd-period">one-time</div>
             <div className="wd-divider"></div>
             <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
@@ -193,13 +193,13 @@ export default function PhotographyVideographyPricingPage() {
             <div className="wd-package">Package</div>
             <div className="wd-name">Starter — Event Highlight</div>
             <del className="sp-original" style={{fontSize:'16px',marginTop:'8px'}}>$499</del>
-            <div className="wd-price grad-text">$349</div>
+            <div className="wd-price grad-text">$449</div>
             <div className="wd-period">one-time</div>
             <div className="wd-divider"></div>
             <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
               <li><span className="tick"></span>Up to 2 hours coverage</li>
               <li><span className="tick"></span>Highlight video</li>
-              <li><span className="tick"></span>Basic photo coverage</li>
+              <li><span className="tick"></span>Edited photo</li>
             </ul>
             <CalButton variant="outline" />
           </div>
@@ -208,7 +208,7 @@ export default function PhotographyVideographyPricingPage() {
             <div className="wd-package">Package</div>
             <div className="wd-name">Growth — Half-Day Coverage</div>
             <del className="sp-original" style={{fontSize:'16px',marginTop:'8px'}}>$899</del>
-            <div className="wd-price grad-text">$629</div>
+            <div className="wd-price grad-text">$799</div>
             <div className="wd-period">one-time</div>
             <div className="wd-divider"></div>
             <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
@@ -224,13 +224,13 @@ export default function PhotographyVideographyPricingPage() {
             <div className="wd-package">Package</div>
             <div className="wd-name">Premium — Full Event Coverage</div>
             <del className="sp-original" style={{fontSize:'16px',marginTop:'8px'}}>$1,499</del>
-            <div className="wd-price grad-text">$1,049</div>
+            <div className="wd-price grad-text">$1,099</div>
             <div className="wd-period">one-time</div>
             <div className="wd-divider"></div>
             <ul className="tick-list" style={{flex:1,marginBottom:'24px'}}>
               <li><span className="tick"></span>Up to 8 hours coverage</li>
               <li><span className="tick"></span>Full cinematic recap</li>
-              <li><span className="tick"></span>Edited pictures</li>
+              <li><span className="tick"></span>Edited photos</li>
               <li><span className="tick"></span>Social media videos</li>
             </ul>
             <CalButton variant="outline" />
